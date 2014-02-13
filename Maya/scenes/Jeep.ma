@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Jeep.ma
-//Last modified: Wed, Feb 12, 2014 08:41:51 PM
+//Last modified: Thu, Feb 13, 2014 09:44:52 AM
 //Codeset: UTF-8
 requires maya "2014";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeType "mentalrayRenderPass"
@@ -90,8 +90,8 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.695152524536466 8.5016161515167514 15.017377908986957 ;
-	setAttr ".r" -type "double3" -16.538352748756402 1465.7999999999647 -1.7663491990226092e-15 ;
+	setAttr ".t" -type "double3" 14.944886206413839 7.0301200845433405 8.4950868325472193 ;
+	setAttr ".r" -type "double3" -11.138352748703761 1502.1999999998734 1.7048916104952521e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
