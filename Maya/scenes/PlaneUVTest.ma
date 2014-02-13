@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: PlaneUVTest.ma
-//Last modified: Tue, Feb 11, 2014 07:31:06 PM
+//Last modified: Wed, Feb 12, 2014 08:33:02 PM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,14 +12,14 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -26.13174539506926 33.338541874285525 26.182488932741251 ;
-	setAttr ".r" -type "double3" -29.738352742797392 1046.5999999997964 0 ;
+	setAttr ".t" -type "double3" -31.656658067655638 37.631768684753581 24.46826928815258 ;
+	setAttr ".r" -type "double3" -38.738352745875666 671.79999999987467 -2.3858962792022434e-15 ;
 	setAttr ".rp" -type "double3" 0 -3.5527136788005009e-15 7.1054273576010019e-15 ;
 	setAttr ".rpt" -type "double3" -1.2203791588642557e-14 3.3256058804950291e-15 -2.1653361099092758e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 54.169706828808245;
+	setAttr ".coi" 51.698899591653401;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -805,33 +805,6 @@ createNode polySmoothFace -n "polySmoothFace2";
 	setAttr ".m08" yes;
 createNode polyTweakUV -n "polyTweakUV1";
 	setAttr ".uopa" yes;
-	setAttr -s 216 ".uvtk[0:215]" -type "float2" -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
-		 -inf -inf;
 createNode polyAutoProj -n "polyAutoProj1";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 1 "f[0:195]";
@@ -969,8 +942,8 @@ createNode polyAutoProj -n "polyAutoProj2";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 1 "f[0:199]";
 	setAttr ".ix" -type "matrix" 0.54643671657020831 0 0 0 0 2.8637951703049229e-16 1.2897386861850677 0
-		 0 -0.55188358262139314 1.2254277206777811e-16 0 -6 2.9446486492771258 0.93948050049269316 1;
-	setAttr ".s" -type "double3" 14.188408630558349 14.188408630558349 14.188408630558349 ;
+		 0 -0.55188358262139314 1.2254277206777814e-16 0 -6 2.9446486492771258 0.93948050049269316 1;
+	setAttr ".s" -type "double3" 14.188408630558348 14.188408630558348 14.188408630558348 ;
 	setAttr ".ps" 0.20000000298023224;
 	setAttr ".dl" yes;
 createNode polyTweak -n "polyTweak18";
@@ -984,8 +957,8 @@ createNode polyAutoProj -n "polyAutoProj3";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 1 "f[0:199]";
 	setAttr ".ix" -type "matrix" 0.54643671657020831 0 0 0 0 2.8637951703049229e-16 1.2897386861850677 0
-		 0 -0.55188358262139314 1.2254277206777811e-16 0 6 2.9446486492771258 0.93948050049269316 1;
-	setAttr ".s" -type "double3" 14.188408630558349 14.188408630558349 14.188408630558349 ;
+		 0 -0.55188358262139314 1.2254277206777814e-16 0 6 2.9446486492771258 0.93948050049269316 1;
+	setAttr ".s" -type "double3" 14.188408630558348 14.188408630558348 14.188408630558348 ;
 	setAttr ".ps" 0.20000000298023224;
 	setAttr ".dl" yes;
 createNode polyTweak -n "polyTweak19";
