@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Jeep2.ma
-//Last modified: Fri, Feb 14, 2014 12:02:22 PM
+//Last modified: Sat, Feb 15, 2014 11:54:56 AM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,14 +12,14 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 37.839693461498825 13.541564923458358 21.906009236580321 ;
-	setAttr ".r" -type "double3" -9.9383527298061836 54.199999999966323 1.3593097490046767e-15 ;
+	setAttr ".t" -type "double3" 30.143492300146814 17.726506895687169 16.355333898612066 ;
+	setAttr ".r" -type "double3" -19.538352729805329 54.199999999963381 0 ;
 	setAttr ".rp" -type "double3" 0 1.7763568394002505e-15 -7.1054273576010019e-15 ;
 	setAttr ".rpt" -type "double3" -4.4564243905150764e-15 -9.7545791146124399e-16 2.1765979113828979e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 42.678565045612238;
+	setAttr ".coi" 34.537876555495622;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -730,6 +730,20 @@ createNode mesh -n "pPlaneShape16" -p "pPlane16";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 2 ".pt";
+	setAttr ".pt[4]" -type "float3" -0.089837007 0 0 ;
+	setAttr ".pt[6]" -type "float3" -0.1199342 0 4.4408921e-16 ;
+	setAttr ".dn" yes;
+createNode mesh -n "polySurfaceShape11" -p "pPlane16";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 4 ".uvst[0].uvsp[0:3]" -type "float2" 0 0 0.78464228 0
 		 0 1 0.78464228 1;
 	setAttr ".cuvs" -type "string" "map1";
@@ -755,6 +769,78 @@ createNode transform -n "pPlane17";
 	setAttr ".s" -type "double3" 0.52597309277608872 0.52597309277608872 0.52597309277608872 ;
 createNode mesh -n "pPlaneShape17" -p "pPlane17";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt[4:7]" -type "float3"  -0.090657659 0 0 0.032550804 
+		0 0 -0.060361315 0 0 0.034592573 0 0;
+	setAttr ".dn" yes;
+createNode mesh -n "polySurfaceShape12" -p "pPlane17";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 4 ".uvst[0].uvsp[0:3]" -type "float2" 0 0 0.78464228 0
+		 0 1 0.78464228 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt[0:3]" -type "float3"  1.5380776 -13.538137 -1.7567062 
+		0.69308454 -11.695424 -1.703307 1.4928625 -13.538137 -1.6442013 0.75965995 -11.695424 
+		-1.8145329;
+	setAttr -s 4 ".vt[0:3]"  -2.61524343 -7.4008334e-16 3.33303905 2.61524343 -7.4008334e-16 3.33303905
+		 -2.61524343 7.4008334e-16 -3.33303905 2.61524343 7.4008334e-16 -3.33303905;
+	setAttr -s 4 ".ed[0:3]"  0 1 0 0 2 0 1 3 0 2 3 0;
+	setAttr -ch 4 ".fc[0]" -type "polyFaces" 
+		f 4 0 2 -4 -2
+		mu 0 4 0 1 3 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".dn" yes;
+createNode transform -n "pPlane18";
+	setAttr ".t" -type "double3" 10.353687873643512 9.0753356517791026 -6.9150922791377738 ;
+	setAttr -av ".tz";
+createNode mesh -n "pPlaneShape18" -p "pPlane18";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 8 ".uvst[0].uvsp[0:7]" -type "float2" 0 0 0.78464228 0
+		 0 1 0.78464228 1 0 0.31754595 0.78464228 0.31754595 0 0.63208371 0.78464228 0.63208371;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  -0.063680388 -0.056364723 
+		-0.65092862 -0.12211527 -0.24161425 -1.0882422 -0.032539025 -0.056364723 0.55010229 
+		-0.45870769 -0.24161434 0.1232326 -0.090657659 0 0 -0.065608785 0 0 -0.060361315 
+		0 0 -0.056758814 0 0;
+	setAttr -s 8 ".vt[0:7]"  -1.077165842 -13.53813744 1.57633281 3.30832791 -11.69542408 1.62973201
+		 -1.12238097 -13.53813744 -4.97724056 3.37490344 -11.69542408 -5.14757204 -1.091523647 -13.53813744 -0.50472796
+		 3.32946873 -11.69542408 -0.52237344 -1.10574555 -13.53813744 -2.56607413 3.35040927 -11.69542408 -2.65409136;
+	setAttr -s 10 ".ed[0:9]"  0 1 0 0 4 0 1 5 0 2 3 0 4 6 0 5 7 0 4 5 1
+		 6 2 0 7 3 0 6 7 1;
+	setAttr -s 3 -ch 12 ".fc[0:2]" -type "polyFaces" 
+		f 4 9 8 -4 -8
+		mu 0 4 6 7 3 2
+		f 4 0 2 -7 -2
+		mu 0 4 0 1 5 4
+		f 4 6 5 -10 -5
+		mu 0 4 4 5 7 6;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".dn" yes;
+createNode mesh -n "polySurfaceShape12" -p "pPlane18";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2966,13 +3052,94 @@ createNode polyTweak -n "polyTweak85";
 	setAttr ".tk[16]" -type "float3" 0 0 1.4215295 ;
 	setAttr ".tk[21]" -type "float3" 0.036895901 -0.049272984 1.1121435 ;
 	setAttr ".tk[22]" -type "float3" -2.0278771e-08 -1.3878766e-07 1.1120995 ;
+createNode polySplitRing -n "polySplitRing72";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[1:2]";
+	setAttr ".ix" -type "matrix" 1.1678948758666346e-16 -0.52597309277608872 -0 0 0.52597309277608872 1.1678948758666346e-16 0 0
+		 0 -0 0.52597309277608872 0 10.353687873643512 9.0753356517791026 1.6544268310137689 1;
+	setAttr ".wt" 0.29655531048774719;
+	setAttr ".re" 1;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing73";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[4:5]";
+	setAttr ".ix" -type "matrix" 1.1678948758666346e-16 -0.52597309277608872 -0 0 0.52597309277608872 1.1678948758666346e-16 0 0
+		 0 -0 0.52597309277608872 0 10.353687873643512 9.0753356517791026 1.6544268310137689 1;
+	setAttr ".wt" 0.42112353444099426;
+	setAttr ".re" 4;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing74";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[1:2]";
+	setAttr ".ix" -type "matrix" 1.1678948758666346e-16 -0.52597309277608872 -0 0 0.52597309277608872 1.1678948758666346e-16 0 0
+		 0 -0 0.52597309277608872 0 10.353687873643512 9.0753356517791026 -2.8217678173416125 1;
+	setAttr ".wt" 0.31754595041275024;
+	setAttr ".re" 1;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing75";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[4:5]";
+	setAttr ".ix" -type "matrix" 1.1678948758666346e-16 -0.52597309277608872 -0 0 0.52597309277608872 1.1678948758666346e-16 0 0
+		 0 -0 0.52597309277608872 0 10.353687873643512 9.0753356517791026 -2.8217678173416125 1;
+	setAttr ".wt" 0.4608922004699707;
+	setAttr ".re" 4;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode animCurveTL -n "pPlane18_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 10.353687873643512;
+createNode animCurveTL -n "pPlane18_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 9.0753356517791026;
+createNode animCurveTL -n "pPlane18_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -2.8217678173416125;
+createNode animCurveTU -n "pPlane18_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTA -n "pPlane18_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pPlane18_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pPlane18_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -90;
+createNode animCurveTU -n "pPlane18_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.52597309277608872;
+createNode animCurveTU -n "pPlane18_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.52597309277608872;
+createNode animCurveTU -n "pPlane18_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.52597309277608872;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
 	setAttr -s 5 ".st";
 select -ne :initialShadingGroup;
-	setAttr -s 13 ".dsm";
+	setAttr -s 14 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -3010,6 +3177,18 @@ connectAttr "polyExtrudeEdge43.out" "pPlaneShape12.i";
 connectAttr "polyExtrudeEdge41.out" "pPlaneShape13.i";
 connectAttr "polyExtrudeEdge21.out" "pPlaneShape14.i";
 connectAttr "polyExtrudeEdge45.out" "pPlaneShape15.i";
+connectAttr "polySplitRing73.out" "pPlaneShape16.i";
+connectAttr "polySplitRing75.out" "pPlaneShape17.i";
+connectAttr "pPlane18_translateX.o" "pPlane18.tx";
+connectAttr "pPlane18_translateY.o" "pPlane18.ty";
+connectAttr "pPlane18_translateZ.o" "pPlane18.tz";
+connectAttr "pPlane18_visibility.o" "pPlane18.v";
+connectAttr "pPlane18_rotateX.o" "pPlane18.rx";
+connectAttr "pPlane18_rotateY.o" "pPlane18.ry";
+connectAttr "pPlane18_rotateZ.o" "pPlane18.rz";
+connectAttr "pPlane18_scaleX.o" "pPlane18.sx";
+connectAttr "pPlane18_scaleY.o" "pPlane18.sy";
+connectAttr "pPlane18_scaleZ.o" "pPlane18.sz";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -3429,6 +3608,14 @@ connectAttr "polyExtrudeEdge42.out" "polyTweak84.ip";
 connectAttr "polyTweak85.out" "polyExtrudeEdge45.ip";
 connectAttr "pPlaneShape15.wm" "polyExtrudeEdge45.mp";
 connectAttr "polyExtrudeEdge29.out" "polyTweak85.ip";
+connectAttr "polySurfaceShape11.o" "polySplitRing72.ip";
+connectAttr "pPlaneShape16.wm" "polySplitRing72.mp";
+connectAttr "polySplitRing72.out" "polySplitRing73.ip";
+connectAttr "pPlaneShape16.wm" "polySplitRing73.mp";
+connectAttr "|pPlane17|polySurfaceShape12.o" "polySplitRing74.ip";
+connectAttr "pPlaneShape17.wm" "polySplitRing74.mp";
+connectAttr "polySplitRing74.out" "polySplitRing75.ip";
+connectAttr "pPlaneShape17.wm" "polySplitRing75.mp";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
@@ -3445,6 +3632,7 @@ connectAttr "pPlaneShape14.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pPlaneShape15.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pPlaneShape16.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pPlaneShape17.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pPlaneShape18.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert4.msg" ":defaultShaderList1.s" -na;
