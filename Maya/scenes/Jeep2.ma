@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Jeep2.ma
-//Last modified: Sun, Feb 16, 2014 01:26:14 PM
+//Last modified: Sun, Feb 16, 2014 10:44:00 PM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,14 +12,14 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 30.670433883439863 18.333626874504919 48.471428507641491 ;
-	setAttr ".r" -type "double3" -12.338352729959091 397.3999999999707 1.0009114256100455e-15 ;
-	setAttr ".rp" -type "double3" 0 1.7763568394002505e-15 0 ;
-	setAttr ".rpt" -type "double3" 1.4064352960383718e-15 -1.8135191134503022e-15 -2.3638401205685732e-15 ;
+	setAttr ".t" -type "double3" -13.348713985813569 13.564707516687742 22.782876140523502 ;
+	setAttr ".r" -type "double3" -18.938352730036932 -390.99999999997283 0 ;
+	setAttr ".rp" -type "double3" 7.7715611723760958e-16 0 1.7763568394002505e-15 ;
+	setAttr ".rpt" -type "double3" 2.2555695117694254e-15 -1.3706893110566243e-15 -2.5616709808373182e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 64.201268296339109;
+	setAttr ".coi" 27.535115554184262;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -126,10 +126,10 @@ createNode mesh -n "pPlaneShape9" -p "pPlane9";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "group1";
-	setAttr ".t" -type "double3" 0 0.42695361202917037 0.43264867116468153 ;
+	setAttr ".t" -type "double3" 0 0.42695361202917043 0.43264867116468153 ;
 	setAttr ".s" -type "double3" 0.96817853883483473 0.96817853883483473 0.96817853883483473 ;
 createNode transform -n "group2";
-	setAttr ".t" -type "double3" 0 0.42695361202917037 -14.30355120926826 ;
+	setAttr ".t" -type "double3" 0 0.42695361202917043 -14.30355120926826 ;
 	setAttr ".s" -type "double3" 0.96817853883483473 0.96817853883483473 0.96817853883483473 ;
 createNode transform -n "group3";
 createNode transform -n "pPlane3" -p "group3";
@@ -144,7 +144,7 @@ createNode mesh -n "pPlaneShape3" -p "|group3|pPlane3";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt";
+	setAttr -s 13 ".pt";
 	setAttr ".pt[14]" -type "float3" 0.015182693 -0.063432924 0 ;
 	setAttr ".pt[18]" -type "float3" 0.031954437 -0.066455573 0 ;
 	setAttr ".pt[21]" -type "float3" 0.044698503 0.024068424 0 ;
@@ -209,7 +209,7 @@ createNode mesh -n "polySurfaceShape1" -p "|group3|pPlane4";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
 createNode transform -n "pPlane6" -p "group3";
-	setAttr ".t" -type "double3" 4.859450501994111 3.9733050702868646 -10.956816976880745 ;
+	setAttr ".t" -type "double3" 4.859450501994111 3.9733050702868646 -10.956816976880743 ;
 	setAttr ".r" -type "double3" -47.133099149751573 0 -89.999999999999915 ;
 	setAttr ".s" -type "double3" 0.48175081517823343 0.48175081517823343 0.48175081517823343 ;
 createNode mesh -n "pPlaneShape6" -p "|group3|pPlane6";
@@ -315,19 +315,25 @@ createNode mesh -n "pPlaneShape8" -p "|group3|pPlane8";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 23 ".pt";
+	setAttr -s 29 ".pt";
 	setAttr ".pt[26]" -type "float3" 0 0.12316272 0 ;
 	setAttr ".pt[27]" -type "float3" 0 0.12316272 0 ;
 	setAttr ".pt[28]" -type "float3" 0 0.12316272 0 ;
+	setAttr ".pt[29]" -type "float3" 0 0.016097546 0 ;
+	setAttr ".pt[30]" -type "float3" 0 0.016097546 0 ;
+	setAttr ".pt[32]" -type "float3" 0 0.016101837 0 ;
+	setAttr ".pt[33]" -type "float3" 0 0.016101837 0 ;
+	setAttr ".pt[40]" -type "float3" 0 0.016097546 0 ;
 	setAttr ".pt[45]" -type "float3" -5.9604645e-08 0 0 ;
 	setAttr ".pt[46]" -type "float3" 5.364418e-07 0 0 ;
 	setAttr ".pt[47]" -type "float3" 1.013279e-06 0 0 ;
 	setAttr ".pt[48]" -type "float3" 5.364418e-07 0 0 ;
+	setAttr ".pt[55]" -type "float3" 0 0.0069189072 0 ;
 	setAttr ".pt[56]" -type "float3" 0 0.12316272 0 ;
 	setAttr ".pt[67]" -type "float3" 1.013279e-06 0 0 ;
 	setAttr ".pt[68]" -type "float3" 1.2767565e-15 0.12316272 0.19334278 ;
 	setAttr ".pt[69]" -type "float3" 1.3322676e-15 0.12316272 0.19334278 ;
-	setAttr ".pt[70]" -type "float3" 1.2767565e-15 0 0.19334278 ;
+	setAttr ".pt[70]" -type "float3" 1.2767565e-15 0.0069189072 0.19334278 ;
 	setAttr ".pt[71]" -type "float3" 1.3322676e-15 0 0.19334278 ;
 	setAttr ".pt[72]" -type "float3" 1.2767565e-15 0 0.19334278 ;
 	setAttr ".pt[73]" -type "float3" 1.3322676e-15 0 0.19334278 ;
@@ -431,7 +437,17 @@ createNode mesh -n "pPlaneShape11" -p "|group3|pPlane11";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".pt[73]" -type "float3"  0.70298928 0.1479532 -0.28923827;
+	setAttr -s 11 ".pt";
+	setAttr ".pt[0]" -type "float3" 0.017977953 0 0 ;
+	setAttr ".pt[2]" -type "float3" 0.014875669 -6.5102192e-08 -0.090529382 ;
+	setAttr ".pt[5]" -type "float3" 0.015881062 0 0 ;
+	setAttr ".pt[7]" -type "float3" 0.014190197 0 0 ;
+	setAttr ".pt[9]" -type "float3" 0.012429237 0 0 ;
+	setAttr ".pt[11]" -type "float3" 0.011227146 0 0 ;
+	setAttr ".pt[24]" -type "float3" 0.017977953 0 0 ;
+	setAttr ".pt[29]" -type "float3" 0.016097307 0 0 ;
+	setAttr ".pt[64]" -type "float3" 0 0 -0.067359857 ;
+	setAttr ".pt[73]" -type "float3" 0.70298928 0.1479532 -0.28923827 ;
 	setAttr ".dn" yes;
 createNode mesh -n "polySurfaceShape7" -p "|group3|pPlane11";
 	setAttr -k off ".v";
@@ -459,7 +475,7 @@ createNode mesh -n "polySurfaceShape7" -p "|group3|pPlane11";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
 createNode transform -n "pPlane12" -p "group3";
-	setAttr ".t" -type "double3" 1.5418988351765068 10.14759947049431 -1.3873813824242163 ;
+	setAttr ".t" -type "double3" 1.5418988351765068 10.14759947049431 -1.3873813824242165 ;
 	setAttr ".s" -type "double3" 0.58240242247383611 1 1 ;
 createNode mesh -n "pPlaneShape12" -p "|group3|pPlane12";
 	setAttr -k off ".v";
@@ -470,39 +486,50 @@ createNode mesh -n "pPlaneShape12" -p "|group3|pPlane12";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 32 ".pt";
-	setAttr ".pt[2]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[3]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[4]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[5]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[6]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[7]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[8]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[9]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[10]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[11]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[12]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[13]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[14]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[15]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[16]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[17]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[18]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[19]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[20]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[21]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[22]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[23]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[24]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[25]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[26]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[27]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[28]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[29]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[30]" -type "float3" 0 -0.030353764 0 ;
-	setAttr ".pt[31]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[33]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[35]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr -s 43 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[2]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[4]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[6]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[8]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[10]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[12]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[14]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[16]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[18]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[20]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[22]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[24]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[26]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[28]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[30]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[32]" -type "float3" 4.4408921e-16 -0.038460404 0 ;
+	setAttr ".pt[34]" -type "float3" 4.4408921e-16 -0.038460404 0 ;
+	setAttr ".pt[36]" -type "float3" 0.0056735128 3.4272671e-07 -4.718847e-07 ;
+	setAttr ".pt[57]" -type "float3" -2.9606323e-07 -1.8998981e-07 4.9524544e-09 ;
+	setAttr ".pt[76]" -type "float3" -2.3841858e-07 -0.028760176 -0.0099048615 ;
+	setAttr ".pt[80]" -type "float3" -4.4408921e-16 0.00076415297 0 ;
+	setAttr ".pt[81]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[82]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[83]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[84]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[85]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[86]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[87]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[88]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[89]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[90]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[91]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[92]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[93]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[94]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[95]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[96]" -type "float3" -2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[97]" -type "float3" -0.17145784 0 0 ;
+	setAttr ".pt[100]" -type "float3" -2.3841858e-07 -0.028760176 -0.054947268 ;
+	setAttr ".pt[101]" -type "float3" -0.17145784 0 -0.045042407 ;
+	setAttr ".pt[102]" -type "float3" 0 0 -0.045042407 ;
+	setAttr ".pt[103]" -type "float3" 4.4408921e-16 -0.038460404 -0.045042407 ;
 	setAttr ".dn" yes;
 createNode mesh -n "polySurfaceShape8" -p "|group3|pPlane12";
 	setAttr -k off ".v";
@@ -961,7 +988,7 @@ createNode mesh -n "polySurfaceShape12" -p "|group3|pPlane18";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
 createNode transform -n "pPlane19" -p "group3";
-	setAttr ".t" -type "double3" 1.7109392071545233 8.5306424085930512 3.8421947929727267 ;
+	setAttr ".t" -type "double3" 1.7109392071545233 8.5306424085930512 3.8421947929727263 ;
 	setAttr ".r" -type "double3" 90 -1.5902773407317584e-15 -89.999999999999929 ;
 	setAttr ".s" -type "double3" 0.52222223931146605 1 0.51111112783675616 ;
 createNode mesh -n "pPlaneShape19" -p "|group3|pPlane19";
@@ -973,10 +1000,13 @@ createNode mesh -n "pPlaneShape19" -p "|group3|pPlane19";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 6 ".pt";
+	setAttr -s 8 ".pt";
+	setAttr ".pt[0]" -type "float3" 5.9604645e-08 0 0.0026097298 ;
+	setAttr ".pt[1]" -type "float3" 1.7881393e-07 -0.09052933 -0.019336104 ;
 	setAttr ".pt[4]" -type "float3" 0.056647602 -0.049081627 -0.03723019 ;
 	setAttr ".pt[6]" -type "float3" 0.056638759 -0.047555748 0.10311959 ;
 	setAttr ".pt[8]" -type "float3" 0 -0.025259694 0 ;
+	setAttr ".pt[11]" -type "float3" 0.070308983 -0.0061726719 -0.002466402 ;
 	setAttr ".pt[12]" -type "float3" 2.4590634e-07 0.029420666 -0.043056399 ;
 	setAttr ".pt[14]" -type "float3" 0 8.8817842e-16 -0.046944458 ;
 	setAttr ".dn" yes;
@@ -1079,7 +1109,7 @@ createNode mesh -n "polySurfaceShape14" -p "|group3|pPlane22";
 	setAttr ".dn" yes;
 createNode transform -n "pCube1" -p "group3";
 	setAttr ".t" -type "double3" 1.3829656949236333 7.7078042491120033 5.7878589108409315 ;
-	setAttr ".r" -type "double3" -0.22111570168117062 8.6133618778684902 -1.4760892799920464 ;
+	setAttr ".r" -type "double3" -0.22111570168117065 8.6133618778684902 -1.4760892799920466 ;
 	setAttr ".s" -type "double3" 4.3132836241034349 0.8031676264141967 1 ;
 createNode mesh -n "pCubeShape1" -p "|group3|pCube1";
 	setAttr -k off ".v";
@@ -1370,7 +1400,7 @@ createNode mesh -n "pCubeShape2" -p "|group3|pCube2";
 	setAttr ".pt[20]" -type "float3" 0 0.34651443 0 ;
 	setAttr ".pt[21]" -type "float3" 0 0.34651443 0 ;
 createNode transform -n "pPipe1" -p "group3";
-	setAttr ".t" -type "double3" 4.8743690553475796 2.7189023845673734 7.7151375743757002 ;
+	setAttr ".t" -type "double3" 4.8743690553475796 2.7189023845673734 7.7151375743757011 ;
 	setAttr ".r" -type "double3" 0 0 -89.999999999999986 ;
 	setAttr ".s" -type "double3" 0.50606977708332179 0.50606977708332179 0.50606977708332179 ;
 createNode mesh -n "pPipeShape1" -p "|group3|pPipe1";
@@ -1387,7 +1417,7 @@ createNode mesh -n "pPipeShape1" -p "|group3|pPipe1";
 createNode transform -n "pPlane24" -p "group3";
 	setAttr ".t" -type "double3" 5.1270368987695569 2.7178032846547922 7.6956291545122335 ;
 	setAttr ".r" -type "double3" 0 0 -89.999999999999986 ;
-	setAttr ".s" -type "double3" 0.53154565658440878 0.47203920245436892 0.42846242886878916 ;
+	setAttr ".s" -type "double3" 0.53154565658440878 0.47203920245436898 0.4284624288687891 ;
 createNode mesh -n "pPlaneShape24" -p "|group3|pPlane24";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -1901,13 +1931,13 @@ createNode mesh -n "pPipeShape2" -p "|group3|pPipe2";
 createNode transform -n "pPlane25" -p "group3";
 	setAttr ".t" -type "double3" 5.1270368987695569 2.7178032846547922 -7.0405707259207082 ;
 	setAttr ".r" -type "double3" 0 0 -89.999999999999986 ;
-	setAttr ".s" -type "double3" 0.53154565658440878 0.47203920245436892 0.42846242886878916 ;
+	setAttr ".s" -type "double3" 0.53154565658440878 0.47203920245436898 0.4284624288687891 ;
 createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 226 ".uvst[0].uvsp[0:225]" -type "float2" 0 0 0.78464228 0
+	setAttr -s 248 ".uvst[0].uvsp[0:247]" -type "float2" 0 0 0.78464228 0
 		 0 1 0.78464228 1 0.78464222 0.16201322 0 0.16201322 0.78464222 0.32462528 0 0.32462528
 		 0.78464228 0.49719319 0 0.49719319 0.78464228 0.67971694 0 0.67971694 0.78464228
 		 0.86224067 0 0.86224067 0.11056765 1 0.11056766 0.86224067 0.11056766 0.67971694
@@ -1959,7 +1989,13 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		 0.46870613 0.67971694 0.39245272 0.67971694 0.36469558 0.67971694 0.34031224 0.67971694
 		 0.24557537 0.67971694 0.21489383 0.67971694 0.21489383 0.65391523 0.21489383 0.53654695
 		 0.21489383 0.49719316 0.21489382 0.46261528 0.21489382 0.35443103 0.21489382 0.32462528
-		 0.49844712 0.32462528 0.49844712 0.37298363 0.49844715 0.46524736;
+		 0.49844712 0.32462528 0.49844712 0.37298363 0.49844715 0.46524736 0.21489383 0.67971694
+		 0.65092391 0.86224067 0.65092391 0.86224067 0.65092385 0.16201322 0.65092385 0.16201322
+		 0.11056766 0.86224067 0.11056766 0.86224067 0.65092391 0.86224067 0.65092385 0.16201322
+		 0.65092385 0.16201322 0.65092391 0.86224067 0.21489383 0.49719316 0.36469558 0.67971694
+		 0.49844715 0.67971694 0.21489383 0.67971694 0.21489383 0.67971694 0.21489383 0.49719316
+		 0.21489383 0.49719316 0.36469558 0.67971694 0.36469558 0.67971694 0.49844715 0.67971694
+		 0.49844715 0.67971694;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -2143,7 +2179,7 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 185 187 -148 -189
 		mu 0 4 102 101 87 90
 		f 4 293 295 297 -299
-		mu 0 4 159 157 160 161
+		mu 0 4 159 226 160 161
 		f 4 301 303 -306 -307
 		mu 0 4 162 163 164 165
 		f 5 309 311 313 315 -317
@@ -2167,15 +2203,15 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 46 68 -70 -67
 		mu 0 4 35 42 55 54
 		f 4 -34 70 71 259
-		mu 0 4 141 41 56 140
+		mu 0 4 141 227 56 140
 		f 4 -44 61 72 -71
-		mu 0 4 41 30 52 56
+		mu 0 4 228 30 52 56
 		f 4 49 76 -78 -75
 		mu 0 4 37 38 58 57
 		f 6 34 78 -282 -279 -80 -77
-		mu 0 6 38 45 59 154 152 58
+		mu 0 6 38 229 59 154 152 58
 		f 4 -49 66 80 -79
-		mu 0 4 45 35 54 59
+		mu 0 4 230 35 54 59
 		f 4 39 197 -84 -82
 		mu 0 4 19 106 107 60
 		f 4 -45 84 85 -83
@@ -2189,11 +2225,11 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 -14 90 96 -95
 		mu 0 4 2 13 65 64
 		f 4 -16 89 100 -98
-		mu 0 4 16 15 67 66
+		mu 0 4 16 231 67 66
 		f 4 -12 98 101 -91
 		mu 0 4 13 11 68 65
 		f 4 -19 102 103 -90
-		mu 0 4 15 22 69 67
+		mu 0 4 232 22 69 67
 		f 4 -15 92 106 -105
 		mu 0 4 21 14 63 70
 		f 4 12 110 -112 -108
@@ -2209,7 +2245,7 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 -21 117 124 -123
 		mu 0 4 33 28 75 77
 		f 4 28 108 -126 -121
-		mu 0 4 34 41 78 76
+		mu 0 4 34 233 78 76
 		f 4 -23 122 126 -113
 		mu 0 4 40 33 77 73
 		f 4 25 130 -132 -129
@@ -2219,7 +2255,7 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 4 135 -137 -133
 		mu 0 4 4 6 82 81
 		f 4 29 127 -140 -138
-		mu 0 4 44 45 84 83
+		mu 0 4 44 234 84 83
 		f 4 6 140 -142 -136
 		mu 0 4 6 8 85 82
 		f 4 30 137 -145 -143
@@ -2231,7 +2267,7 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 23 128 -154 -149
 		mu 0 4 39 46 79 88
 		f 4 -35 150 154 -128
-		mu 0 4 45 38 89 84
+		mu 0 4 235 38 89 84
 		f 4 32 142 -157 -156
 		mu 0 4 42 43 86 91
 		f 4 8 157 -159 -141
@@ -2239,7 +2275,7 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 264 107 -263 265
 		mu 0 4 144 12 71 143
 		f 4 33 261 -162 -109
-		mu 0 4 41 141 142 78
+		mu 0 4 236 141 142 78
 		f 4 -38 97 165 228
 		mu 0 4 124 16 66 123
 		f 4 -223 224 223 -99
@@ -2293,7 +2329,7 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 -220 216 51 -219
 		mu 0 4 119 118 17 47
 		f 4 335 -338 -340 340
-		mu 0 4 179 174 180 181
+		mu 0 4 179 237 180 181
 		f 4 -212 213 212 -225
 		mu 0 4 121 115 116 122
 		f 4 215 -226 -227 -213
@@ -2315,7 +2351,7 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 -243 -244 240 254
 		mu 0 4 138 132 131 137
 		f 4 -344 345 -348 -349
-		mu 0 4 182 183 162 184
+		mu 0 4 182 183 238 184
 		f 4 -248 -249 245 -64
 		mu 0 4 29 135 134 53
 		f 4 -251 247 115 -250
@@ -2335,7 +2371,7 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 275 -266 -274 276
 		mu 0 4 150 144 143 149
 		f 4 351 353 -356 -357
-		mu 0 4 185 166 186 187
+		mu 0 4 185 239 186 187
 		f 4 -270 -271 267 -69
 		mu 0 4 42 147 146 55
 		f 4 -273 269 155 -272
@@ -2357,9 +2393,9 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 58 283 -291 -289
 		mu 0 4 50 125 155 158
 		f 4 60 292 -294 -292
-		mu 0 4 51 49 157 159
+		mu 0 4 51 49 240 159
 		f 4 62 294 -296 -293
-		mu 0 4 49 127 160 157
+		mu 0 4 49 127 160 241
 		f 4 235 296 -298 -295
 		mu 0 4 127 128 161 160
 		f 4 -66 291 298 -297
@@ -2399,9 +2435,9 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 -210 326 332 -331
 		mu 0 4 62 114 175 178
 		f 4 53 334 -336 -334
-		mu 0 4 47 48 174 179
+		mu 0 4 47 48 242 179
 		f 4 -221 336 337 -335
-		mu 0 4 48 120 180 174
+		mu 0 4 48 120 180 243
 		f 4 -222 338 339 -337
 		mu 0 4 120 119 181 180
 		f 4 218 333 -341 -339
@@ -2409,15 +2445,15 @@ createNode mesh -n "pPlaneShape25" -p "|group3|pPlane25";
 		f 4 -247 341 343 -343
 		mu 0 4 134 133 183 182
 		f 4 244 344 -346 -342
-		mu 0 4 133 52 162 183
+		mu 0 4 133 52 244 183
 		f 4 -65 346 347 -345
-		mu 0 4 52 53 184 162
+		mu 0 4 52 53 184 245
 		f 4 -246 342 348 -347
 		mu 0 4 53 134 182 184
 		f 4 266 350 -352 -350
-		mu 0 4 145 54 166 185
+		mu 0 4 145 54 246 185
 		f 4 69 352 -354 -351
-		mu 0 4 54 55 186 166
+		mu 0 4 54 55 186 247
 		f 4 -268 354 355 -353
 		mu 0 4 55 146 187 186
 		f 4 -269 349 356 -355
@@ -2555,7 +2591,7 @@ createNode mesh -n "pPlaneShape3" -p "|group4|pPlane3";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 17 ".pt";
+	setAttr -s 13 ".pt";
 	setAttr ".pt[14]" -type "float3" 0.015182693 -0.063432924 0 ;
 	setAttr ".pt[18]" -type "float3" 0.031954437 -0.066455573 0 ;
 	setAttr ".pt[21]" -type "float3" 0.044698503 0.024068424 0 ;
@@ -2980,7 +3016,7 @@ createNode mesh -n "polySurfaceShape1" -p "|group4|pPlane4";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
 createNode transform -n "pPlane6" -p "group4";
-	setAttr ".t" -type "double3" 4.859450501994111 3.9733050702868646 -10.956816976880745 ;
+	setAttr ".t" -type "double3" 4.859450501994111 3.9733050702868646 -10.956816976880743 ;
 	setAttr ".r" -type "double3" -47.133099149751573 0 -89.999999999999915 ;
 	setAttr ".s" -type "double3" 0.48175081517823343 0.48175081517823343 0.48175081517823343 ;
 createNode mesh -n "pPlaneShape6" -p "|group4|pPlane6";
@@ -3357,19 +3393,25 @@ createNode mesh -n "pPlaneShape8" -p "|group4|pPlane8";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 23 ".pt";
+	setAttr -s 29 ".pt";
 	setAttr ".pt[26]" -type "float3" 0 0.12316272 0 ;
 	setAttr ".pt[27]" -type "float3" 0 0.12316272 0 ;
 	setAttr ".pt[28]" -type "float3" 0 0.12316272 0 ;
+	setAttr ".pt[29]" -type "float3" 0 0.016097546 0 ;
+	setAttr ".pt[30]" -type "float3" 0 0.016097546 0 ;
+	setAttr ".pt[32]" -type "float3" 0 0.016101837 0 ;
+	setAttr ".pt[33]" -type "float3" 0 0.016101837 0 ;
+	setAttr ".pt[40]" -type "float3" 0 0.016097546 0 ;
 	setAttr ".pt[45]" -type "float3" -5.9604645e-08 0 0 ;
 	setAttr ".pt[46]" -type "float3" 5.364418e-07 0 0 ;
 	setAttr ".pt[47]" -type "float3" 1.013279e-06 0 0 ;
 	setAttr ".pt[48]" -type "float3" 5.364418e-07 0 0 ;
+	setAttr ".pt[55]" -type "float3" 0 0.0069189072 0 ;
 	setAttr ".pt[56]" -type "float3" 0 0.12316272 0 ;
 	setAttr ".pt[67]" -type "float3" 1.013279e-06 0 0 ;
 	setAttr ".pt[68]" -type "float3" 1.2767565e-15 0.12316272 0.19334278 ;
 	setAttr ".pt[69]" -type "float3" 1.3322676e-15 0.12316272 0.19334278 ;
-	setAttr ".pt[70]" -type "float3" 1.2767565e-15 0 0.19334278 ;
+	setAttr ".pt[70]" -type "float3" 1.2767565e-15 0.0069189072 0.19334278 ;
 	setAttr ".pt[71]" -type "float3" 1.3322676e-15 0 0.19334278 ;
 	setAttr ".pt[72]" -type "float3" 1.2767565e-15 0 0.19334278 ;
 	setAttr ".pt[73]" -type "float3" 1.3322676e-15 0 0.19334278 ;
@@ -3782,7 +3824,17 @@ createNode mesh -n "pPlaneShape11" -p "|group4|pPlane11";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".pt[73]" -type "float3"  0.70298928 0.1479532 -0.28923827;
+	setAttr -s 10 ".pt";
+	setAttr ".pt[0]" -type "float3" 0.017977953 0 0 ;
+	setAttr ".pt[2]" -type "float3" 0.0020312611 -5.9604645e-08 -0.090529442 ;
+	setAttr ".pt[5]" -type "float3" 0.015881062 0 0 ;
+	setAttr ".pt[7]" -type "float3" 0.014190197 0 0 ;
+	setAttr ".pt[9]" -type "float3" 0.012429237 0 0 ;
+	setAttr ".pt[11]" -type "float3" 0.011227131 0 0 ;
+	setAttr ".pt[24]" -type "float3" 0.017977953 0 0 ;
+	setAttr ".pt[29]" -type "float3" 0.016097307 0 0 ;
+	setAttr ".pt[64]" -type "float3" 0 0 -0.067359857 ;
+	setAttr ".pt[73]" -type "float3" 0.70298928 0.1479532 -0.28923827 ;
 	setAttr -s 74 ".vt[0:73]"  -2.57347298 0.096467018 2.91082001 1.68815541 0.023868084 2.62924576
 		 -2.56394839 0.75971699 -1.60675097 1.7775414 0.44637871 -2.3837595 1.7775414 0.034641266 1.51176834
 		 -2.57137609 0.40129566 1.88714027 1.7775414 0.092110157 0.74169254 -2.56968522 0.54233217 1.06176281
@@ -3970,10 +4022,88 @@ createNode mesh -n "polySurfaceShape7" -p "|group4|pPlane11";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
 createNode transform -n "pPlane12" -p "group4";
-	setAttr ".t" -type "double3" 1.5418988351765068 10.14759947049431 -1.3873813824242163 ;
+	setAttr ".t" -type "double3" 1.5418988351765068 10.14759947049431 -1.3873813824242165 ;
 	setAttr ".s" -type "double3" 0.58240242247383611 1 1 ;
 createNode mesh -n "pPlaneShape12" -p "|group4|pPlane12";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 42 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[2]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[4]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[6]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[8]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[10]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[12]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[14]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[16]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[18]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[20]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[22]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[24]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[26]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[28]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[30]" -type "float3" 0 0.08653482 0 ;
+	setAttr ".pt[32]" -type "float3" -4.4408921e-16 -0.038460404 0 ;
+	setAttr ".pt[34]" -type "float3" -4.4408921e-16 -0.038460404 0 ;
+	setAttr ".pt[36]" -type "float3" 0.0056737815 3.5017729e-07 0 ;
+	setAttr ".pt[79]" -type "float3" -2.3841858e-07 -0.040071711 0.0099039078 ;
+	setAttr ".pt[80]" -type "float3" 4.4408921e-16 0.00047036353 0 ;
+	setAttr ".pt[81]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[82]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[83]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[84]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[85]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[86]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[87]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[88]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[89]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[90]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[91]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[92]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[93]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[94]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[95]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[96]" -type "float3" 2.220446e-16 0.06126292 0 ;
+	setAttr ".pt[97]" -type "float3" -0.18706295 0 0 ;
+	setAttr ".pt[100]" -type "float3" -0.18706295 0 -0.045042407 ;
+	setAttr ".pt[101]" -type "float3" -2.3841858e-07 -0.040071711 -0.035138499 ;
+	setAttr ".pt[102]" -type "float3" 0 0 -0.045042407 ;
+	setAttr ".pt[103]" -type "float3" -4.4408921e-16 -0.038460404 -0.045042407 ;
+	setAttr ".dn" yes;
+createNode mesh -n "polySurfaceShape8" -p "|group4|pPlane12";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 4 ".uvst[0].uvsp[0:3]" -type "float2" 0 0 0.78464228 0
+		 0 1 0.78464228 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt[0:3]" -type "float3"  0 0 0.69394815 -0.036146235 
+		-0.24013299 0.64918995 0 0 -4.7539239 -0.013887346 0.08799839 -4.782321;
+	setAttr -s 4 ".vt[0:3]"  -2.61524343 -7.4008334e-16 3.33303905 2.61524343 -7.4008334e-16 3.33303905
+		 -2.61524343 7.4008334e-16 -3.33303905 2.61524343 7.4008334e-16 -3.33303905;
+	setAttr -s 4 ".ed[0:3]"  0 1 0 0 2 0 1 3 0 2 3 0;
+	setAttr -ch 4 ".fc[0]" -type "polyFaces" 
+		f 4 0 2 -4 -2
+		mu 0 4 0 1 3 2;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".dn" yes;
+createNode mesh -n "polySurfaceShape17" -p "|group4|pPlane12";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -3999,37 +4129,39 @@ createNode mesh -n "pPlaneShape12" -p "|group4|pPlane12";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 32 ".pt";
-	setAttr ".pt[2]" -type "float3" 0 -0.030353764 0 ;
+	setAttr -s 34 ".pt";
+	setAttr ".pt[0]" -type "float3" 0.0056738853 0 4.7683716e-07 ;
+	setAttr ".pt[2]" -type "float3" 0.0056738853 -0.030353764 0 ;
 	setAttr ".pt[3]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[4]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[4]" -type "float3" 0.0056738853 -0.030353764 0 ;
 	setAttr ".pt[5]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[6]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[6]" -type "float3" 0.0056738853 -0.030353764 0 ;
 	setAttr ".pt[7]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[8]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[8]" -type "float3" 0.0056738853 -0.030353764 0 ;
 	setAttr ".pt[9]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[10]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[10]" -type "float3" 0.0056738853 -0.030353764 1.1920929e-07 ;
 	setAttr ".pt[11]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[12]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[12]" -type "float3" 0.0056738853 -0.03035377 0 ;
 	setAttr ".pt[13]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[14]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[14]" -type "float3" 0.0056738853 -0.030353772 0 ;
 	setAttr ".pt[15]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[16]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[16]" -type "float3" 0.0056738853 -0.030353764 0 ;
 	setAttr ".pt[17]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[18]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[18]" -type "float3" 0.0056738853 -0.030353764 0 ;
 	setAttr ".pt[19]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[20]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[20]" -type "float3" 0.0056738853 -0.030353764 0 ;
 	setAttr ".pt[21]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[22]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[22]" -type "float3" 0.0056738853 -0.030353764 0 ;
 	setAttr ".pt[23]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[24]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[24]" -type "float3" 0.0056738853 -0.030353772 0 ;
 	setAttr ".pt[25]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[26]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[26]" -type "float3" 0.0056738853 -0.03035377 0 ;
 	setAttr ".pt[27]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[28]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[28]" -type "float3" 0.0056738853 -0.030353764 0 ;
 	setAttr ".pt[29]" -type "float3" 0 1.4901161e-08 0 ;
-	setAttr ".pt[30]" -type "float3" 0 -0.030353764 0 ;
+	setAttr ".pt[30]" -type "float3" 0.0056738853 -0.030353764 0 ;
 	setAttr ".pt[31]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".pt[32]" -type "float3" 0.0056736469 0 0 ;
 	setAttr ".pt[33]" -type "float3" 0 1.4901161e-08 0 ;
 	setAttr ".pt[35]" -type "float3" 0 1.4901161e-08 0 ;
 	setAttr -s 76 ".vt[0:75]"  -2.61524272 -0.21740818 4.25403547 2.57909727 -0.24013329 3.98222876
@@ -4183,30 +4315,6 @@ createNode mesh -n "pPlaneShape12" -p "|group4|pPlane12";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
-createNode mesh -n "polySurfaceShape8" -p "|group4|pPlane12";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 4 ".uvst[0].uvsp[0:3]" -type "float2" 0 0 0.78464228 0
-		 0 1 0.78464228 1;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt[0:3]" -type "float3"  0 0 0.69394815 -0.036146235 
-		-0.24013299 0.64918995 0 0 -4.7539239 -0.013887346 0.08799839 -4.782321;
-	setAttr -s 4 ".vt[0:3]"  -2.61524343 -7.4008334e-16 3.33303905 2.61524343 -7.4008334e-16 3.33303905
-		 -2.61524343 7.4008334e-16 -3.33303905 2.61524343 7.4008334e-16 -3.33303905;
-	setAttr -s 4 ".ed[0:3]"  0 1 0 0 2 0 1 3 0 2 3 0;
-	setAttr -ch 4 ".fc[0]" -type "polyFaces" 
-		f 4 0 2 -4 -2
-		mu 0 4 0 1 3 2;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".dn" yes;
 createNode transform -n "pPlane13" -p "group4";
 	setAttr ".t" -type "double3" 5.1152965945405802 6.0354243010657482 -4.5658559617527317 ;
 	setAttr ".r" -type "double3" 0 0 -90 ;
@@ -4236,17 +4344,15 @@ createNode mesh -n "pPlaneShape13" -p "|group4|pPlane13";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 10 ".pt";
-	setAttr ".pt[36]" -type "float3" 1.4901161e-08 0 0 ;
-	setAttr ".pt[37]" -type "float3" 1.4901161e-08 0 0 ;
-	setAttr ".pt[38]" -type "float3" 1.4901161e-08 0 0 ;
-	setAttr ".pt[39]" -type "float3" 1.4901161e-08 0 0 ;
-	setAttr ".pt[40]" -type "float3" 1.4901161e-08 0 0 ;
-	setAttr ".pt[41]" -type "float3" 1.4901161e-08 0 0 ;
-	setAttr ".pt[74]" -type "float3" 0.024879029 0.15361674 -0.14891961 ;
-	setAttr ".pt[75]" -type "float3" -0.015739873 0.13793154 -0.1505184 ;
-	setAttr ".pt[76]" -type "float3" -0.024879029 0.13793154 0.14691649 ;
-	setAttr ".pt[77]" -type "float3" 0.024265297 0.15361674 0.1505184 ;
+	setAttr -s 78 ".pt[6:77]" -type "float3"  0 -2.9802322e-08 0 0 -2.9802322e-08 
+		0 0 -2.9802322e-08 0 0 0 0 0 0 0 0 0 0 0 -2.9802322e-08 0 0 0 0 0 0 0 0 0 0 0 -2.9802322e-08 
+		0 0 0 0 0 0 0 0 0 -5.9604645e-08 0 -2.9802322e-08 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 -5.9604645e-08 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.024879038 0.15361673 -0.14891961 
+		-0.015739873 0.13793153 -0.1505184 -0.024879031 0.13793153 0.14691639 0.024265319 
+		0.15361673 0.15051842;
 	setAttr -s 78 ".vt[0:77]"  2.2899251 0 5.38746834 2.2899251 0 -0.22041035
 		 1.15392256 0 5.27046967 1.15392256 0 -0.53587008 0.1893549 0 5.19086933 0.1893549 0 -1.35706997
 		 -0.45910096 -0.29626369 5.11587954 -0.42751431 -0.29626369 -1.43206215 -0.45603776 -0.25423193 2.5851078
@@ -4958,7 +5064,7 @@ createNode mesh -n "polySurfaceShape12" -p "|group4|pPlane18";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
 createNode transform -n "pPlane19" -p "group4";
-	setAttr ".t" -type "double3" 1.7109392071545233 8.5306424085930512 3.8421947929727267 ;
+	setAttr ".t" -type "double3" 1.7109392071545233 8.5306424085930512 3.8421947929727263 ;
 	setAttr ".r" -type "double3" 90 -1.5902773407317584e-15 -89.999999999999929 ;
 	setAttr ".s" -type "double3" 0.52222223931146605 1 0.51111112783675616 ;
 createNode mesh -n "pPlaneShape19" -p "|group4|pPlane19";
@@ -4974,10 +5080,13 @@ createNode mesh -n "pPlaneShape19" -p "|group4|pPlane19";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 5 ".pt";
+	setAttr -s 8 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 0 -0.015540345 ;
+	setAttr ".pt[1]" -type "float3" 5.9604645e-08 -0.090529509 -0.013742078 ;
 	setAttr ".pt[4]" -type "float3" 0.056647602 -0.049081627 -0.03723019 ;
 	setAttr ".pt[6]" -type "float3" 0.056638759 -0.047555748 0.10311959 ;
 	setAttr ".pt[8]" -type "float3" 0 -0.025259694 0 ;
+	setAttr ".pt[11]" -type "float3" 0.070308931 -0.0061726719 -0.020959195 ;
 	setAttr ".pt[12]" -type "float3" 2.4590634e-07 0.029420666 -0.043056399 ;
 	setAttr ".pt[14]" -type "float3" 0 8.8817842e-16 -0.046944458 ;
 	setAttr -s 15 ".vt[0:14]"  -2.20816374 -0.72724777 3.31075573 2.1352005 2.47975111 3.32082963
@@ -5521,9 +5630,9 @@ createNode mesh -n "pCubeShape2" -p "|group4|pCube2";
 		 -0.21900643 -0.27854994 -4.58356142 -0.21900643 -0.48834926 4.61482239 -0.21900643 -0.50286472 5.25123358
 		 0.21900643 -0.5028649 5.25123358;
 	setAttr -s 42 ".ed[0:41]"  0 1 0 2 3 0 4 5 0 6 7 0 0 22 0 1 23 0 2 10 0
-		 3 11 0 4 19 0 5 18 0 6 13 0 7 12 0 8 1 0 9 0 0 8 9 1 10 14 0 9 21 1 11 15 0 10 11 1
-		 11 16 1 12 13 1 14 4 0 13 20 1 15 5 0 14 15 1 15 17 1 16 8 1 17 12 1 16 17 1 18 7 0
-		 17 18 1 19 6 0 18 19 1 20 14 1 19 20 1 21 10 1 20 21 1 22 2 0 21 22 1 23 3 0 22 23 1
+		 3 11 0 4 19 0 5 18 0 6 13 0 7 12 0 8 1 0 9 0 0 8 9 0 10 14 0 9 21 0 11 15 0 10 11 1
+		 11 16 1 12 13 0 14 4 0 13 20 0 15 5 0 14 15 1 15 17 1 16 8 0 17 12 0 16 17 0 18 7 0
+		 17 18 1 19 6 0 18 19 1 20 14 1 19 20 1 21 10 1 20 21 0 22 2 0 21 22 1 23 3 0 22 23 1
 		 23 16 1;
 	setAttr -s 19 -ch 76 ".fc[0:18]" -type "polyFaces" 
 		f 4 40 39 -2 -38
@@ -5568,7 +5677,7 @@ createNode mesh -n "pCubeShape2" -p "|group4|pCube2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pPipe1" -p "group4";
-	setAttr ".t" -type "double3" 4.8743690553475796 2.7189023845673734 7.7151375743757002 ;
+	setAttr ".t" -type "double3" 4.8743690553475796 2.7189023845673734 7.7151375743757011 ;
 	setAttr ".r" -type "double3" 0 0 -89.999999999999986 ;
 	setAttr ".s" -type "double3" 0.50606977708332179 0.50606977708332179 0.50606977708332179 ;
 createNode mesh -n "pPipeShape1" -p "|group4|pPipe1";
@@ -6040,13 +6149,13 @@ createNode mesh -n "pPipeShape1" -p "|group4|pPipe1";
 createNode transform -n "pPlane24" -p "group4";
 	setAttr ".t" -type "double3" 5.1270368987695569 2.7178032846547922 7.6956291545122335 ;
 	setAttr ".r" -type "double3" 0 0 -89.999999999999986 ;
-	setAttr ".s" -type "double3" 0.53154565658440878 0.47203920245436892 0.42846242886878916 ;
+	setAttr ".s" -type "double3" 0.53154565658440878 0.47203920245436898 0.4284624288687891 ;
 createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 226 ".uvst[0].uvsp[0:225]" -type "float2" 0 0 0.78464228 0
+	setAttr -s 248 ".uvst[0].uvsp[0:247]" -type "float2" 0 0 0.78464228 0
 		 0 1 0.78464228 1 0.78464222 0.16201322 0 0.16201322 0.78464222 0.32462528 0 0.32462528
 		 0.78464228 0.49719319 0 0.49719319 0.78464228 0.67971694 0 0.67971694 0.78464228
 		 0.86224067 0 0.86224067 0.11056765 1 0.11056766 0.86224067 0.11056766 0.67971694
@@ -6098,7 +6207,13 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		 0.46870613 0.67971694 0.39245272 0.67971694 0.36469558 0.67971694 0.34031224 0.67971694
 		 0.24557537 0.67971694 0.21489383 0.67971694 0.21489383 0.65391523 0.21489383 0.53654695
 		 0.21489383 0.49719316 0.21489382 0.46261528 0.21489382 0.35443103 0.21489382 0.32462528
-		 0.49844712 0.32462528 0.49844712 0.37298363 0.49844715 0.46524736;
+		 0.49844712 0.32462528 0.49844712 0.37298363 0.49844715 0.46524736 0.21489383 0.67971694
+		 0.65092391 0.86224067 0.65092391 0.86224067 0.65092385 0.16201322 0.65092385 0.16201322
+		 0.11056766 0.86224067 0.11056766 0.86224067 0.65092391 0.86224067 0.65092385 0.16201322
+		 0.65092385 0.16201322 0.65092391 0.86224067 0.21489383 0.49719316 0.36469558 0.67971694
+		 0.49844715 0.67971694 0.21489383 0.67971694 0.21489383 0.67971694 0.21489383 0.49719316
+		 0.21489383 0.49719316 0.36469558 0.67971694 0.36469558 0.67971694 0.49844715 0.67971694
+		 0.49844715 0.67971694;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -6282,7 +6397,7 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 185 187 -148 -189
 		mu 0 4 102 101 87 90
 		f 4 293 295 297 -299
-		mu 0 4 159 157 160 161
+		mu 0 4 159 226 160 161
 		f 4 301 303 -306 -307
 		mu 0 4 162 163 164 165
 		f 5 309 311 313 315 -317
@@ -6306,15 +6421,15 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 46 68 -70 -67
 		mu 0 4 35 42 55 54
 		f 4 -34 70 71 259
-		mu 0 4 141 41 56 140
+		mu 0 4 141 227 56 140
 		f 4 -44 61 72 -71
-		mu 0 4 41 30 52 56
+		mu 0 4 228 30 52 56
 		f 4 49 76 -78 -75
 		mu 0 4 37 38 58 57
 		f 6 34 78 -282 -279 -80 -77
-		mu 0 6 38 45 59 154 152 58
+		mu 0 6 38 229 59 154 152 58
 		f 4 -49 66 80 -79
-		mu 0 4 45 35 54 59
+		mu 0 4 230 35 54 59
 		f 4 39 197 -84 -82
 		mu 0 4 19 106 107 60
 		f 4 -45 84 85 -83
@@ -6328,11 +6443,11 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 -14 90 96 -95
 		mu 0 4 2 13 65 64
 		f 4 -16 89 100 -98
-		mu 0 4 16 15 67 66
+		mu 0 4 16 231 67 66
 		f 4 -12 98 101 -91
 		mu 0 4 13 11 68 65
 		f 4 -19 102 103 -90
-		mu 0 4 15 22 69 67
+		mu 0 4 232 22 69 67
 		f 4 -15 92 106 -105
 		mu 0 4 21 14 63 70
 		f 4 12 110 -112 -108
@@ -6348,7 +6463,7 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 -21 117 124 -123
 		mu 0 4 33 28 75 77
 		f 4 28 108 -126 -121
-		mu 0 4 34 41 78 76
+		mu 0 4 34 233 78 76
 		f 4 -23 122 126 -113
 		mu 0 4 40 33 77 73
 		f 4 25 130 -132 -129
@@ -6358,7 +6473,7 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 4 135 -137 -133
 		mu 0 4 4 6 82 81
 		f 4 29 127 -140 -138
-		mu 0 4 44 45 84 83
+		mu 0 4 44 234 84 83
 		f 4 6 140 -142 -136
 		mu 0 4 6 8 85 82
 		f 4 30 137 -145 -143
@@ -6370,7 +6485,7 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 23 128 -154 -149
 		mu 0 4 39 46 79 88
 		f 4 -35 150 154 -128
-		mu 0 4 45 38 89 84
+		mu 0 4 235 38 89 84
 		f 4 32 142 -157 -156
 		mu 0 4 42 43 86 91
 		f 4 8 157 -159 -141
@@ -6378,7 +6493,7 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 264 107 -263 265
 		mu 0 4 144 12 71 143
 		f 4 33 261 -162 -109
-		mu 0 4 41 141 142 78
+		mu 0 4 236 141 142 78
 		f 4 -38 97 165 228
 		mu 0 4 124 16 66 123
 		f 4 -223 224 223 -99
@@ -6432,7 +6547,7 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 -220 216 51 -219
 		mu 0 4 119 118 17 47
 		f 4 335 -338 -340 340
-		mu 0 4 179 174 180 181
+		mu 0 4 179 237 180 181
 		f 4 -212 213 212 -225
 		mu 0 4 121 115 116 122
 		f 4 215 -226 -227 -213
@@ -6454,7 +6569,7 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 -243 -244 240 254
 		mu 0 4 138 132 131 137
 		f 4 -344 345 -348 -349
-		mu 0 4 182 183 162 184
+		mu 0 4 182 183 238 184
 		f 4 -248 -249 245 -64
 		mu 0 4 29 135 134 53
 		f 4 -251 247 115 -250
@@ -6474,7 +6589,7 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 275 -266 -274 276
 		mu 0 4 150 144 143 149
 		f 4 351 353 -356 -357
-		mu 0 4 185 166 186 187
+		mu 0 4 185 239 186 187
 		f 4 -270 -271 267 -69
 		mu 0 4 42 147 146 55
 		f 4 -273 269 155 -272
@@ -6496,9 +6611,9 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 58 283 -291 -289
 		mu 0 4 50 125 155 158
 		f 4 60 292 -294 -292
-		mu 0 4 51 49 157 159
+		mu 0 4 51 49 240 159
 		f 4 62 294 -296 -293
-		mu 0 4 49 127 160 157
+		mu 0 4 49 127 160 241
 		f 4 235 296 -298 -295
 		mu 0 4 127 128 161 160
 		f 4 -66 291 298 -297
@@ -6538,9 +6653,9 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 -210 326 332 -331
 		mu 0 4 62 114 175 178
 		f 4 53 334 -336 -334
-		mu 0 4 47 48 174 179
+		mu 0 4 47 48 242 179
 		f 4 -221 336 337 -335
-		mu 0 4 48 120 180 174
+		mu 0 4 48 120 180 243
 		f 4 -222 338 339 -337
 		mu 0 4 120 119 181 180
 		f 4 218 333 -341 -339
@@ -6548,15 +6663,15 @@ createNode mesh -n "pPlaneShape24" -p "|group4|pPlane24";
 		f 4 -247 341 343 -343
 		mu 0 4 134 133 183 182
 		f 4 244 344 -346 -342
-		mu 0 4 133 52 162 183
+		mu 0 4 133 52 244 183
 		f 4 -65 346 347 -345
-		mu 0 4 52 53 184 162
+		mu 0 4 52 53 184 245
 		f 4 -246 342 348 -347
 		mu 0 4 53 134 182 184
 		f 4 266 350 -352 -350
-		mu 0 4 145 54 166 185
+		mu 0 4 145 54 246 185
 		f 4 69 352 -354 -351
-		mu 0 4 54 55 186 166
+		mu 0 4 54 55 186 247
 		f 4 -268 354 355 -353
 		mu 0 4 55 146 187 186
 		f 4 -269 349 356 -355
@@ -7136,13 +7251,13 @@ createNode mesh -n "pPipeShape2" -p "|group4|pPipe2";
 createNode transform -n "pPlane25" -p "group4";
 	setAttr ".t" -type "double3" 5.1270368987695569 2.7178032846547922 -7.0405707259207082 ;
 	setAttr ".r" -type "double3" 0 0 -89.999999999999986 ;
-	setAttr ".s" -type "double3" 0.53154565658440878 0.47203920245436892 0.42846242886878916 ;
+	setAttr ".s" -type "double3" 0.53154565658440878 0.47203920245436898 0.4284624288687891 ;
 createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 226 ".uvst[0].uvsp[0:225]" -type "float2" 0 0 0.78464228 0
+	setAttr -s 248 ".uvst[0].uvsp[0:247]" -type "float2" 0 0 0.78464228 0
 		 0 1 0.78464228 1 0.78464222 0.16201322 0 0.16201322 0.78464222 0.32462528 0 0.32462528
 		 0.78464228 0.49719319 0 0.49719319 0.78464228 0.67971694 0 0.67971694 0.78464228
 		 0.86224067 0 0.86224067 0.11056765 1 0.11056766 0.86224067 0.11056766 0.67971694
@@ -7194,7 +7309,13 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		 0.46870613 0.67971694 0.39245272 0.67971694 0.36469558 0.67971694 0.34031224 0.67971694
 		 0.24557537 0.67971694 0.21489383 0.67971694 0.21489383 0.65391523 0.21489383 0.53654695
 		 0.21489383 0.49719316 0.21489382 0.46261528 0.21489382 0.35443103 0.21489382 0.32462528
-		 0.49844712 0.32462528 0.49844712 0.37298363 0.49844715 0.46524736;
+		 0.49844712 0.32462528 0.49844712 0.37298363 0.49844715 0.46524736 0.21489383 0.67971694
+		 0.65092391 0.86224067 0.65092391 0.86224067 0.65092385 0.16201322 0.65092385 0.16201322
+		 0.11056766 0.86224067 0.11056766 0.86224067 0.65092391 0.86224067 0.65092385 0.16201322
+		 0.65092385 0.16201322 0.65092391 0.86224067 0.21489383 0.49719316 0.36469558 0.67971694
+		 0.49844715 0.67971694 0.21489383 0.67971694 0.21489383 0.67971694 0.21489383 0.49719316
+		 0.21489383 0.49719316 0.36469558 0.67971694 0.36469558 0.67971694 0.49844715 0.67971694
+		 0.49844715 0.67971694;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -7378,7 +7499,7 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 185 187 -148 -189
 		mu 0 4 102 101 87 90
 		f 4 293 295 297 -299
-		mu 0 4 159 157 160 161
+		mu 0 4 159 226 160 161
 		f 4 301 303 -306 -307
 		mu 0 4 162 163 164 165
 		f 5 309 311 313 315 -317
@@ -7402,15 +7523,15 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 46 68 -70 -67
 		mu 0 4 35 42 55 54
 		f 4 -34 70 71 259
-		mu 0 4 141 41 56 140
+		mu 0 4 141 227 56 140
 		f 4 -44 61 72 -71
-		mu 0 4 41 30 52 56
+		mu 0 4 228 30 52 56
 		f 4 49 76 -78 -75
 		mu 0 4 37 38 58 57
 		f 6 34 78 -282 -279 -80 -77
-		mu 0 6 38 45 59 154 152 58
+		mu 0 6 38 229 59 154 152 58
 		f 4 -49 66 80 -79
-		mu 0 4 45 35 54 59
+		mu 0 4 230 35 54 59
 		f 4 39 197 -84 -82
 		mu 0 4 19 106 107 60
 		f 4 -45 84 85 -83
@@ -7424,11 +7545,11 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 -14 90 96 -95
 		mu 0 4 2 13 65 64
 		f 4 -16 89 100 -98
-		mu 0 4 16 15 67 66
+		mu 0 4 16 231 67 66
 		f 4 -12 98 101 -91
 		mu 0 4 13 11 68 65
 		f 4 -19 102 103 -90
-		mu 0 4 15 22 69 67
+		mu 0 4 232 22 69 67
 		f 4 -15 92 106 -105
 		mu 0 4 21 14 63 70
 		f 4 12 110 -112 -108
@@ -7444,7 +7565,7 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 -21 117 124 -123
 		mu 0 4 33 28 75 77
 		f 4 28 108 -126 -121
-		mu 0 4 34 41 78 76
+		mu 0 4 34 233 78 76
 		f 4 -23 122 126 -113
 		mu 0 4 40 33 77 73
 		f 4 25 130 -132 -129
@@ -7454,7 +7575,7 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 4 135 -137 -133
 		mu 0 4 4 6 82 81
 		f 4 29 127 -140 -138
-		mu 0 4 44 45 84 83
+		mu 0 4 44 234 84 83
 		f 4 6 140 -142 -136
 		mu 0 4 6 8 85 82
 		f 4 30 137 -145 -143
@@ -7466,7 +7587,7 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 23 128 -154 -149
 		mu 0 4 39 46 79 88
 		f 4 -35 150 154 -128
-		mu 0 4 45 38 89 84
+		mu 0 4 235 38 89 84
 		f 4 32 142 -157 -156
 		mu 0 4 42 43 86 91
 		f 4 8 157 -159 -141
@@ -7474,7 +7595,7 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 264 107 -263 265
 		mu 0 4 144 12 71 143
 		f 4 33 261 -162 -109
-		mu 0 4 41 141 142 78
+		mu 0 4 236 141 142 78
 		f 4 -38 97 165 228
 		mu 0 4 124 16 66 123
 		f 4 -223 224 223 -99
@@ -7528,7 +7649,7 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 -220 216 51 -219
 		mu 0 4 119 118 17 47
 		f 4 335 -338 -340 340
-		mu 0 4 179 174 180 181
+		mu 0 4 179 237 180 181
 		f 4 -212 213 212 -225
 		mu 0 4 121 115 116 122
 		f 4 215 -226 -227 -213
@@ -7550,7 +7671,7 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 -243 -244 240 254
 		mu 0 4 138 132 131 137
 		f 4 -344 345 -348 -349
-		mu 0 4 182 183 162 184
+		mu 0 4 182 183 238 184
 		f 4 -248 -249 245 -64
 		mu 0 4 29 135 134 53
 		f 4 -251 247 115 -250
@@ -7570,7 +7691,7 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 275 -266 -274 276
 		mu 0 4 150 144 143 149
 		f 4 351 353 -356 -357
-		mu 0 4 185 166 186 187
+		mu 0 4 185 239 186 187
 		f 4 -270 -271 267 -69
 		mu 0 4 42 147 146 55
 		f 4 -273 269 155 -272
@@ -7592,9 +7713,9 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 58 283 -291 -289
 		mu 0 4 50 125 155 158
 		f 4 60 292 -294 -292
-		mu 0 4 51 49 157 159
+		mu 0 4 51 49 240 159
 		f 4 62 294 -296 -293
-		mu 0 4 49 127 160 157
+		mu 0 4 49 127 160 241
 		f 4 235 296 -298 -295
 		mu 0 4 127 128 161 160
 		f 4 -66 291 298 -297
@@ -7634,9 +7755,9 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 -210 326 332 -331
 		mu 0 4 62 114 175 178
 		f 4 53 334 -336 -334
-		mu 0 4 47 48 174 179
+		mu 0 4 47 48 242 179
 		f 4 -221 336 337 -335
-		mu 0 4 48 120 180 174
+		mu 0 4 48 120 180 243
 		f 4 -222 338 339 -337
 		mu 0 4 120 119 181 180
 		f 4 218 333 -341 -339
@@ -7644,15 +7765,15 @@ createNode mesh -n "pPlaneShape25" -p "|group4|pPlane25";
 		f 4 -247 341 343 -343
 		mu 0 4 134 133 183 182
 		f 4 244 344 -346 -342
-		mu 0 4 133 52 162 183
+		mu 0 4 133 52 244 183
 		f 4 -65 346 347 -345
-		mu 0 4 52 53 184 162
+		mu 0 4 52 53 184 245
 		f 4 -246 342 348 -347
 		mu 0 4 53 134 182 184
 		f 4 266 350 -352 -350
-		mu 0 4 145 54 166 185
+		mu 0 4 145 54 246 185
 		f 4 69 352 -354 -351
-		mu 0 4 54 55 186 166
+		mu 0 4 54 55 186 247
 		f 4 -268 354 355 -353
 		mu 0 4 55 146 187 186
 		f 4 -269 349 356 -355
@@ -11184,6 +11305,105 @@ createNode deleteComponent -n "deleteComponent38";
 	setAttr ".dc" -type "componentList" 1 "f[8]";
 createNode deleteComponent -n "deleteComponent39";
 	setAttr ".dc" -type "componentList" 1 "f[9]";
+createNode polySplitRing -n "polySplitRing113";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 3 "e[46:47]" "e[89]" "e[126]";
+	setAttr ".ix" -type "matrix" 0.58240242247383611 0 0 0 0 1 0 0 0 0 1 0 1.5418988351765068 10.14759947049431 -1.3873813824242165 1;
+	setAttr ".wt" 0.74727892875671387;
+	setAttr ".dr" no;
+	setAttr ".re" 46;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak120";
+	setAttr ".uopa" yes;
+	setAttr -s 42 ".tk";
+	setAttr ".tk[0]" -type "float3" 0.0056738853 0 4.7683716e-07 ;
+	setAttr ".tk[2]" -type "float3" 0.0056739151 -0.030354232 0 ;
+	setAttr ".tk[3]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".tk[4]" -type "float3" 0.0056738853 -0.030353764 0 ;
+	setAttr ".tk[5]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".tk[6]" -type "float3" 0.0056738853 -0.030353762 0 ;
+	setAttr ".tk[7]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".tk[8]" -type "float3" 0.0056739151 -0.030354232 0 ;
+	setAttr ".tk[9]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".tk[10]" -type "float3" 0.0056739151 -0.030354232 0 ;
+	setAttr ".tk[11]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".tk[12]" -type "float3" 0.0056739151 -0.030354232 0 ;
+	setAttr ".tk[14]" -type "float3" 0.0056739151 -0.030354232 0 ;
+	setAttr ".tk[15]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".tk[16]" -type "float3" 0.0056739151 -0.030354232 0 ;
+	setAttr ".tk[17]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".tk[18]" -type "float3" 0.0056739151 -0.030354232 9.5367432e-07 ;
+	setAttr ".tk[19]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".tk[20]" -type "float3" 0.0056739151 -0.030354232 9.5367432e-07 ;
+	setAttr ".tk[21]" -type "float3" 0 0 4.7683716e-07 ;
+	setAttr ".tk[22]" -type "float3" 0.0056739151 -0.030354232 0 ;
+	setAttr ".tk[23]" -type "float3" 0 1.4901161e-08 2.3841858e-07 ;
+	setAttr ".tk[24]" -type "float3" 0.0056739151 -0.030354232 0 ;
+	setAttr ".tk[25]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".tk[26]" -type "float3" 0.0056739151 -0.030354232 0 ;
+	setAttr ".tk[27]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".tk[28]" -type "float3" 0.0056739151 -0.030354232 0 ;
+	setAttr ".tk[30]" -type "float3" 0.0056739151 -0.030354232 9.5367432e-07 ;
+	setAttr ".tk[31]" -type "float3" 0 1.4901161e-08 4.7683716e-07 ;
+	setAttr ".tk[32]" -type "float3" 0.0056736469 0 0 ;
+	setAttr ".tk[36]" -type "float3" 0 0 4.7683716e-07 ;
+	setAttr ".tk[37]" -type "float3" 0 0 4.7683716e-07 ;
+	setAttr ".tk[38]" -type "float3" 1.1920929e-07 2.9802322e-08 0 ;
+	setAttr ".tk[56]" -type "float3" 1.1920929e-07 0 0 ;
+	setAttr ".tk[75]" -type "float3" 0 2.9802322e-08 0 ;
+createNode polySplitRing -n "polySplitRing114";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 3 "e[46:47]" "e[89]" "e[126]";
+	setAttr ".ix" -type "matrix" -0.58240242247383611 0 0 0 0 1 0 0 0 0 1 0 -1.4977396466626729 10.14759947049431 -1.3873813824242165 1;
+	setAttr ".wt" 0.78907167911529541;
+	setAttr ".dr" no;
+	setAttr ".re" 126;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing115";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 20 "e[0]" "e[3]" "e[6]" "e[9]" "e[12]" "e[15]" "e[19]" "e[21]" "e[24]" "e[27]" "e[30]" "e[33]" "e[36]" "e[39]" "e[42]" "e[45]" "e[48]" "e[51]" "e[54]" "e[135]";
+	setAttr ".ix" -type "matrix" -0.58240242247383611 0 0 0 0 1 0 0 0 0 1 0 -1.4977396466626729 10.14759947049431 -1.3873813824242165 1;
+	setAttr ".wt" 0.41461482644081116;
+	setAttr ".re" 3;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing116";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 20 "e[0]" "e[3]" "e[6]" "e[9]" "e[12]" "e[15]" "e[19]" "e[21]" "e[24]" "e[27]" "e[30]" "e[33]" "e[36]" "e[39]" "e[42]" "e[45]" "e[48]" "e[51]" "e[54]" "e[131]";
+	setAttr ".ix" -type "matrix" 0.58240242247383611 0 0 0 0 1 0 0 0 0 1 0 1.5418988351765068 10.14759947049431 -1.3873813824242165 1;
+	setAttr ".wt" 0.37866002321243286;
+	setAttr ".re" 3;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyExtrudeFace -n "polyExtrudeFace29";
+	setAttr ".ics" -type "componentList" 1 "f[15]";
+	setAttr ".ix" -type "matrix" 0.58240242247383611 0 0 0 0 1 0 0 0 0 1 0 1.5418988351765068 10.14759947049431 -1.3873813824242165 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -0.0015792752 9.8435221 -9.8863678 ;
+	setAttr ".rs" 775577913;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0.022079624465161096 9.7585888622980512 -9.9483364300316381 ;
+	setAttr ".cbx" -type "double3" 0.53036150548400407 9.919948500273744 -9.8243997768944311 ;
+createNode polyExtrudeFace -n "polyExtrudeFace30";
+	setAttr ".ics" -type "componentList" 1 "f[56]";
+	setAttr ".ix" -type "matrix" -0.58240242247383611 0 0 0 0 1 0 0 0 0 1 0 -1.4977396466626729 10.14759947049431 -1.3873813824242165 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -0.0015792752 9.8435221 -9.8863678 ;
+	setAttr ".rs" 487281316;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -0.53352005605279207 9.7557845829706586 -9.9483364300316381 ;
+	setAttr ".cbx" -type "double3" 0.02207956404867284 9.9312601505499281 -9.8432596401756811 ;
+createNode polyTweak -n "polyTweak121";
+	setAttr ".uopa" yes;
+	setAttr -s 3 ".tk";
+	setAttr ".tk[79]" -type "float3" 4.4408921e-16 0.033111759 0 ;
+	setAttr ".tk[97]" -type "float3" 2.220446e-16 0.033111759 0 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -11225,7 +11445,7 @@ connectAttr "polyExtrudeEdge44.out" "|group3|pPlane7|pPlaneShape7.i";
 connectAttr "polyExtrudeFace12.out" "|group3|pPlane8|pPlaneShape8.i";
 connectAttr "polyExtrudeFace5.out" "|group3|pPlane10|pPlaneShape10.i";
 connectAttr "deleteComponent12.og" "|group3|pPlane11|pPlaneShape11.i";
-connectAttr "polySplitRing94.out" "|group3|pPlane12|pPlaneShape12.i";
+connectAttr "polyExtrudeFace29.out" "|group3|pPlane12|pPlaneShape12.i";
 connectAttr "polyExtrudeFace14.out" "|group3|pPlane13|pPlaneShape13.i";
 connectAttr "polyExtrudeEdge21.out" "|group3|pPlane14|pPlaneShape14.i";
 connectAttr "deleteComponent39.og" "|group3|pPlane15|pPlaneShape15.i";
@@ -11247,6 +11467,7 @@ connectAttr "polySplitRing89.out" "|group3|pCube1|pCubeShape1.i";
 connectAttr "deleteComponent23.og" "|group3|pCube2|pCubeShape2.i";
 connectAttr "polyExtrudeFace28.out" "|group3|pPipe1|pPipeShape1.i";
 connectAttr "polyExtrudeFace25.out" "|group3|pPlane24|pPlaneShape24.i";
+connectAttr "polyExtrudeFace30.out" "|group4|pPlane12|pPlaneShape12.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -11900,6 +12121,20 @@ connectAttr "polyExtrudeFace27.out" "polyTweak118.ip";
 connectAttr "polyExtrudeFace15.out" "polyTweak119.ip";
 connectAttr "polyTweak119.out" "deleteComponent38.ig";
 connectAttr "deleteComponent38.og" "deleteComponent39.ig";
+connectAttr "polyTweak120.out" "polySplitRing113.ip";
+connectAttr "|group3|pPlane12|pPlaneShape12.wm" "polySplitRing113.mp";
+connectAttr "polySplitRing94.out" "polyTweak120.ip";
+connectAttr "polySurfaceShape17.o" "polySplitRing114.ip";
+connectAttr "|group4|pPlane12|pPlaneShape12.wm" "polySplitRing114.mp";
+connectAttr "polySplitRing114.out" "polySplitRing115.ip";
+connectAttr "|group4|pPlane12|pPlaneShape12.wm" "polySplitRing115.mp";
+connectAttr "polySplitRing113.out" "polySplitRing116.ip";
+connectAttr "|group3|pPlane12|pPlaneShape12.wm" "polySplitRing116.mp";
+connectAttr "polySplitRing116.out" "polyExtrudeFace29.ip";
+connectAttr "|group3|pPlane12|pPlaneShape12.wm" "polyExtrudeFace29.mp";
+connectAttr "polyTweak121.out" "polyExtrudeFace30.ip";
+connectAttr "|group4|pPlane12|pPlaneShape12.wm" "polyExtrudeFace30.mp";
+connectAttr "polySplitRing115.out" "polyTweak121.ip";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
