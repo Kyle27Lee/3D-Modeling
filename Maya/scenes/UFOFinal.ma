@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: UFOFinal.ma
-//Last modified: Tue, Feb 18, 2014 11:56:24 AM
+//Last modified: Wed, Feb 19, 2014 06:06:11 PM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,14 +12,14 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 46.051306685404029 12.154914998525451 33.274596687538285 ;
-	setAttr ".r" -type "double3" -10.538352729818852 -306.19999999998186 -2.6926211987451544e-15 ;
+	setAttr ".t" -type "double3" 18.614956032720304 19.820409208837802 38.719750346859669 ;
+	setAttr ".r" -type "double3" -23.138352729821293 -335.3999999999283 8.7451286025110178e-16 ;
 	setAttr ".rp" -type "double3" -1.1102230246251565e-16 1.7763568394002505e-15 0 ;
 	setAttr ".rpt" -type "double3" -4.2770020214153185e-15 -1.4143550644489346e-15 -3.0440012619751325e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 56.737045337346117;
+	setAttr ".coi" 45.914783355317539;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -197,7 +197,7 @@ createNode mesh -n "pPlaneShape4" -p "|group3|group6|transform25|pPlane4";
 	setAttr ".pt[51]" -type "float3" -0.71749306 0.39706942 -0.73794556 ;
 	setAttr ".pt[56]" -type "float3" 0 0 -0.05692625 ;
 	setAttr ".pt[57]" -type "float3" 0 0 -0.035919368 ;
-	setAttr ".pt[58]" -type "float3" 0.57289463 -0.37050363 0.51476383 ;
+	setAttr ".pt[58]" -type "float3" 0.57289463 -1.1357951 0.51476383 ;
 	setAttr ".pt[59]" -type "float3" 0.61635691 0 -1.3542414 ;
 createNode transform -n "transform26" -p "group6";
 createNode transform -n "pPlane5" -p "transform26";
@@ -223,7 +223,7 @@ createNode mesh -n "pPlaneShape5" -p "|group3|group6|transform26|pPlane5";
 	setAttr ".pt[50]" -type "float3" -0.021538742 -0.0022715498 0 ;
 	setAttr ".pt[56]" -type "float3" -0.75518423 0.31962743 -0.73794514 ;
 	setAttr ".pt[58]" -type "float3" -1.8076718 -0.19064327 0.81902111 ;
-	setAttr ".pt[59]" -type "float3" 0.60859108 -0.30837408 0.51476431 ;
+	setAttr ".pt[59]" -type "float3" 0.68885607 -1.0694449 0.51476431 ;
 createNode transform -n "transform27" -p "group6";
 createNode transform -n "pPlane6" -p "transform27";
 	setAttr ".t" -type "double3" 5.5352394696157958 0.96015332649703988 5.6109691647863063 ;
