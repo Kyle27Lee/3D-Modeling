@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: AlienFinal.ma
-//Last modified: Sun, Feb 23, 2014 02:18:57 PM
+//Last modified: Sun, Feb 23, 2014 02:21:03 PM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,8 +12,8 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 28.062165141861236 16.721474516134112 -5.5858769135861639 ;
-	setAttr ".r" -type "double3" -18.338352845297774 103.39999999894857 0 ;
+	setAttr ".t" -type "double3" 21.332456862515663 26.525026441395728 9.9530978727234345 ;
+	setAttr ".r" -type "double3" -40.538352845295378 65.799999998947399 -7.7589069624292524e-15 ;
 	setAttr ".rp" -type "double3" 8.8817841970012523e-16 1.7763568394002505e-15 -2.2204460492503131e-15 ;
 	setAttr ".rpt" -type "double3" -5.7210193917829755e-16 7.1843458157665279e-16 1.3911918523592239e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
