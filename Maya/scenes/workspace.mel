@@ -1,6 +1,6 @@
 //Maya 2014 x64 Project Definition
 
-workspace -fr "scene" "scenes";
+workspace -fr "scene" "";
 workspace -fr "3dPaintTextures" "sourceimages/3dPaintTextures";
 workspace -fr "eps" "data";
 workspace -fr "mel" "scripts";
@@ -24,10 +24,10 @@ workspace -fr "fluidCache" "cache/nCache/fluid";
 workspace -fr "clips" "clips";
 workspace -fr "templates" "assets";
 workspace -fr "DWG_DC" "data";
-workspace -fr "offlineEdit" "scenes/edits";
 workspace -fr "translatorData" "data";
-workspace -fr "DXF_DC" "data";
+workspace -fr "offlineEdit" "scenes/edits";
 workspace -fr "renderData" "renderData";
+workspace -fr "DXF_DC" "data";
 workspace -fr "SPF_DCE" "data";
 workspace -fr "furShadowMap" "renderData/fur/furShadowMap";
 workspace -fr "audio" "sound";
@@ -42,8 +42,8 @@ workspace -fr "movie" "movies";
 workspace -fr "Alembic" "data";
 workspace -fr "furImages" "renderData/fur/furImages";
 workspace -fr "IGES_DC" "data";
-workspace -fr "illustrator" "data";
 workspace -fr "furEqualMap" "renderData/fur/furEqualMap";
+workspace -fr "illustrator" "data";
 workspace -fr "images" "/Users/temp/Desktop/3D-Modeling/Maya/images";
 workspace -fr "SPF_DC" "data";
 workspace -fr "OBJ" "data";
