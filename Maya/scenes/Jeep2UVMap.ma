@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Jeep2UVMAP.ma
-//Last modified: Tue, Feb 25, 2014 11:52:02 AM
+//Last modified: Tue, Feb 25, 2014 02:20:57 PM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,8 +12,8 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -7.6843238940259804 7.8699327025667252 8.7566370494667698 ;
-	setAttr ".r" -type "double3" -25.538352728848761 -765.40000000008843 2.2648585432344541e-15 ;
+	setAttr ".t" -type "double3" 3.3768835059190865 7.7609617966293971 11.232710122800974 ;
+	setAttr ".r" -type "double3" -24.938352728847502 -699.40000000007683 0 ;
 	setAttr ".rp" -type "double3" -7.1054273576010019e-15 -8.8373752760162461e-14 0 ;
 	setAttr ".rpt" -type "double3" 6.3801781744892857e-14 1.9876638280763449e-14 2.1338626180868124e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -2449,7 +2449,7 @@ createNode mesh -n "polySurfaceShape25" -p "transform47";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.077560345525853336 0.72506269812583923 ;
+	setAttr ".pv" -type "double2" 0.07756034552585335 0.72506269812583923 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -2493,7 +2493,7 @@ createNode mesh -n "polySurfaceShape28" -p "transform44";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.54087024927139282 0.15870584209915251 ;
+	setAttr ".pv" -type "double2" 0.54087024927139282 0.15870584209915253 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -2523,7 +2523,7 @@ createNode mesh -n "polySurfaceShape30" -p "transform42";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.36734951590338061 0.32418423573816979 ;
+	setAttr ".pv" -type "double2" 0.36734951590338066 0.32418423573816979 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -2612,7 +2612,7 @@ createNode mesh -n "polySurfaceShape36" -p "transform36";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.35409331898535457 0.75819571441219735 ;
+	setAttr ".pv" -type "double2" 0.35409331898535457 0.75819571441219724 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -2627,7 +2627,7 @@ createNode mesh -n "polySurfaceShape37" -p "transform35";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.45071038757601101 0.64840495894032146 ;
+	setAttr ".pv" -type "double2" 0.45071038757601106 0.64840495894032146 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -2715,7 +2715,7 @@ createNode mesh -n "polySurfaceShape43" -p "transform29";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.23196750456286974 0.45086139250666901 ;
+	setAttr ".pv" -type "double2" 0.23196750456286977 0.45086139250666907 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -2745,7 +2745,7 @@ createNode mesh -n "polySurfaceShape45" -p "transform27";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.11992266674836477 0.47160859356323875 ;
+	setAttr ".pv" -type "double2" 0.11992266674836476 0.4716085935632387 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -2816,8 +2816,8 @@ createNode mesh -n "polySurfaceShape48" -p "polySurface25";
 	setAttr ".pt[1910]" -type "float3" 0.033980325 0 0 ;
 	setAttr ".pt[1913]" -type "float3" 0.033980325 0 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 7 ".lnk";
-	setAttr -s 7 ".slnk";
+	setAttr -s 6 ".lnk";
+	setAttr -s 6 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -6249,7 +6249,7 @@ createNode polyAutoProj -n "polyAutoProj15";
 	setAttr ".ics" -type "componentList" 1 "f[0]";
 	setAttr ".ix" -type "matrix" 6.1138722244511608e-17 -0.27534432671829073 3.0569361122255804e-17 0
 		 7.1110160116352503e-17 -1.4222032023270501e-16 -0.64050338120452288 0 0.27329055828215254 9.1024041065252706e-17 0 0
-		 0.91814184388412678 5.4531083224274646 -4.3249910406322751 1;
+		 0.91814184388412667 5.4531083224274646 -4.3249910406322751 1;
 	setAttr ".s" -type "double3" 14.856587339244308 14.856587339244308 14.856587339244308 ;
 	setAttr ".ps" 0.20000000298023224;
 	setAttr ".dl" yes;
@@ -6464,7 +6464,7 @@ createNode polyAutoProj -n "polyAutoProj62";
 	setAttr ".ics" -type "componentList" 1 "f[0]";
 	setAttr ".ix" -type "matrix" 6.1138722244511608e-17 -0.27534432671829073 3.0569361122255804e-17 0
 		 7.1110160116352503e-17 -1.4222032023270501e-16 -0.64050338120452288 0 0.27329055828215254 9.1024041065252706e-17 0 0
-		 0.91814184388412678 5.4531083224274646 -4.3249910406322751 1;
+		 0.91814184388412667 5.4531083224274646 -4.3249910406322751 1;
 	setAttr ".ps" 0.20000000298023224;
 	setAttr ".dl" yes;
 createNode polyAutoProj -n "polyAutoProj63";
@@ -6886,72 +6886,72 @@ createNode groupId -n "groupId48";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts25";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 57 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]";
+	setAttr ".ic" -type "componentList" 1 "f[0:56]";
 createNode groupId -n "groupId49";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts26";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 30 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]";
+	setAttr ".ic" -type "componentList" 1 "f[0:29]";
 createNode groupId -n "groupId50";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts27";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 54 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]";
+	setAttr ".ic" -type "componentList" 1 "f[0:53]";
 createNode groupId -n "groupId51";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts28";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 62 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]";
+	setAttr ".ic" -type "componentList" 1 "f[0:61]";
 createNode groupId -n "groupId52";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts29";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 41 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]";
+	setAttr ".ic" -type "componentList" 1 "f[0:40]";
 createNode groupId -n "groupId53";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts30";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 59 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]";
+	setAttr ".ic" -type "componentList" 1 "f[0:58]";
 createNode groupId -n "groupId54";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts31";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 80 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]";
+	setAttr ".ic" -type "componentList" 1 "f[0:79]";
 createNode groupId -n "groupId55";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts32";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 59 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]";
+	setAttr ".ic" -type "componentList" 1 "f[0:58]";
 createNode groupId -n "groupId56";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts33";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 2 "f[0]" "f[1]";
+	setAttr ".ic" -type "componentList" 1 "f[0:1]";
 createNode groupId -n "groupId57";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts34";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 29 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]";
+	setAttr ".ic" -type "componentList" 1 "f[0:28]";
 createNode groupId -n "groupId58";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts35";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 3 "f[0]" "f[1]" "f[2]";
+	setAttr ".ic" -type "componentList" 1 "f[0:2]";
 createNode groupId -n "groupId59";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts36";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 3 "f[0]" "f[1]" "f[2]";
+	setAttr ".ic" -type "componentList" 1 "f[0:2]";
 createNode groupId -n "groupId60";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts37";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 3 "f[0]" "f[1]" "f[2]";
+	setAttr ".ic" -type "componentList" 1 "f[0:2]";
 createNode groupId -n "groupId61";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts38";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 8 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]";
+	setAttr ".ic" -type "componentList" 1 "f[0:7]";
 createNode groupId -n "groupId62";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts39";
@@ -6961,42 +6961,42 @@ createNode groupId -n "groupId63";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts40";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 22 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]";
+	setAttr ".ic" -type "componentList" 1 "f[0:21]";
 createNode groupId -n "groupId64";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts41";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 10 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]";
+	setAttr ".ic" -type "componentList" 1 "f[0:9]";
 createNode groupId -n "groupId65";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts42";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 71 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]";
+	setAttr ".ic" -type "componentList" 1 "f[0:70]";
 createNode groupId -n "groupId66";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts43";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 19 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]";
+	setAttr ".ic" -type "componentList" 1 "f[0:18]";
 createNode groupId -n "groupId67";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts44";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 164 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]";
+	setAttr ".ic" -type "componentList" 1 "f[0:163]";
 createNode groupId -n "groupId68";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts45";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 199 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]";
+	setAttr ".ic" -type "componentList" 1 "f[0:198]";
 createNode groupId -n "groupId69";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts46";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 164 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]";
+	setAttr ".ic" -type "componentList" 1 "f[0:163]";
 createNode groupId -n "groupId70";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts47";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 199 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]";
+	setAttr ".ic" -type "componentList" 1 "f[0:198]";
 createNode polyTweakUV -n "polyTweakUV1";
 	setAttr ".uopa" yes;
 	setAttr -s 114 ".uvtk[0:113]" -type "float2" 0.080214284 -0.028062776
@@ -7083,33 +7083,12 @@ createNode polyTweakUV -n "polyTweakUV3";
 		 0.4266226 -0.38629791 0.41097632 -0.14250106 0.38176486 -0.13173838 0.39521021 -0.19314945
 		 0.41928288 -0.20121077 0.35096371 -0.12113515 0.37101999 -0.18586254 -0.32434049
 		 -0.0036374747 -0.34841013 -0.010170657 -0.34179044 -0.079166263 -0.3052085 -0.068617135
-		 -0.52783597 -0.27051923 -0.39669052 -0.24765052 -0.37149608 -0.62674552 nan nan -0.33182678
-		 -0.61952871 -0.37149608 -0.62674552 0.40143499 0.000983531 0.37628463 -0.026211467
-		 0.36223406 -0.078752451 0.40853658 -0.091664806 0.31816986 -0.044886727 0.33453923
-		 -0.077873208 -0.35600075 0.073180556 -0.3754881 0.088366136 -0.37800455 0.031862322
-		 -0.34032267 0.039877363 0.43956026 -0.38615802 0.4535116 -0.34886065 0.43610963 -0.20141138
-		 0.42773372 -0.14273205 0.44863126 -0.31321567 0.45100224 -0.3304131 0.42349282 -0.09192311
-		 0.42110902 -0.018293042 0.46876869 -0.38728786 -0.47595081 -0.52969909 -0.47580814
-		 -0.566948 -0.39644986 -0.566944 -0.3965331 -0.52963656 -0.47614166 -0.46085805 -0.39672241
-		 -0.46079844 -0.47622228 -0.38348117 -0.39681622 -0.38344967 -0.47618657 -0.33745292
-		 -0.39678577 -0.33744442 -0.16320953 0.2034781 -0.16320953 0.065832876 -0.085230462
-		 0.065832876 -0.085230462 0.20347804 -0.0080544874 0.20154905 -0.03516978 0.23737572
-		 -0.10782047 0.10773712 -0.1080735 0.10809556 0.47107485 -0.043903545 0.54007137 -0.037283782
-		 0.45934412 0.055987202 0.459613 0.056013029 0.14914545 -0.038382776 0.22651641 -0.039348952
-		 0.21505457 0.060567375 0.21535607 0.060563635 0.14707233 0.11146028 0.19485192 0.16650979
-		 0.095905595 0.23272039 0.096091874 0.23293492 -0.34767258 0.087161019 -0.21151449
-		 0.11991674 -0.26219353 0.2420999 -0.26166293 0.24222754 -0.49439391 -0.33745995 -0.49442893
-		 -0.38348573 -0.019618312 -0.27957869 -0.01960993 -0.23150887 -0.037776828 -0.2315052
-		 -0.037794542 -0.27957797 -0.49434787 -0.46088728 -0.49416098 -0.52973622 -0.019621762
-		 -0.14642702 -0.019623382 -0.082617827 -0.037777711 -0.082603909 -0.037784629 -0.14643164
-		 0.14329645 0.17337105 0.14329645 0.041161899 0.16123438 0.041161899 0.16123438 0.17337105
-		 -0.019619063 -0.30605271 -0.037807897 -0.30605555 -0.18109126 0.2034781 -0.18109126
-		 0.065832876 0.021834914 0.13507354 0.021834914 0.16175355 0.0038309093 0.16175355
-		 0.0038309093 0.13507354 0.10223456 0.066915885 0.10223456 0.16563839 0.10223456 0.16563839
-		 0.10223456 0.066915885 -0.019606618 -0.0088789007 -0.019642856 0.001475588 -0.037815835
-		 0.0014668253 -0.037790991 -0.0089289267 -0.47514129 -0.62337089 -0.49401417 -0.56705767
-		 -0.49335852 -0.62355745 -0.019603383 -0.040459685 -0.037772156 -0.040459476 0.29835576
-		 -0.030088248;
+		 -0.52783597 -0.27051923 -0.39669052 -0.24765052 -0.37149608 -0.62674552 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode polyTweakUV -n "polyTweakUV4";
 	setAttr ".uopa" yes;
 	setAttr -s 146 ".uvtk[0:145]" -type "float2" 0.33662769 -0.61409676 0.27481169
@@ -7304,7 +7283,9 @@ createNode polyTweakUV -n "polyTweakUV12";
 		 0.11186869 -0.076035149 0.41229677 0.05810621 0.16184379 -0.12812044 0.40404624 0.058037151
 		 0.21182419 -0.17510691 0.38010418 0.057624776 0.25498253 -0.21239518 0.34281436 -0.43028417
 		 -0.21629807 -0.42950597 -0.18656349 -0.23633535 0.29582718 -0.42921758 -0.14364302
-		 nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan nan;
+		 3.1318363e-27 1.4012985e-45 3.1317593e-27 1.4012985e-45 3.1310968e-27 1.4012985e-45
+		 3.1311276e-27 1.4012985e-45 3.2025873e-27 1.4012985e-45 3.2027414e-27 1.4012985e-45
+		 3.2028955e-27 1.4012985e-45 3.2033577e-27 1.4012985e-45;
 createNode polyTweakUV -n "polyTweakUV13";
 	setAttr ".uopa" yes;
 	setAttr -s 536 ".uvtk";
