@@ -1,4 +1,4 @@
-//Maya 2014 Project Definition
+//Maya 2014 x64 Project Definition
 
 workspace -fr "scene" "scenes";
 workspace -fr "3dPaintTextures" "sourceimages/3dPaintTextures";
@@ -28,16 +28,16 @@ workspace -fr "fluidCache" "cache/nCache/fluid";
 workspace -fr "clips" "clips";
 workspace -fr "templates" "assets";
 workspace -fr "DWG_DC" "data";
-workspace -fr "offlineEdit" "scenes/edits";
 workspace -fr "translatorData" "data";
-workspace -fr "DXF_DC" "data";
+workspace -fr "offlineEdit" "scenes/edits";
 workspace -fr "renderData" "renderData";
-workspace -fr "SPF_DCE" "data";
+workspace -fr "DXF_DC" "data";
 workspace -fr "ZPR_DCE" "data";
+workspace -fr "SPF_DCE" "data";
 workspace -fr "furShadowMap" "renderData/fur/furShadowMap";
 workspace -fr "audio" "sound";
-workspace -fr "IV_DC" "data";
 workspace -fr "scripts" "scripts";
+workspace -fr "IV_DC" "data";
 workspace -fr "STL_DCE" "data";
 workspace -fr "furAttrMap" "renderData/fur/furAttrMap";
 workspace -fr "FBX export" "data";
