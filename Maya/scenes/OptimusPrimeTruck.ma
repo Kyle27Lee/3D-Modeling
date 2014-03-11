@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: OptimusPrimeTruck.ma
-//Last modified: Tue, Mar 11, 2014 04:44:24 PM
+//Last modified: Tue, Mar 11, 2014 04:45:44 PM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,8 +12,8 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 18.880592392528964 10.648977245095967 39.451177483855659 ;
-	setAttr ".r" -type "double3" -14.738352714187192 31.399999999989777 -9.315657286057306e-16 ;
+	setAttr ".t" -type "double3" 1.1944335705615572 24.223862696115837 38.165627065364554 ;
+	setAttr ".r" -type "double3" -37.538352714187525 2.9999999999901408 1.5924597514758821e-15 ;
 	setAttr ".rp" -type "double3" -1.7763568394002505e-15 3.5527136788005009e-15 0 ;
 	setAttr ".rpt" -type "double3" 5.7196320298646542e-16 -7.9424429929644138e-15 -1.4162834364921836e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
