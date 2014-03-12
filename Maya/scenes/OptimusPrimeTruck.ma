@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: OptimusPrimeTruck.ma
-//Last modified: Tue, Mar 11, 2014 04:55:05 PM
+//Last modified: Tue, Mar 11, 2014 11:03:30 PM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,14 +12,14 @@ fileInfo "osv" "Mac OS X 10.9.1";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 34.431723316412253 22.170946888371375 49.673904916021371 ;
-	setAttr ".r" -type "double3" -21.338352714187934 39.799999999990327 -1.0349547347398957e-15 ;
+	setAttr ".t" -type "double3" 5.6386718918689187 11.581246704716769 2.6322142473315719 ;
+	setAttr ".r" -type "double3" -80.138352714290804 -181.40000000000211 0 ;
 	setAttr ".rp" -type "double3" -1.7763568394002505e-15 3.5527136788005009e-15 0 ;
 	setAttr ".rpt" -type "double3" 5.7196320298646542e-16 -7.9424429929644138e-15 -1.4162834364921836e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 58.408284018782766;
+	setAttr ".coi" 12.561518988110675;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -12293,7 +12293,7 @@ createNode mesh -n "pPlaneShape17" -p "pPlane17";
 	setAttr ".pt[14]" -type "float3" 0 0 -0.4730444 ;
 	setAttr ".pt[15]" -type "float3" 0 0 -0.4730444 ;
 	setAttr ".pt[16]" -type "float3" 0 0 -0.4730444 ;
-	setAttr ".pt[17]" -type "float3" -0.15633363 0 -0.4730444 ;
+	setAttr ".pt[17]" -type "float3" -0.17189667 0 -0.4730444 ;
 	setAttr ".pt[18]" -type "float3" 0.36826032 0 -0.4730444 ;
 	setAttr ".pt[19]" -type "float3" 0 0 -0.4730444 ;
 	setAttr ".pt[20]" -type "float3" 0 0 -0.4730444 ;
@@ -12432,7 +12432,7 @@ createNode mesh -n "pPlaneShape17" -p "pPlane17";
 	setAttr ".pt[154]" -type "float3" 0 0 -0.4730444 ;
 	setAttr ".pt[155]" -type "float3" 0 0 -0.16138034 ;
 	setAttr ".pt[156]" -type "float3" -0.15633363 0 -0.4730444 ;
-	setAttr ".pt[157]" -type "float3" -0.15633363 0 -0.4730444 ;
+	setAttr ".pt[157]" -type "float3" -0.17189667 0 -0.4730444 ;
 	setAttr ".pt[158]" -type "float3" 0 0 -0.4730444 ;
 	setAttr ".pt[159]" -type "float3" 0 0 -0.4730444 ;
 	setAttr ".pt[160]" -type "float3" -0.15633363 0 -0.4730444 ;
@@ -12546,7 +12546,7 @@ createNode mesh -n "pPlaneShape17" -p "pPlane17";
 	setAttr ".pt[269]" -type "float3" 0 0 -0.16138034 ;
 	setAttr ".pt[270]" -type "float3" 0 0 -0.4730444 ;
 	setAttr ".pt[271]" -type "float3" -0.15633363 0 -0.4730444 ;
-	setAttr ".pt[272]" -type "float3" -0.15633363 0 -0.4730444 ;
+	setAttr ".pt[272]" -type "float3" -0.17189667 0 -0.4730444 ;
 	setAttr ".pt[273]" -type "float3" 0 0 -0.4730444 ;
 	setAttr ".pt[274]" -type "float3" 0 0 -0.4730444 ;
 	setAttr ".pt[275]" -type "float3" 0 0 -0.4730444 ;
