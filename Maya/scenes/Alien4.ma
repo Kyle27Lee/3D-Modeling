@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Alien4.ma
-//Last modified: Sat, Mar 22, 2014 05:31:20 PM
+//Last modified: Sat, Mar 22, 2014 05:35:14 PM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,12 +12,12 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.1771147838369878 9.1298089726118068 9.3132451760621944 ;
-	setAttr ".r" -type "double3" -4.5383527297771078 388.9999999996914 0 ;
+	setAttr ".t" -type "double3" -4.8520520951293884 14.43097870485906 27.428322618724323 ;
+	setAttr ".r" -type "double3" -14.138352729772697 352.19999999958645 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 13.612737571480427;
+	setAttr ".coi" 31.739653147801022;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -237,21 +237,86 @@ createNode mesh -n "pCubeShape5" -p "pCube5";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 41 ".pt[121:161]" -type "float3"  0 -0.018951438 -0.1504371 
-		0 -0.018951438 -0.1504371 0 -0.00011114794 -0.14891225 0 0.020903155 -0.14721148 
-		0 0.020903155 -0.14721148 0 -0.018951438 -0.1504371 0 -0.00011114794 -0.14891225 
-		0 0.020903155 -0.14721148 0 -0.045162059 -0.11331494 0 -0.045162059 -0.11331494 0 
-		-0.0045242738 -0.11002593 0 0.040802754 -0.10635737 0 0.040802754 -0.10635737 0 -0.045162059 
-		-0.11331494 0 -0.0045242738 -0.11002593 0 0.040802754 -0.10635737 0 -0.090337358 
-		-0.073289834 0 -0.090337358 -0.073289834 0 -0.021906361 0.069015659 -0.18221834 0.07895337 
-		0.077178746 0 0.07895337 0.077178746 0 -0.090337358 -0.073289834 0 -0.021906361 0.069015659 
-		0.18221834 0.07895337 0.077178746 0 -0.080302007 -0.047999412 0 -0.080302007 -0.047999412 
-		0 -0.023219833 0.093387552 -0.19916201 0.26901349 0.11332817 -0.01203315 0.26901349 
-		0.11332817 0 -0.080302007 -0.047999412 0 -0.023219833 0.093387552 0.19916201 0.26901349 
-		0.11332817 -0.030672403 0.30318856 -0.34115568 -0.45862669 0.30318856 -0.34115568 
-		-0.52153599 0.32772383 -1.7518643e-05 -0.031510569 0.32772383 -1.7518643e-05 -0.45862669 
-		0.3550902 0.38048509 -0.030672403 0.3550902 0.38048509 0.45232028 0.30318856 -0.34115568 
-		0.52153599 0.32772383 -1.7518643e-05 0.45232028 0.3550902 0.38048509;
+	setAttr -s 68 ".pt";
+	setAttr ".pt[2]" -type "float3" 0.096033297 -0.050064888 -0.03246833 ;
+	setAttr ".pt[3]" -type "float3" -0.096033297 -0.050064888 -0.03246833 ;
+	setAttr ".pt[4]" -type "float3" 0.096033297 -0.050064888 0.055176966 ;
+	setAttr ".pt[5]" -type "float3" -0.096033297 -0.050064888 0.05517697 ;
+	setAttr ".pt[8]" -type "float3" 0 0 -0.14295207 ;
+	setAttr ".pt[9]" -type "float3" 0 0 -0.14295207 ;
+	setAttr ".pt[12]" -type "float3" -0.16114968 0.050064899 -0.073911697 ;
+	setAttr ".pt[13]" -type "float3" 0.16114968 0.050064895 -0.073911689 ;
+	setAttr ".pt[14]" -type "float3" 0.16114968 0.050064895 0.073911689 ;
+	setAttr ".pt[15]" -type "float3" -0.16114968 0.050064899 0.073911697 ;
+	setAttr ".pt[16]" -type "float3" 0 0 -0.18606953 ;
+	setAttr ".pt[17]" -type "float3" 0 0 -0.18606953 ;
+	setAttr ".pt[28]" -type "float3" -0.19921523 -0.053436909 -0.090907447 ;
+	setAttr ".pt[29]" -type "float3" 0.19921523 -0.053436909 -0.090907447 ;
+	setAttr ".pt[30]" -type "float3" 0.19921529 -0.053436909 0.090907447 ;
+	setAttr ".pt[31]" -type "float3" -0.19921529 -0.053436909 0.090907447 ;
+	setAttr ".pt[51]" -type "float3" 0 0 -0.12322138 ;
+	setAttr ".pt[52]" -type "float3" 0 0 -0.12463029 ;
+	setAttr ".pt[53]" -type "float3" -0.027254606 0.018703768 -0.0096641099 ;
+	setAttr ".pt[62]" -type "float3" 0.16369219 0 0 ;
+	setAttr ".pt[66]" -type "float3" -0.16369219 0 0 ;
+	setAttr ".pt[73]" -type "float3" -0.063843034 0.045459207 -0.083334781 ;
+	setAttr ".pt[91]" -type "float3" -0.063843034 0.045459207 0.083334774 ;
+	setAttr ".pt[93]" -type "float3" 0.06253776 0.053436909 -0.081127614 ;
+	setAttr ".pt[111]" -type "float3" 0.06253776 0.053436909 0.085541964 ;
+	setAttr ".pt[121]" -type "float3" 0 -0.018951438 -0.1504371 ;
+	setAttr ".pt[122]" -type "float3" 0 -0.018951438 -0.1504371 ;
+	setAttr ".pt[123]" -type "float3" 0 -0.00011114794 -0.14891225 ;
+	setAttr ".pt[124]" -type "float3" 0 0.020903155 -0.14721148 ;
+	setAttr ".pt[125]" -type "float3" 0 0.020903155 -0.14721148 ;
+	setAttr ".pt[126]" -type "float3" 0 -0.018951438 -0.1504371 ;
+	setAttr ".pt[127]" -type "float3" 0 -0.00011114794 -0.14891225 ;
+	setAttr ".pt[128]" -type "float3" 0 0.020903155 -0.14721148 ;
+	setAttr ".pt[129]" -type "float3" 0 -0.045162059 -0.11331494 ;
+	setAttr ".pt[130]" -type "float3" 0 -0.045162059 -0.11331494 ;
+	setAttr ".pt[131]" -type "float3" 0 -0.0045242738 -0.11002593 ;
+	setAttr ".pt[132]" -type "float3" 0 0.040802754 -0.10635737 ;
+	setAttr ".pt[133]" -type "float3" 0 0.040802754 -0.10635737 ;
+	setAttr ".pt[134]" -type "float3" 0 -0.045162059 -0.11331494 ;
+	setAttr ".pt[135]" -type "float3" 0 -0.0045242738 -0.11002593 ;
+	setAttr ".pt[136]" -type "float3" 0 0.040802754 -0.10635737 ;
+	setAttr ".pt[137]" -type "float3" 0 -0.090337358 -0.073289834 ;
+	setAttr ".pt[138]" -type "float3" 0 -0.090337358 -0.073289834 ;
+	setAttr ".pt[139]" -type "float3" 0 -0.021906365 0.069015659 ;
+	setAttr ".pt[140]" -type "float3" -0.18221834 0.07895337 0.077178746 ;
+	setAttr ".pt[141]" -type "float3" 0 0.07895337 0.077178746 ;
+	setAttr ".pt[142]" -type "float3" 0 -0.090337358 -0.073289834 ;
+	setAttr ".pt[143]" -type "float3" 0 -0.021906365 0.069015659 ;
+	setAttr ".pt[144]" -type "float3" 0.18221834 0.07895337 0.077178746 ;
+	setAttr ".pt[145]" -type "float3" 0 0.14236823 -0.047999412 ;
+	setAttr ".pt[146]" -type "float3" 0 0.14236823 -0.047999412 ;
+	setAttr ".pt[147]" -type "float3" 0 0.19945043 0.093387552 ;
+	setAttr ".pt[148]" -type "float3" -0.19916201 0.49168375 0.11332817 ;
+	setAttr ".pt[149]" -type "float3" -0.01203315 0.49168375 0.11332817 ;
+	setAttr ".pt[150]" -type "float3" 0 0.14236823 -0.047999412 ;
+	setAttr ".pt[151]" -type "float3" 0 0.19945043 0.093387552 ;
+	setAttr ".pt[152]" -type "float3" 0.19916201 0.49168375 0.11332817 ;
+	setAttr ".pt[153]" -type "float3" -0.030672403 0.52585882 -0.34115568 ;
+	setAttr ".pt[154]" -type "float3" -0.45862669 0.52585882 -0.34115568 ;
+	setAttr ".pt[155]" -type "float3" -0.52153599 0.55039406 -1.7518643e-05 ;
+	setAttr ".pt[156]" -type "float3" -0.031510569 0.55039406 -1.7518643e-05 ;
+	setAttr ".pt[157]" -type "float3" -0.45862669 0.57776034 0.38048509 ;
+	setAttr ".pt[158]" -type "float3" -0.030672403 0.57776034 0.38048509 ;
+	setAttr ".pt[159]" -type "float3" 0.45232028 0.52585882 -0.34115568 ;
+	setAttr ".pt[160]" -type "float3" 0.52153599 0.55039406 -1.7518643e-05 ;
+	setAttr ".pt[161]" -type "float3" 0.45232028 0.57776034 0.38048509 ;
+createNode transform -n "pCube6";
+	setAttr ".t" -type "double3" 3.0560409907033041 8.7545073148952781 -0.071455684720955981 ;
+	setAttr ".r" -type "double3" 0 0 -90 ;
+	setAttr ".s" -type "double3" 0.65669445323451259 0.93266553174384315 0.65669445323451259 ;
+createNode mesh -n "pCubeShape6" -p "pCube6";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
@@ -720,13 +785,18 @@ createNode polyTweak -n "polyTweak16";
 		 0.15122131 -0.0040715784 -0.095429838 0.15122131 0.074641526 -0.0063822325 0.15122131
 		 0.074641526 0.094117604 0.15122131 -0.074641526 0.10851984 0.15122131 -0.0040715784
 		 0.094117604 0.15122131 0.074641526;
+createNode polyCube -n "polyCube6";
+	setAttr ".w" 0.64220769768283081;
+	setAttr ".h" 3.9092249645273447;
+	setAttr ".d" 0.89631260531819379;
+	setAttr ".cuv" 4;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
 	setAttr -s 2 ".st";
 select -ne :initialShadingGroup;
-	setAttr -s 7 ".dsm";
+	setAttr -s 8 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -759,6 +829,7 @@ connectAttr "polyCube4.out" "|group1|pCube4|pCubeShape4.i";
 connectAttr "AlienLayout.di" "|group2|pCube3.do";
 connectAttr "AlienLayout.di" "|group2|pCube4.do";
 connectAttr "polyExtrudeFace6.out" "pCubeShape5.i";
+connectAttr "polyCube6.out" "pCubeShape6.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -837,5 +908,6 @@ connectAttr "|group1|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|group2|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|group2|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape6.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of Alien4.ma
