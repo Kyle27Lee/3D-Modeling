@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Jeep2.ma
-//Last modified: Tue, Mar 25, 2014 09:51:21 AM
+//Last modified: Tue, Mar 25, 2014 09:53:01 AM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,8 +12,8 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.1593011575960475 5.2694605937395336 -24.924310536845645 ;
-	setAttr ".r" -type "double3" -8.1383527282221415 -1965.3999999988357 0 ;
+	setAttr ".t" -type "double3" -16.228279404390324 8.7018444126173229 7.0661043087437214 ;
+	setAttr ".r" -type "double3" -17.138352728221079 -1860.5999999988264 3.2394890626986067e-15 ;
 	setAttr ".rp" -type "double3" 7.7715611723760958e-16 0 1.7763568394002505e-15 ;
 	setAttr ".rpt" -type "double3" 2.2555695117694254e-15 -1.3706893110566245e-15 -2.5616709808373186e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -4974,7 +4974,7 @@ createNode mesh -n "pPlaneShape46" -p "pPlane46";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.15089731637045001 0.89395185438453717 ;
+	setAttr ".pv" -type "double2" 0.15089733898639679 0.8939518928527832 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
