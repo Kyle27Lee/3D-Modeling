@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Jeep2.ma
-//Last modified: Fri, Apr 04, 2014 09:51:24 AM
+//Last modified: Fri, Apr 04, 2014 10:28:36 AM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,14 +12,14 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.218938470650116 8.9801308927247838 12.236063222054703 ;
-	setAttr ".r" -type "double3" -21.938352727972664 -3195.3999999983021 -2.233453888003336e-15 ;
+	setAttr ".t" -type "double3" 15.577928473595353 15.758224487648125 17.775688409536102 ;
+	setAttr ".r" -type "double3" -27.338352728055135 -3193.3999999981634 0 ;
 	setAttr ".rp" -type "double3" 7.7715611723760958e-16 0 1.7763568394002505e-15 ;
 	setAttr ".rpt" -type "double3" 2.2555695117694254e-15 -1.3706893110566245e-15 -2.5616709808373186e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 20.869587909110344;
+	setAttr ".coi" 26.962030041207036;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
