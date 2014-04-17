@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Alien4UV.ma
-//Last modified: Thu, Apr 17, 2014 02:11:56 PM
+//Last modified: Thu, Apr 17, 2014 02:26:34 PM
 //Codeset: 1252
 requires maya "2014";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeType "mentalrayRenderPass"
@@ -90,15 +90,15 @@ fileInfo "osv" "Microsoft Windows 7 Enterprise Edition, 64-bit Windows 7 Service
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 17.951654513346405 16.404376695578168 28.901393522372448 ;
-	setAttr ".r" -type "double3" -15.938352732068671 30.599999999997625 -9.2378278905883637e-016 ;
+	setAttr ".t" -type "double3" -8.6418918440257588 10.474110335775293 -7.0441916052233378 ;
+	setAttr ".r" -type "double3" -3.3383527320649566 -135.39999999998253 0 ;
 	setAttr ".rp" -type "double3" 8.8817841970012523e-016 -1.7763568394002505e-015 0 ;
 	setAttr ".rpt" -type "double3" 7.7401081680092614e-016 -2.2531159730457767e-016 
 		8.6102826819064923e-017 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 33.744996503384691;
+	setAttr ".coi" 11.003457993952676;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -120,7 +120,7 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 createNode transform -s -n "front";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.00014386970157120871 4.4606845773134403 100.1000601946007 ;
+	setAttr ".t" -type "double3" -1.9682005446878497 9.6828547644057394 100.1000601946007 ;
 createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
@@ -349,8 +349,6 @@ createNode mesh -n "pCubeShape5" -p "transform3";
 	setAttr ".pt[286]" -type "float3" 0 0 0.040304702 ;
 	setAttr ".pt[287]" -type "float3" 0 0 0.040304702 ;
 createNode joint -n "Root";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 14;
 	setAttr ".t" -type "double3" 0 4.9025623709048194 -0.65489585833648023 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -362,8 +360,6 @@ createNode joint -n "Pelvis1" -p "Root";
 	setAttr ".dla" yes;
 	setAttr ".radi" 0.75;
 createNode joint -n "Hip_R" -p "Pelvis1";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 30;
 	setAttr ".t" -type "double3" -0.283 0 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -393,8 +389,6 @@ createNode joint -n "Toe_R" -p "Ankle_R";
 	setAttr ".dla" yes;
 	setAttr ".radi" 0.5;
 createNode joint -n "Hip_L" -p "Pelvis1";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" 0.28251805807909114 0 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -424,8 +418,6 @@ createNode joint -n "Toe_L" -p "Ankle_L";
 	setAttr ".dla" yes;
 	setAttr ".radi" 0.5;
 createNode joint -n "LowerBack" -p "Root";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -444,8 +436,6 @@ createNode joint -n "UpperBack" -p "MidBack";
 	setAttr ".dla" yes;
 	setAttr ".radi" 0.5;
 createNode joint -n "Clav_L" -p "UpperBack";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" 2.1780799741760122 -0.11083092230434788 -0.29113577059993118 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -473,8 +463,6 @@ createNode joint -n "Wrist_L" -p "Elbow_L";
 	setAttr ".dla" yes;
 	setAttr ".radi" 0.5;
 createNode joint -n "Clav_R" -p "UpperBack";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 30;
 	setAttr ".t" -type "double3" 2.1780799741760122 -0.11083092230434766 0.2910000000000047 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -502,8 +490,6 @@ createNode joint -n "Wrist_R" -p "Elbow_R";
 	setAttr ".dla" yes;
 	setAttr ".radi" 0.5;
 createNode joint -n "Neck1" -p "UpperBack";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
 	setAttr ".t" -type "double3" 2.1827559971184973 1.1102230246251565e-016 4.6632031829586346e-015 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -670,6 +656,11 @@ createNode transform -n "Clav_L_CTRL" -p "Clav_L_GRP";
 createNode nurbsCurve -n "Clav_L_CTRLShape" -p "Clav_L_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.42052071399047586 -0.02871694524176327 
+		0 0.23388075040178569 -0.29977890702984666 0 0.88828221479404501 -0.02871694524176327 
+		0 1.1593441765821331 0.62568451915050183 0 0.88828221479404523 1.2800859835427607 
+		0 0.23388075040178591 1.5511479453308459 0 -0.42052071399047453 1.2800859835427607 
+		0 -0.69158267577856103 0.62568451915050183 0 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Shoulder_L_GRP" -p "Clav_L_CTRL";
 	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999978 1 ;
 	setAttr ".rp" -type "double3" 1.2169649467765746 8.690304210122596 -0.56539001454094662 ;
@@ -683,6 +674,13 @@ createNode transform -n "Shoulder_L_CTRL" -p "Shoulder_L_GRP";
 createNode nurbsCurve -n "Shoulder_L_CTRLShape" -p "Shoulder_L_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.32973191938507118 -0.41596152277280041 
+		-0.0027919828597603447 0.17920657818749852 -0.5751844082034232 -0.0078770451703988886 
+		0.70205243678718299 -0.47970656835846448 -0.012254370867131104 0.69342430599787808 
+		0.18326063469547194 -0.012103766283995121 0.37123994407308691 0.78032344687947663 
+		-0.0064800173277425044 -0.31881640841047232 0.97382746380988383 0.0055649611089850781 
+		-0.51877739476359719 0.66151488660814639 0.00094504286651309055 -0.54306073091070495 
+		0 0 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Elbow_L_GRP" -p "Shoulder_L_CTRL";
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999978 0.99999999999999989 ;
 	setAttr ".rp" -type "double3" 2.9984688568332203 8.7718008514618724 -0.56539001454094606 ;
@@ -696,6 +694,13 @@ createNode transform -n "Elbow_L_CTRL" -p "Elbow_L_GRP";
 createNode nurbsCurve -n "Elbow_L_CTRLShape" -p "Elbow_L_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.57862513709638197 -0.48121596870030103 
+		0.0022812100363489574 0 -0.63461462824281156 0 0.52667154161487373 -0.51369297644501444 
+		-0.0013301504245886164 0.63461413639304998 0.12340948159155296 -5.6379719014953977e-005 
+		0.44873896095554988 0.78649257247911919 -0.00015430238888325398 -2.0968331599924284e-006 
+		1.1607287339752057 -0.00024035564422186795 -0.44874165318578063 0.78649257247912008 
+		-0.00015430238888325398 -0.63461512009255383 0.12340948159155296 -5.6379719014953977e-005 
+		0 0 0 0 0 0 0 0 0;
 createNode transform -n "Wrist_L_GRP" -p "Elbow_L_CTRL";
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1 ;
 	setAttr ".rp" -type "double3" 4.4989064341233123 8.7718008514618635 -0.56539001454094628 ;
@@ -707,6 +712,13 @@ createNode transform -n "Wrist_L_CTRL" -p "Wrist_L_GRP";
 createNode nurbsCurve -n "Wrist_L_CTRLShape" -p "Wrist_L_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.51991862599526506 -0.51991862599526328 
+		-1.1102230246251565e-016 8.8817841970012523e-016 -0.73527597221289298 -1.1102230246251565e-016 
+		0.51991862599526906 -0.51991862599526328 -1.1102230246251565e-016 0.73527597221289298 
+		0 -1.1102230246251565e-016 0.5199186259952695 0.51991862599526151 -1.1102230246251565e-016 
+		8.8817841970012523e-016 0.73527597221289387 -1.1102230246251565e-016 -0.51991862599526328 
+		0.5199186259952624 -1.1102230246251565e-016 -0.73527597221288943 0 -1.1102230246251565e-016 
+		0 0 0 0 0 0 0 0 0;
 createNode transform -n "Clav_R_GRP" -p "UpperBack_CTRL";
 	setAttr ".rp" -type "double3" 1.2193823569033395 8.5509508996635955 0.54406493603210004 ;
 	setAttr ".rpt" -type "double3" 7.4131707776440985 -8.0068859636314613 -0.25306493603209013 ;
@@ -717,6 +729,13 @@ createNode transform -n "Clav_R_CTRL" -p "Clav_R_GRP";
 createNode nurbsCurve -n "Clav_R_CTRLShape" -p "Clav_R_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.38620851213925156 -0.023763016697889938 
+		-1.4432899320127035e-015 0.25654566639155196 -0.29000051471732746 -1.4432899320127035e-015 
+		0.89929984492235449 -0.023763016697889938 -1.4432899320127035e-015 1.1655373429417912 
+		0.61899116183291447 -1.4432899320127035e-015 0.89929984492235471 1.2617453403637136 
+		-1.4432899320127035e-015 0.25654566639155196 1.5279828383831502 -1.4432899320127035e-015 
+		-0.38620851213925045 1.2617453403637144 -1.4432899320127035e-015 -0.65244601015868775 
+		0.61899116183291447 -1.4432899320127035e-015 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Shoulder_R_GRP" -p "Clav_R_CTRL";
 	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999978 1 ;
 	setAttr ".rp" -type "double3" 1.1131604725415003 8.6967869195059482 0.52471752405582572 ;
@@ -730,6 +749,13 @@ createNode transform -n "Shoulder_R_CTRL" -p "Shoulder_R_GRP";
 createNode nurbsCurve -n "Shoulder_R_CTRLShape" -p "Shoulder_R_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.35217993792621793 -0.47018052544076738 
+		-0.0024110084694521916 0.10932624451004913 -0.58564049412570007 -0.0066681366396927899 
+		0.61711353086668219 -0.53353207882386755 -0.010771756749361261 0.5545340071197995 
+		0.20772623619592601 -0.0096794270991821252 0.30135132562785427 0.76024513496229673 
+		-0.0052601069550423096 -0.44990861155504114 0.93811797512808415 0.0078531840264548514 
+		-0.47252843249610699 0.73149903724550303 0.00018744140283433186 -0.54306155699434377 
+		0 0 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Elbow_R_GRP" -p "Shoulder_R_CTRL";
 	setAttr ".s" -type "double3" 1 1 0.99999999999999989 ;
 	setAttr ".rp" -type "double3" 2.8945302562504698 8.7755640550264502 0.52471752405582606 ;
@@ -742,6 +768,13 @@ createNode transform -n "Elbow_R_CTRL" -p "Elbow_R_GRP";
 createNode nurbsCurve -n "Elbow_R_CTRLShape" -p "Elbow_R_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.62112080647866463 -0.47500670714824622 
+		0.0032952650484502355 0 -0.61286502458137271 1.1102230246251565e-016 0.58382228224421873 
+		-0.50917186344702081 -0.0025907717024400423 0.61129439433402144 0.11040784786314894 
+		-2.3041532182910274e-005 0.42800239398961315 0.81004661342547735 -7.8612286272594645e-005 
+		-0.0068368610767572946 1.0934638917503809 -0.00010029843420955586 -0.43871963567750161 
+		0.81004661342547823 -7.8612286272594645e-005 -0.61443565482874973 0.11040784786314894 
+		-2.3041532182910274e-005 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Wrist_R_GRP" -p "Elbow_R_CTRL";
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
 	setAttr ".rp" -type "double3" 4.3949678335405578 8.7755640550264538 0.52471752405582639 ;
@@ -753,6 +786,13 @@ createNode transform -n "Wrist_R_CTRL" -p "Wrist_R_GRP";
 createNode nurbsCurve -n "Wrist_R_CTRLShape" -p "Wrist_R_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.47895699210596465 -0.47895699210595666 
+		-2.2204460492503131e-016 -8.8817841970012523e-016 -0.67734747402966988 -2.2204460492503131e-016 
+		0.47895699210596154 -0.47895699210595666 -2.2204460492503131e-016 0.67734747402967743 
+		3.5527136788005009e-015 -2.2204460492503131e-016 0.47895699210596199 0.47895699210596909 
+		-2.2204460492503131e-016 -8.8817841970012523e-016 0.67734747402968676 -2.2204460492503131e-016 
+		-0.47895699210596376 0.47895699210596998 -2.2204460492503131e-016 -0.67734747402967876 
+		3.5527136788005009e-015 -2.2204460492503131e-016 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Neck1_GRP" -p "UpperBack_CTRL";
 	setAttr ".rp" -type "double3" 8.6372291574899211 0.65489585833648023 9.3730879392169102e-015 ;
 	setAttr ".sp" -type "double3" 8.6372291574899211 0.65489585833648023 9.3730879392169102e-015 ;
@@ -771,6 +811,13 @@ createNode transform -n "Neck2_CTRL" -p "Neck2_GRP";
 createNode nurbsCurve -n "Neck2_CTRLShape" -p "Neck2_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.47575502677949366 -0.25359027462557471 
+		1.3423765805107892e-016 0.1889942114019707 -0.46049473699032939 1.3423765805107892e-016 
+		0.85374344958343507 -0.25359027462557515 1.3423765805107892e-016 1.1290915996153839 
+		0.24592128453092843 1.3423765805107892e-016 0.85374344958343507 0.74543284368743312 
+		1.3423765805107892e-016 0.1889942114019707 0.95233730605218847 1.3423765805107892e-016 
+		-0.47575502677949366 0.74543284368743334 1.3423765805107892e-016 -0.75110317681144245 
+		0.24592128453092843 1.3423765805107892e-016 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Head_GRP" -p "Neck2_CTRL";
 	setAttr ".rp" -type "double3" 10.210709701086476 -0.65489585833648067 -1.0239400998620841e-014 ;
 	setAttr ".rpt" -type "double3" 0 1.3097917166729613 2.0398600385573018e-014 ;
@@ -781,6 +828,13 @@ createNode transform -n "Head_CTRL" -p "Head_GRP";
 createNode nurbsCurve -n "Head_CTRLShape" -p "Head_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.062372069871139857 -0.22705983056594259 
+		-0.048068625199157007 0 -0.77142443380868009 7.6818387269785369e-017 0.46359755053072682 
+		-0.5148149285290895 -0.059204716006881992 0.62097043600003232 0 -6.2047410809288109e-016 
+		0.76823199602549508 0.16499458147094037 -7.8404811326710307e-016 0.69771358349826684 
+		0.44643844241721542 -7.416122231117804e-016 0.50978698115616616 0.4294902603668298 
+		-5.5214812764033367e-016 0.84741105322131816 0 -8.4673373634734876e-016 0 0 0 0 0 
+		0 0 0 0;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 	setAttr ".rvb" 3;
@@ -932,9 +986,9 @@ createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	setAttr ".cdl" 1;
-	setAttr -s 3 ".dli[1:2]"  1 2;
-	setAttr -s 3 ".dli";
+	setAttr ".cdl" 3;
+	setAttr -s 5 ".dli[1:4]"  1 2 0 3;
+	setAttr -s 4 ".dli";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
@@ -3640,6 +3694,9 @@ createNode transformGeometry -n "transformGeometry23";
 createNode makeNurbCircle -n "makeNurbCircle24";
 createNode transformGeometry -n "transformGeometry24";
 	setAttr ".txf" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 10.210709701086476 -0.65489585833648056 -1.0239400998620841e-014 1;
+createNode displayLayer -n "Joints";
+	setAttr ".dt" 1;
+	setAttr ".do" 3;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3689,10 +3746,12 @@ connectAttr "groupParts1.og" "pCubeShape5.i";
 connectAttr "groupId1.id" "pCubeShape5.iog.og[2].gid";
 connectAttr ":initialShadingGroup.mwc" "pCubeShape5.iog.og[2].gco";
 connectAttr "Root_CTRL.r" "Root.r";
+connectAttr "Joints.di" "Root.do";
 connectAttr "Root.s" "Pelvis1.is";
 connectAttr "Pelvis1_CTRL.r" "Pelvis1.r";
 connectAttr "Pelvis1.s" "Hip_R.is";
 connectAttr "Hip_R_CTRL.r" "Hip_R.r";
+connectAttr "Joints.di" "Hip_R.do";
 connectAttr "Hip_R.s" "Knee_R.is";
 connectAttr "Knee_R_CTRL.r" "Knee_R.r";
 connectAttr "Knee_R.s" "Ankle_R.is";
@@ -3701,6 +3760,7 @@ connectAttr "Ankle_R.s" "Toe_R.is";
 connectAttr "Toe_R_CTRL.r" "Toe_R.r";
 connectAttr "Pelvis1.s" "Hip_L.is";
 connectAttr "Hip_L_CTRL.r" "Hip_L.r";
+connectAttr "Joints.di" "Hip_L.do";
 connectAttr "Hip_L.s" "Knee_L.is";
 connectAttr "Knee_L_CTRL.r" "Knee_L.r";
 connectAttr "Knee_L.s" "Ankle_L.is";
@@ -3709,12 +3769,16 @@ connectAttr "Ankle_L.s" "Toe_L.is";
 connectAttr "Toe_L_CTRL.r" "Toe_L.r";
 connectAttr "Root.s" "LowerBack.is";
 connectAttr "LowerBack_CTRL.r" "LowerBack.r";
+connectAttr "Joints.di" "LowerBack.do";
 connectAttr "LowerBack.s" "MidBack.is";
 connectAttr "MidBack_CTRL.r" "MidBack.r";
+connectAttr "Joints.di" "MidBack.do";
 connectAttr "MidBack.s" "UpperBack.is";
 connectAttr "UpperBack_CTRL.r" "UpperBack.r";
+connectAttr "Joints.di" "UpperBack.do";
 connectAttr "UpperBack.s" "Clav_L.is";
 connectAttr "Clav_L_CTRL.r" "Clav_L.r";
+connectAttr "Joints.di" "Clav_L.do";
 connectAttr "Clav_L.s" "Shoulder_L.is";
 connectAttr "Shoulder_L_CTRL.r" "Shoulder_L.r";
 connectAttr "Shoulder_L.s" "Elbow_L.is";
@@ -3723,16 +3787,20 @@ connectAttr "Elbow_L.s" "Wrist_L.is";
 connectAttr "Wrist_L_CTRL.r" "Wrist_L.r";
 connectAttr "UpperBack.s" "Clav_R.is";
 connectAttr "Clav_R_CTRL.r" "Clav_R.r";
+connectAttr "Joints.di" "Clav_R.do";
 connectAttr "Clav_R.s" "Shoulder_R.is";
 connectAttr "Shoulder_R_CTRL.r" "Shoulder_R.r";
+connectAttr "Joints.di" "Shoulder_R.do";
 connectAttr "Shoulder_R.s" "Elbow_R.is";
 connectAttr "Elbow_R_CTRL.r" "Elbow_R.r";
 connectAttr "Elbow_R.s" "Wrist_R.is";
 connectAttr "Wrist_R_CTRL.r" "Wrist_R.r";
 connectAttr "UpperBack.s" "Neck1.is";
 connectAttr "Neck1_CTRL.r" "Neck1.r";
+connectAttr "Joints.di" "Neck1.do";
 connectAttr "Neck1.s" "Neck2.is";
 connectAttr "Neck2_CTRL.r" "Neck2.r";
+connectAttr "Joints.di" "Neck2.do";
 connectAttr "Neck2.s" "Head.is";
 connectAttr "Head_CTRL.r" "Head.r";
 connectAttr "Root.jo" "Root_GRP.r";
@@ -4086,6 +4154,7 @@ connectAttr "makeNurbCircle21.oc" "transformGeometry21.ig";
 connectAttr "makeNurbCircle22.oc" "transformGeometry22.ig";
 connectAttr "makeNurbCircle23.oc" "transformGeometry23.ig";
 connectAttr "makeNurbCircle24.oc" "transformGeometry24.ig";
+connectAttr "layerManager.dli[4]" "Joints.id";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "misss_fast_skin_maya1SG.pa" ":renderPartition.st" -na;
