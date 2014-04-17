@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: 300cLayout.ma
-//Last modified: Wed, Apr 16, 2014 06:36:00 PM
+//Last modified: Wed, Apr 16, 2014 06:52:31 PM
 //Codeset: UTF-8
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,12 +12,12 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.46365044955132 7.2073938425761623 4.7426405918423278 ;
-	setAttr ".r" -type "double3" -17.13835272965202 57.399999999971726 2.9516770117931945e-15 ;
+	setAttr ".t" -type "double3" 20.570115063516347 12.618888022105139 9.3606308150038995 ;
+	setAttr ".r" -type "double3" -16.538352729648757 58.999999999956557 -3.0876888878700401e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 10.713419136325218;
+	setAttr ".coi" 23.101715969672568;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -51,13 +51,13 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 100.1 7.5168781826483562 2.2295254144021253 ;
+	setAttr ".t" -type "double3" 100.1 6.7820325368108714 -3.4380489974609239 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 8.9252138723380021;
+	setAttr ".ow" 3.9220527066260615;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -104,19 +104,6 @@ createNode mesh -n "DriverDoorShape" -p "DriverDoor";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 12 ".pt";
-	setAttr ".pt[24]" -type "float3" 0 -0.071853228 -0.074959695 ;
-	setAttr ".pt[26]" -type "float3" 0 -0.033197995 0 ;
-	setAttr ".pt[28]" -type "float3" 0 -0.033197995 0 ;
-	setAttr ".pt[30]" -type "float3" 0 -0.033197995 0 ;
-	setAttr ".pt[32]" -type "float3" 0 -0.033197995 0 ;
-	setAttr ".pt[34]" -type "float3" 0 -0.033197995 0 ;
-	setAttr ".pt[36]" -type "float3" 0 -0.033197995 0 ;
-	setAttr ".pt[38]" -type "float3" 8.8817842e-16 -0.020198569 0 ;
-	setAttr ".pt[39]" -type "float3" 8.8817842e-16 -0.092051804 -0.074959695 ;
-	setAttr ".pt[41]" -type "float3" 0 -0.071853228 -0.074959695 ;
-	setAttr ".pt[43]" -type "float3" 0.029748604 -0.055027187 -0.019667909 ;
-	setAttr ".pt[45]" -type "float3" 0.018233532 -0.040494125 -0.010926326 ;
 	setAttr ".dn" yes;
 createNode mesh -n "polySurfaceShape1" -p "DriverDoor";
 	setAttr -k off ".v";
@@ -240,9 +227,9 @@ createNode mesh -n "WindowRubberShape" -p "WindowRubber";
 		-1.8530493 -0.049681239 -0.42048895 -1.5870528 3.6578873e-09 -5.3290705e-15 -1.5749571 
 		-3.0642155e-14 -5.3290705e-15 -1.5749571 0 -0.42048892 -1.384058 -4.4703484e-08 -1.7763568e-15 
 		-1.3235019 -2.264855e-14 -1.7763568e-15 -1.3235019 0 -0.42048892 -1.1274455 -9.6274562e-08 
-		-0.29073417 -0.85624301 -0.35950178 -0.17380938 -0.84787929 -0.36078644 -0.012157055 
-		-0.83974779 -0.17696381 0.13164294 -0.83043528 0.039200597 1.2278816 -0.83147699 
-		0.18110752 -0.34949195 -0.86734343 -0.084690109 0.058707669 -1.0620923 -0.10887469 
+		-0.29073417 -0.9096939 -0.35950178 -0.17380938 -0.90133017 -0.36078644 -0.012157055 
+		-0.89319867 -0.17696381 0.13164294 -0.88388616 0.039200597 1.2278816 -0.88668925 
+		0.18110758 -0.35716328 -0.86211395 0.078719482 0.058707669 -1.0620923 -0.10887469 
 		-0.27943775 -1.3840587 0.029884681 0.0109976 -1.5870529 0.34803778 -0.39290401 -1.8530493 
 		0.042087995 -0.42048883 -1.8530493 -4.148319e-09;
 	setAttr ".dn" yes;
@@ -289,10 +276,10 @@ createNode mesh -n "DriverWindow" -p "pPlane9";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr -s 20 ".pt[0:19]" -type "float3"  -0.45677981 1.5382761 0.07262376 
-		0.068252094 3.8663232 -0.18786573 -0.49090257 1.5382761 -0.23808993 0.15304452 4.5481663 
-		0.067641482 -0.78533304 1.5382762 -0.5957008 0.61860287 4.4722052 1.3655508 -0.71163583 
-		1.5382762 0.055104345 0.45439851 4.4968224 1.2561793 -0.62454903 1.5382762 -0.45218173 
-		0.33144635 4.5207562 0.39377087 -0.20003927 2.3567936 -0.061440453 -0.18439278 2.4054642 
+		0.068252094 3.8663232 -0.18786573 -0.49090257 1.5382761 -0.23808993 0.15304458 4.390842 
+		0.067641467 -0.78533304 1.5382762 -0.5957008 0.61860281 4.3148823 1.3655514 -0.71163583 
+		1.5382762 0.055104345 0.45439839 4.3394995 1.256179 -0.62454903 1.5382762 -0.45218173 
+		0.33144623 4.3634338 0.39377087 -0.20003927 2.3567936 -0.061440453 -0.18439278 2.4054642 
 		0 -0.18439278 2.4054642 0 1.3855583e-13 2.4054642 0 -0.027341485 2.3211915 1.207755 
 		-0.79797339 3.0969081 -0.17204008 -0.5900569 3.2150688 0 -0.42410338 3.2150688 0 
 		1.9090285e-13 3.3229148 0.33190703 -0.32885185 2.9186692 1.2065266;
@@ -323,7 +310,7 @@ createNode mesh -n "polySurfaceShape3" -p "pPlane9";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
 createNode transform -n "BackLeftDoor";
-	setAttr ".t" -type "double3" 10.932237197930665 4.0407747599178272 -4.1602530055047442 ;
+	setAttr ".t" -type "double3" 10.762302765883332 4.0407747599178272 -4.1602530055047442 ;
 	setAttr ".r" -type "double3" 0 0 -90 ;
 	setAttr ".s" -type "double3" 1 1 0.42633302839255471 ;
 createNode mesh -n "BackLeftDoorShape" -p "BackLeftDoor";
@@ -335,8 +322,48 @@ createNode mesh -n "BackLeftDoorShape" -p "BackLeftDoor";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 2 ".pt[70:71]" -type "float3"  -0.018236263 0 -0.085549384 
-		-0.0035690651 -1.3007577e-08 0.11179425;
+	setAttr -s 41 ".pt";
+	setAttr ".pt[0]" -type "float3" -2.9786234e-08 -0.66050082 -1.9445987e-07 ;
+	setAttr ".pt[1]" -type "float3" -2.9786234e-08 0.0038472814 2.1732447e-07 ;
+	setAttr ".pt[2]" -type "float3" 0 -0.72243583 0 ;
+	setAttr ".pt[5]" -type "float3" -2.9786234e-08 0.0038472814 -6.2665592e-08 ;
+	setAttr ".pt[7]" -type "float3" -1.4899553e-07 0.0038472814 -4.4627419e-07 ;
+	setAttr ".pt[9]" -type "float3" 4.4719574e-08 0.0038472814 4.5672274e-07 ;
+	setAttr ".pt[11]" -type "float3" 8.9423054e-08 0.0038472814 -7.1644102e-08 ;
+	setAttr ".pt[13]" -type "float3" -2.9786234e-08 0.0038472814 -3.7522608e-07 ;
+	setAttr ".pt[15]" -type "float3" -2.9786234e-08 -0.11985763 4.6684701e-07 ;
+	setAttr ".pt[16]" -type "float3" -8.8817842e-16 -0.32946131 0 ;
+	setAttr ".pt[17]" -type "float3" -2.9786234e-08 -0.28129086 2.0644397e-07 ;
+	setAttr ".pt[18]" -type "float3" 0 -0.72243583 0 ;
+	setAttr ".pt[19]" -type "float3" -8.8817842e-16 -0.32946131 0 ;
+	setAttr ".pt[20]" -type "float3" -8.8817842e-16 -0.13714683 0 ;
+	setAttr ".pt[27]" -type "float3" 0 -0.72243583 0 ;
+	setAttr ".pt[28]" -type "float3" -8.8817842e-16 -0.32946131 0 ;
+	setAttr ".pt[29]" -type "float3" -8.8817842e-16 -0.13714683 0 ;
+	setAttr ".pt[36]" -type "float3" 0 -0.72243583 0 ;
+	setAttr ".pt[37]" -type "float3" -8.8817842e-16 -0.32946131 0 ;
+	setAttr ".pt[38]" -type "float3" -8.8817842e-16 -0.13714683 0 ;
+	setAttr ".pt[45]" -type "float3" -8.8817842e-16 -1.172747 -0.058908254 ;
+	setAttr ".pt[46]" -type "float3" -8.8817842e-16 -1.1828067 0 ;
+	setAttr ".pt[47]" -type "float3" -0.14927229 -1.6349231 0 ;
+	setAttr ".pt[48]" -type "float3" -0.14927229 -1.7189896 0 ;
+	setAttr ".pt[49]" -type "float3" -0.14927229 -1.67084 0 ;
+	setAttr ".pt[50]" -type "float3" -0.14927229 -1.7169462 0 ;
+	setAttr ".pt[51]" -type "float3" -0.14927229 -1.67084 0 ;
+	setAttr ".pt[52]" -type "float3" -0.14927229 -1.7169462 0 ;
+	setAttr ".pt[53]" -type "float3" -0.14927229 -1.6830801 0 ;
+	setAttr ".pt[54]" -type "float3" -0.14927229 -1.7169462 0 ;
+	setAttr ".pt[55]" -type "float3" -0.16608727 -1.6831149 -1.4948345e-07 ;
+	setAttr ".pt[56]" -type "float3" -0.16608727 -1.7163134 -5.3236204e-07 ;
+	setAttr ".pt[57]" -type "float3" 0 -0.72243583 0 ;
+	setAttr ".pt[58]" -type "float3" -8.8817842e-16 -0.32946131 0 ;
+	setAttr ".pt[59]" -type "float3" -8.8817842e-16 -0.13714683 0 ;
+	setAttr ".pt[66]" -type "float3" -0.14927229 -1.7169462 0 ;
+	setAttr ".pt[67]" -type "float3" -0.14927229 -1.6812791 0 ;
+	setAttr ".pt[68]" -type "float3" -0.14927229 -1.7169462 0 ;
+	setAttr ".pt[69]" -type "float3" -0.14927229 -1.6830801 0 ;
+	setAttr ".pt[70]" -type "float3" -0.16750856 -1.7169462 -0.085549384 ;
+	setAttr ".pt[71]" -type "float3" -0.15284134 -1.67084 0.11179425 ;
 	setAttr ".dn" yes;
 createNode mesh -n "polySurfaceShape4" -p "BackLeftDoor";
 	setAttr -k off ".v";
@@ -364,7 +391,7 @@ createNode mesh -n "polySurfaceShape4" -p "BackLeftDoor";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
 createNode transform -n "BackWindowRubber";
-	setAttr ".t" -type "double3" 10.932237197930665 6.175699848907457 -2.7949271030972476 ;
+	setAttr ".t" -type "double3" 10.048790585780866 6.175699848907457 -2.7949271030972476 ;
 	setAttr ".r" -type "double3" 0 0 -90 ;
 	setAttr ".s" -type "double3" 0.3803682375282767 0.3803682375282767 0.3803682375282767 ;
 	setAttr ".rp" -type "double3" 6.1221416008948373e-30 -8.8817841970012523e-15 0 ;
@@ -379,12 +406,37 @@ createNode mesh -n "BackWindowRubberShape" -p "BackWindowRubber";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 5 ".pt";
-	setAttr ".pt[17]" -type "float3" 0.95321941 3.4197331e-08 0.17460455 ;
-	setAttr ".pt[25]" -type "float3" -0.20370534 3.4197331e-08 4.0875726e-08 ;
-	setAttr ".pt[32]" -type "float3" 2.2351742e-08 1.0259201e-07 -8.9406967e-08 ;
-	setAttr ".pt[34]" -type "float3" -0.053089246 0 -0.017696412 ;
-	setAttr ".pt[35]" -type "float3" -0.1061785 0 0.017696416 ;
+	setAttr -s 30 ".pt";
+	setAttr ".pt[0]" -type "float3" -0.43664813 -2.5491149 7.8379841e-08 ;
+	setAttr ".pt[1]" -type "float3" 4.9190056e-08 0.13936849 -1.1328325e-07 ;
+	setAttr ".pt[2]" -type "float3" -0.39244118 -2.5168447 3.9268325e-08 ;
+	setAttr ".pt[4]" -type "float3" -0.39244142 -2.5442891 -2.0232221e-07 ;
+	setAttr ".pt[6]" -type "float3" -0.39244094 -2.5490239 9.7151531e-09 ;
+	setAttr ".pt[8]" -type "float3" -0.39244097 -2.5168447 1.6315626e-08 ;
+	setAttr ".pt[10]" -type "float3" -0.39244121 -2.4224172 1.2337681e-08 ;
+	setAttr ".pt[11]" -type "float3" 0 -1.8547329 0 ;
+	setAttr ".pt[12]" -type "float3" -6.476454e-09 -1.8180025 -1.5581159e-07 ;
+	setAttr ".pt[13]" -type "float3" 2.6275508e-08 -1.2073425 -0.066026777 ;
+	setAttr ".pt[14]" -type "float3" 1.4210855e-14 -0.13471462 0 ;
+	setAttr ".pt[15]" -type "float3" 1.4210855e-14 -0.13471462 0 ;
+	setAttr ".pt[16]" -type "float3" 1.4210855e-14 -0.13471462 0 ;
+	setAttr ".pt[17]" -type "float3" 1.2750691 -0.0085243881 0.27913469 ;
+	setAttr ".pt[18]" -type "float3" -0.39244124 -2.5490239 -9.3423552e-08 ;
+	setAttr ".pt[19]" -type "float3" 1.4210855e-14 -0.13471462 0 ;
+	setAttr ".pt[21]" -type "float3" -0.39244136 -2.5168447 -2.0681243e-08 ;
+	setAttr ".pt[22]" -type "float3" -0.38661703 -2.3046467 0 ;
+	setAttr ".pt[23]" -type "float3" 0 -1.0112872 0 ;
+	setAttr ".pt[25]" -type "float3" -0.6483469 -2.5491149 -0.076571748 ;
+	setAttr ".pt[26]" -type "float3" -0.3809351 -2.5125954 0 ;
+	setAttr ".pt[27]" -type "float3" -0.3809351 -2.5125954 0 ;
+	setAttr ".pt[28]" -type "float3" -0.3809351 -2.5125954 0 ;
+	setAttr ".pt[29]" -type "float3" -0.3809351 -2.5125954 0 ;
+	setAttr ".pt[30]" -type "float3" -0.34513116 -2.4729292 0 ;
+	setAttr ".pt[31]" -type "float3" -0.37039414 -2.4786599 -0.099040329 ;
+	setAttr ".pt[32]" -type "float3" 4.5083141e-08 -1.1569189 2.3094067e-08 ;
+	setAttr ".pt[33]" -type "float3" -0.27411628 -1.2053157 0 ;
+	setAttr ".pt[34]" -type "float3" -0.16239187 -1.8547329 -0.064166635 ;
+	setAttr ".pt[35]" -type "float3" -0.32409951 -1.7442477 -0.029182963 ;
 	setAttr ".dn" yes;
 createNode mesh -n "polySurfaceShape5" -p "BackWindowRubber";
 	setAttr -k off ".v";
@@ -412,7 +464,7 @@ createNode mesh -n "polySurfaceShape5" -p "BackWindowRubber";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
 createNode transform -n "BackLeftWindow";
-	setAttr ".t" -type "double3" 10.932237197930665 6.0771940854109285 -3.0088500273669023 ;
+	setAttr ".t" -type "double3" 9.8788365031899872 6.0771940854109285 -3.0088500273669023 ;
 	setAttr ".r" -type "double3" 0 0 -90 ;
 	setAttr ".s" -type "double3" 0.32628168378405764 0.32628168378405764 0.32628168378405764 ;
 	setAttr ".rp" -type "double3" -5.5220263365470826e-30 1.5099033134902129e-14 0 ;
@@ -462,7 +514,7 @@ createNode mesh -n "polySurfaceShape6" -p "BackLeftWindow";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
 createNode transform -n "BackLeftFender";
-	setAttr ".t" -type "double3" 10.932237197930665 4.90526192954019 -8.4808434428834349 ;
+	setAttr ".t" -type "double3" 10.762302765883332 4.90526192954019 -8.4808434428834349 ;
 	setAttr ".r" -type "double3" 0 0 -90 ;
 createNode mesh -n "BackLeftFenderShape" -p "BackLeftFender";
 	setAttr -k off ".v";
@@ -512,7 +564,7 @@ createNode mesh -n "polySurfaceShape7" -p "BackLeftFender";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dn" yes;
 createNode transform -n "pPlane10";
-	setAttr ".t" -type "double3" 10.932237197930665 2.6132989068094927 -10.374340872925123 ;
+	setAttr ".t" -type "double3" 10.762302765883332 2.6132989068094927 -10.374340872925123 ;
 	setAttr ".r" -type "double3" 0 0 -90 ;
 	setAttr ".s" -type "double3" 0.37029852144543568 0.37029852144543568 0.37029852144543568 ;
 	setAttr ".rp" -type "double3" -4.9377982828881853e-30 9.7699626167013776e-15 0 ;
@@ -1972,6 +2024,31 @@ createNode polySplitRing -n "polySplitRing100";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing101";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 9 "e[16]" "e[19]" "e[21]" "e[23]" "e[25]" "e[75]" "e[82]" "e[89]" "e[93]";
+	setAttr ".ix" -type "matrix" 2.2204460492503131e-16 -1 -0 0 1 2.2204460492503131e-16 0 0
+		 0 -0 1 0 10.932237197930665 3.1384999426734206 1.2809757343348105 1;
+	setAttr ".wt" 0.47108349204063416;
+	setAttr ".re" 16;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak40";
+	setAttr ".uopa" yes;
+	setAttr -s 12 ".tk";
+	setAttr ".tk[24]" -type "float3" 0 -0.071853228 -0.074959695 ;
+	setAttr ".tk[26]" -type "float3" 0 -0.033197995 0 ;
+	setAttr ".tk[28]" -type "float3" 0 -0.033197995 0 ;
+	setAttr ".tk[30]" -type "float3" 0 -0.033197995 0 ;
+	setAttr ".tk[32]" -type "float3" 0 -0.033197995 0 ;
+	setAttr ".tk[34]" -type "float3" 0 -0.033197995 0 ;
+	setAttr ".tk[36]" -type "float3" 0 -0.033197995 0 ;
+	setAttr ".tk[38]" -type "float3" 8.8817842e-16 -0.020198569 0 ;
+	setAttr ".tk[39]" -type "float3" 8.8817842e-16 -0.092051804 -0.074959695 ;
+	setAttr ".tk[41]" -type "float3" 0 -0.071853228 -0.074959695 ;
+	setAttr ".tk[43]" -type "float3" 0.029748604 -0.055027187 -0.019667909 ;
+	setAttr ".tk[45]" -type "float3" 0.018233532 -0.040494125 -0.010926326 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2008,7 +2085,7 @@ select -ne :ikSystem;
 	setAttr -s 4 ".sol";
 connectAttr "polyPlane1.out" "pPlaneShape1.i";
 connectAttr "polyPlane2.out" "pPlaneShape2.i";
-connectAttr "polySplitRing100.out" "DriverDoorShape.i";
+connectAttr "polySplitRing101.out" "DriverDoorShape.i";
 connectAttr "deleteComponent2.og" "WindowRubberShape.i";
 connectAttr "polySplitRing44.out" "DriverWindow.i";
 connectAttr "polySplitRing72.out" "BackLeftDoorShape.i";
@@ -2308,6 +2385,9 @@ connectAttr "polySplitRing98.out" "polySplitRing99.ip";
 connectAttr "DriverDoorShape.wm" "polySplitRing99.mp";
 connectAttr "polySplitRing99.out" "polySplitRing100.ip";
 connectAttr "DriverDoorShape.wm" "polySplitRing100.mp";
+connectAttr "polyTweak40.out" "polySplitRing101.ip";
+connectAttr "DriverDoorShape.wm" "polySplitRing101.mp";
+connectAttr "polySplitRing100.out" "polyTweak40.ip";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "DriverDoorShape.iog" ":initialShadingGroup.dsm" -na;
