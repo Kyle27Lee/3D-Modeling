@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Alien4UV.ma
-//Last modified: Thu, Apr 17, 2014 02:26:34 PM
+//Last modified: Thu, Apr 17, 2014 03:14:38 PM
 //Codeset: 1252
 requires maya "2014";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeType "mentalrayRenderPass"
@@ -90,15 +90,15 @@ fileInfo "osv" "Microsoft Windows 7 Enterprise Edition, 64-bit Windows 7 Service
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -8.6418918440257588 10.474110335775293 -7.0441916052233378 ;
-	setAttr ".r" -type "double3" -3.3383527320649566 -135.39999999998253 0 ;
+	setAttr ".t" -type "double3" 8.2453459860518397 13.999299466622311 17.729746106324534 ;
+	setAttr ".r" -type "double3" -20.138352731611079 -692.99999999999511 0 ;
 	setAttr ".rp" -type "double3" 8.8817841970012523e-016 -1.7763568394002505e-015 0 ;
 	setAttr ".rpt" -type "double3" 7.7401081680092614e-016 -2.2531159730457767e-016 
 		8.6102826819064923e-017 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 11.003457993952676;
+	setAttr ".coi" 23.417305311468493;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -133,13 +133,13 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 100.1 3.0212735620807951 0.96851130274148711 ;
+	setAttr ".t" -type "double3" 100.1 0.36200001274761101 0.0048185822791037558 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 11.687121953791621;
+	setAttr ".ow" 0.8473090550652651;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -381,8 +381,6 @@ createNode joint -n "Ankle_R" -p "Knee_R";
 	setAttr ".jo" -type "double3" 0 0 87.646909360300754 ;
 	setAttr ".radi" 0.5;
 createNode joint -n "Toe_R" -p "Ankle_R";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 30;
 	setAttr ".t" -type "double3" 0.5742541755503966 8.3266726846886741e-016 1.1102230246251565e-016 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -400,7 +398,7 @@ createNode joint -n "Knee_L" -p "Hip_L";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
-	setAttr ".jo" -type "double3" 0 -3.5295172227886642 0 ;
+	setAttr ".jo" -type "double3" 0 -3.5295172227886646 0 ;
 	setAttr ".radi" 0.5;
 createNode joint -n "Ankle_L" -p "Knee_L";
 	setAttr ".t" -type "double3" 2.028062161315666 2.2204460492503131e-016 -4.9960036108132044e-016 ;
@@ -410,8 +408,6 @@ createNode joint -n "Ankle_L" -p "Knee_L";
 	setAttr ".jo" -type "double3" 0 0 87.646909360300754 ;
 	setAttr ".radi" 0.5;
 createNode joint -n "Toe_L" -p "Ankle_L";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" 0.57425417555039671 0 -5.5511151231257827e-017 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -502,8 +498,6 @@ createNode joint -n "Neck2" -p "Neck1";
 	setAttr ".dla" yes;
 	setAttr ".radi" 0.25;
 createNode joint -n "Head" -p "Neck2";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
 	setAttr ".t" -type "double3" 0.88638912666929315 2.2204460492503131e-016 5.4124928946309417e-016 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -519,6 +513,13 @@ createNode transform -n "Root_CTRL" -p "Root_GRP";
 createNode nurbsCurve -n "Root_CTRLShape" -p "Root_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.030452842451939022 -0.71678314464104087 
+		-0.59943968982689466 0.0072167627404883103 -1.2150567032946737 -0.97552728868510985 
+		0.11730465567748161 -0.73818620957683478 -0.66863569595033934 0.1256140867336446 
+		0.25684175827335309 0.053779046416804643 0.016399161058921363 0.75506595138595234 
+		0.69823483372516226 -0.0010981403124809179 0.8698987757231782 0.97164646826007472 
+		0.013599616293199612 0.78808153179759355 0.74070131743054035 -0.16620588235977685 
+		0.28238561842750887 0.033062998410613664 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Pelvis1_GRP" -p "Root_CTRL";
 	setAttr ".rp" -type "double3" 0 4.9025623709048194 -0.65489585833648023 ;
 	setAttr ".sp" -type "double3" 0 4.9025623709048194 -0.65489585833648023 ;
@@ -528,6 +529,13 @@ createNode transform -n "Pelvis1_CTRL" -p "Pelvis1_GRP";
 createNode nurbsCurve -n "Pelvis1_CTRLShape" -p "Pelvis1_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.79327134577310632 -0.46030243622646694 
+		0.012004915682761186 -0.0063210363878412499 -0.6509659481048482 -0.34259882358689742 
+		0.78062927299742335 -0.46030243622646783 -0.44526858586963947 1.1065947640585014 
+		0 -0.59281414138876265 0.78062927299742368 0.50985758210792564 -0.40683674347273691 
+		-0.0063210363878409993 0.70022538861077077 -0.27428855077617487 -0.79327134577310532 
+		0.46030243622647404 0.012004915682761186 -1.1179683480717955 8.8817841970012523e-016 
+		0.043487082100595598 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Hip_R_GRP" -p "Pelvis1_CTRL";
 	setAttr ".rp" -type "double3" -4.9155745274617937 -0.52615695966553733 0.32308095679324611 ;
 	setAttr ".rpt" -type "double3" 4.6325745274617933 5.428719330570356 -0.97797681512972645 ;
@@ -538,6 +546,13 @@ createNode transform -n "Hip_R_CTRL" -p "Hip_R_GRP";
 createNode nurbsCurve -n "Hip_R_CTRLShape" -p "Hip_R_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.42773234091795231 -0.43152975177604275 
+		0.53180581150467965 0.004283264570278611 -0.61047647472609323 0.53180581150467965 
+		0.43629887005850776 -0.43152975177604308 0.53180581150467965 0.61524559300856385 
+		0.0004858537121888995 0.53180581150467965 0.43629887005850776 0.43250145920042149 
+		0.53180581150467965 0.004283264570278611 0.61144818215047225 0.53180581150467965 
+		-0.42773234091795143 0.43250145920042149 0.53180581150467965 0.16507155218682534 
+		-0.019711479364507345 0.52560843823367287 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Knee_R_GRP" -p "Hip_R_CTRL";
 	setAttr ".s" -type "double3" 1 1 0.99999999999999989 ;
 	setAttr ".rp" -type "double3" -2.3920924805970616 -0.52615695966553633 0.30308736216448395 ;
@@ -550,6 +565,13 @@ createNode transform -n "Knee_R_CTRL" -p "Knee_R_GRP";
 createNode nurbsCurve -n "Knee_R_CTRLShape" -p "Knee_R_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.59443232994471851 -0.45828076555422648 
+		0.025133420236373605 -0.004004816549464163 -0.63909609762949104 0.025241284989625412 
+		0.65678092258278031 -0.47277441929408159 0.025317636670920407 0.49514095235687794 
+		0.08405600639755284 0.025033000063644839 0.35943338095423272 0.7661678903572563 0.024731094458201874 
+		0.016489224819545623 1.1302599365528314 0.024532197018332758 -0.33795198817097738 
+		0.7661678903572563 0.024731094458201874 -0.49111089486056247 0.084056006397553173 
+		0.025033000063644839 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Ankle_R_GRP" -p "Knee_R_CTRL";
 	setAttr ".s" -type "double3" 1.0000000000000002 1 1 ;
 	setAttr ".rp" -type "double3" -0.54065951751752439 0.34212060107265052 0.3030873621644844 ;
@@ -562,6 +584,13 @@ createNode transform -n "Ankle_R_CTRL" -p "Ankle_R_GRP";
 createNode nurbsCurve -n "Ankle_R_CTRLShape" -p "Ankle_R_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.76439710146808659 -0.6297797438793078 
+		0.00011947441694559746 -0.062266019425970209 -0.91439686659790986 3.4555154963533674e-005 
+		0.54198065597426159 -0.66096406063506952 -0.0071885141035039068 0.79803695223384374 
+		0.062120721835080661 3.4555154963533674e-005 0.54606004570962341 0.75262293056398311 
+		3.4555154963533674e-005 -0.062266019425969987 1.0386383102680732 3.4555154963533674e-005 
+		-0.76423820803044584 0.75122704204306756 0.00011933057481516851 -1.0369085463265566 
+		0.060416377151766676 0.00013806380478420532 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Toe_R_GRP" -p "Ankle_R_CTRL";
 	setAttr ".s" -type "double3" 1.0000000000000002 1 0.99999999999999978 ;
 	setAttr ".rp" -type "double3" 0.033594658032872128 0.34212060107265146 0.30308736216448434 ;
@@ -573,6 +602,12 @@ createNode transform -n "Toe_R_CTRL" -p "Toe_R_GRP";
 createNode nurbsCurve -n "Toe_R_CTRLShape" -p "Toe_R_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.68397850289930395 -0.67231626170359893 
+		0.00018987984595192353 0 -0.9463772243385622 0 0.47423006957552916 -0.66918975289029969 
+		0 0.67066259607885104 -3.3306690738754696e-016 0 0.47329680134002389 0.73179875499942026 
+		-2.0820440573832144e-005 -0.00092077438045758131 1.0081480667768898 -2.0541713026178687e-005 
+		-0.57925765743479252 0.73475073429814475 7.1855373096174624e-005 -0.70763317753769994 
+		0.071595566850132464 8.5083347560188649e-006 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Hip_L_GRP" -p "Pelvis1_CTRL";
 	setAttr ".rp" -type "double3" -4.9051837157732283 -0.52667359565532856 -0.45344291500869077 ;
 	setAttr ".rpt" -type "double3" 5.1877017738523197 5.4292359665601486 -0.20145294332778896 ;
@@ -583,6 +618,13 @@ createNode transform -n "Hip_L_CTRL" -p "Hip_L_GRP";
 createNode nurbsCurve -n "Hip_L_CTRLShape" -p "Hip_L_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.36325873293930933 -0.3879561464099241 
+		-0.68943045284857041 0.024067191871866456 -0.54839179752541578 -0.68943045284857041 
+		0.41139311668304668 -0.38795614640992421 -0.68943045284857041 0.57182876779853586 
+		-0.0006302215987474824 -0.68943045284857041 0.41139311668304668 0.38669570321243107 
+		-0.68943045284857041 0.024067191871866456 0.54713135432792392 -0.68943045284857041 
+		-0.36325873293930933 0.3866957032124313 -0.68943045284857041 -0.027513155370477715 
+		-0.013623184337177019 -0.6720974829596722 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Knee_L_GRP" -p "Hip_L_CTRL";
 	setAttr ".s" -type "double3" 1 1 1.0000000000000002 ;
 	setAttr ".rp" -type "double3" -2.4024859960660323 -0.5266735956553289 -0.30611993007140464 ;
@@ -595,6 +637,13 @@ createNode transform -n "Knee_L_CTRL" -p "Knee_L_GRP";
 createNode nurbsCurve -n "Knee_L_CTRLShape" -p "Knee_L_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.58990802354132477 -0.45805087209106143 
+		-0.016399184448818049 0.00043419354973428526 -0.63886620416632622 -0.022821219510484048 
+		0.66110811113483914 -0.47254452583091688 -0.031175307249215634 0.4995721394954149 
+		0.084285899860717328 -0.023192039463495628 0.36385322883879878 0.76639778382042112 
+		-0.023729536941516194 0.020901602327463742 1.1304898300159967 -0.024083643888810402 
+		-0.33353214028640754 0.76639778382042134 -0.023729536941516194 -0.48667970772202174 
+		0.084285899860717772 -0.023192039463495628 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Ankle_L_GRP" -p "Knee_L_CTRL";
 	setAttr ".s" -type "double3" 0.99999999999999989 1 1 ;
 	setAttr ".rp" -type "double3" -0.5416024510355375 0.35248414066732164 -0.30611993007140526 ;
@@ -607,6 +656,13 @@ createNode transform -n "Ankle_L_CTRL" -p "Ankle_L_GRP";
 createNode nurbsCurve -n "Ankle_L_CTRLShape" -p "Ankle_L_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.73416204905114024 -0.69623476748090907 
+		-0.0025948737257262544 -0.063510839939749597 -0.94091655514703121 -0.00081969382499486043 
+		0.60150607545276324 -0.67151436271275622 0.00018057332693965922 0.80346952079079659 
+		0.048911726064490402 0.0057826181303051727 0.55147685354635145 0.74446783687275997 
+		0.0045806921080226437 -0.11994249719114891 1.0356809146091854 0.0039054519071651805 
+		-0.75432778614257023 0.72315069920097597 0.0025858537474337528 -1.0160663398503615 
+		-0.0017609491660361409 0.00018996894299400102 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Toe_L_GRP" -p "Ankle_L_CTRL";
 	setAttr ".s" -type "double3" 0.99999999999999989 1 1 ;
 	setAttr ".rp" -type "double3" 0.032651724514859259 0.3524841406673217 -0.30611993007140542 ;
@@ -618,6 +674,13 @@ createNode transform -n "Toe_L_CTRL" -p "Toe_L_GRP";
 createNode nurbsCurve -n "Toe_L_CTRLShape" -p "Toe_L_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.59173050056368326 -0.69272455103013764 
+		-1.1102230246251565e-016 -0.00047031483013400266 -0.94808930511879796 0.00084242275364887487 
+		0.48515032979356737 -0.66490873642987691 0.00095560143098766259 0.62068669340626004 
+		-0.0032292274724993186 0.00034836492811352038 0.59173050056368304 0.6927245510301383 
+		-1.1102230246251565e-016 -0.00054815676814212039 1.0164569547768556 0.00098185237730658015 
+		-0.57629424712828103 0.72477121212327222 0.00082312599415479415 -0.73456273352649681 
+		0.078416693115258895 0.0018845145546808051 0 0 0 0 0 0 0 0 0;
 createNode transform -n "LowerBack_GRP" -p "Root_CTRL";
 	setAttr ".rp" -type "double3" 4.9025623709048194 0.65489585833648023 4.7532277693241211e-015 ;
 	setAttr ".rpt" -type "double3" -4.9025623709048185 4.2476665125683395 -0.654895858336485 ;
@@ -628,6 +691,13 @@ createNode transform -n "LowerBack_CTRL" -p "LowerBack_GRP";
 createNode nurbsCurve -n "LowerBack_CTRLShape" -p "LowerBack_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" 0.19480402329344404 -0.17686552936199673 
+		1.1869687202615049e-016 0.87389888058772147 -0.40187092093575538 1.3104322180411233e-016 
+		1.6229537970341426 -0.22535280076106745 2.2426480362022325e-016 1.7943356212631905 
+		0.36745864468339007 1.0883426954649635e-016 1.5110245533651065 0.91178281872877776 
+		1.0165868549330588e-016 0.77182141042638186 1.1372492739459101 2.9149716596903893e-017 
+		0.049169163399996663 0.91178281872877776 -2.6821585151447509e-017 -0.20926934562377131 
+		0.3566850089508049 -0.011358191195399313 0 0 0 0 0 0 0 0 0;
 createNode transform -n "MidBack_GRP" -p "LowerBack_CTRL";
 	setAttr ".rp" -type "double3" 5.6013441628101264 0.65489585833648012 5.3310847351994057e-015 ;
 	setAttr ".sp" -type "double3" 5.6013441628101264 0.65489585833648012 5.3310847351994057e-015 ;
@@ -637,6 +707,13 @@ createNode transform -n "MidBack_CTRL" -p "MidBack_GRP";
 createNode nurbsCurve -n "MidBack_CTRLShape" -p "MidBack_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.28690833087923728 -0.20740805072557622 
+		2.3814570660194469e-016 0.37972784199218435 -0.43287450594270949 2.3814570660194469e-016 
+		1.1271468985190545 -0.20740805072557622 3.1886402228884194e-016 1.2585357481655581 
+		0.33691612331981058 1.7423881615250494e-016 0.98161858655559975 0.88124029736519804 
+		1.2041257134296809e-016 0.26190052997407776 1.1067067525823311 1.2041257134296809e-016 
+		-0.42463399718818096 0.93038806301022214 0.00031060355707937916 -0.6808653868691863 
+		0.33691612331981124 1.2041257134296809e-016 0 0 0 0 0 0 0 0 0;
 createNode transform -n "UpperBack_GRP" -p "MidBack_CTRL";
 	setAttr ".rp" -type "double3" 6.4544731603714238 0.65489585833648012 4.9522193527722339e-015 ;
 	setAttr ".sp" -type "double3" 6.4544731603714238 0.65489585833648012 4.9522193527722339e-015 ;
@@ -646,6 +723,13 @@ createNode transform -n "UpperBack_CTRL" -p "UpperBack_GRP";
 createNode nurbsCurve -n "UpperBack_CTRLShape" -p "UpperBack_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.91578939402880799 -0.18701342034542434 
+		3.3043485737036219e-016 -0.24915322115738459 -0.41247987556255783 3.3043485737036219e-016 
+		0.49301085357364283 -0.18701342034542456 4.0590239145191281e-016 0.60816608268966998 
+		0.35731075369996246 2.4505653995820133e-016 0.35535225708581564 0.90163492774534992 
+		2.6835382242937744e-016 -0.38140476732270745 1.1271013829624827 1.9828901693484831e-016 
+		-1.04804094019413 0.90163492774535059 1.9828901693484831e-016 -1.3241706841659688 
+		0.35731075369996312 1.9828901693484831e-016 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Clav_L_GRP" -p "UpperBack_CTRL";
 	setAttr ".rp" -type "double3" 1.3410092711314434 8.5327268673295205 -0.54406493603213235 ;
 	setAttr ".rpt" -type "double3" 7.2915438634159919 -7.9886619312973881 0.25292916543220534 ;
@@ -674,12 +758,12 @@ createNode transform -n "Shoulder_L_CTRL" -p "Shoulder_L_GRP";
 createNode nurbsCurve -n "Shoulder_L_CTRLShape" -p "Shoulder_L_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" -0.32973191938507118 -0.41596152277280041 
-		-0.0027919828597603447 0.17920657818749852 -0.5751844082034232 -0.0078770451703988886 
-		0.70205243678718299 -0.47970656835846448 -0.012254370867131104 0.69342430599787808 
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.30673023763319929 -0.46528353398648647 
+		-0.00044261978692561321 0.37504476429042621 -0.53162280056785249 -0.0010488579518515007 
+		0.70570591562413165 -0.34591633350527928 -0.015906784214844372 0.69342430599787808 
 		0.18326063469547194 -0.012103766283995121 0.37123994407308691 0.78032344687947663 
 		-0.0064800173277425044 -0.31881640841047232 0.97382746380988383 0.0055649611089850781 
-		-0.51877739476359719 0.66151488660814639 0.00094504286651309055 -0.54306073091070495 
+		-0.62163640361873629 0.907845406271794 -0.010293404154770758 -0.54306073091070495 
 		0 0 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Elbow_L_GRP" -p "Shoulder_L_CTRL";
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999978 0.99999999999999989 ;
@@ -694,13 +778,13 @@ createNode transform -n "Elbow_L_CTRL" -p "Elbow_L_GRP";
 createNode nurbsCurve -n "Elbow_L_CTRLShape" -p "Elbow_L_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" -0.57862513709638197 -0.48121596870030103 
-		0.0022812100363489574 0 -0.63461462824281156 0 0.52667154161487373 -0.51369297644501444 
-		-0.0013301504245886164 0.63461413639304998 0.12340948159155296 -5.6379719014953977e-005 
-		0.44873896095554988 0.78649257247911919 -0.00015430238888325398 -2.0968331599924284e-006 
-		1.1607287339752057 -0.00024035564422186795 -0.44874165318578063 0.78649257247912008 
-		-0.00015430238888325398 -0.63461512009255383 0.12340948159155296 -5.6379719014953977e-005 
-		0 0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.57862513709638197 -0.72285066568923817 
+		-0.24997873595805675 0 -1.0458049097429534 -0.42117009434205444 0.52667154161487373 
+		-0.72720268737528748 -0.21759266080726658 0.63461413639304998 0.054336882570675371 
+		-0.071092609433347165 0.44873896095554988 0.83509837687645216 0.049402261219156363 
+		-2.0968331599924284e-006 1.1607287339752057 -0.00024035564422220101 -0.44874165318578063 
+		0.83509837687645305 0.049402261219156363 -0.63461512009255383 0.054336882570675371 
+		-0.071092609433347165 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Wrist_L_GRP" -p "Elbow_L_CTRL";
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1 ;
 	setAttr ".rp" -type "double3" 4.4989064341233123 8.7718008514618635 -0.56539001454094628 ;
@@ -712,13 +796,12 @@ createNode transform -n "Wrist_L_CTRL" -p "Wrist_L_GRP";
 createNode nurbsCurve -n "Wrist_L_CTRLShape" -p "Wrist_L_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" -0.51991862599526506 -0.51991862599526328 
-		-1.1102230246251565e-016 8.8817841970012523e-016 -0.73527597221289298 -1.1102230246251565e-016 
-		0.51991862599526906 -0.51991862599526328 -1.1102230246251565e-016 0.73527597221289298 
-		0 -1.1102230246251565e-016 0.5199186259952695 0.51991862599526151 -1.1102230246251565e-016 
-		8.8817841970012523e-016 0.73527597221289387 -1.1102230246251565e-016 -0.51991862599526328 
-		0.5199186259952624 -1.1102230246251565e-016 -0.73527597221288943 0 -1.1102230246251565e-016 
-		0 0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.51991862599528726 -0.51991862599528282 
+		1.1102230246251565e-016 0 -0.73527597221292496 1.1102230246251565e-016 0.5199186259952886 
+		-0.51991862599528282 1.1102230246251565e-016 0.73527597221292229 0 1.1102230246251565e-016 
+		0.51991862599528904 0.51991862599528282 1.1102230246251565e-016 0 0.73527597221292584 
+		1.1102230246251565e-016 -0.51991862599528549 0.51991862599528371 1.1102230246251565e-016 
+		-0.7352759722129214 0 1.1102230246251565e-016 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Clav_R_GRP" -p "UpperBack_CTRL";
 	setAttr ".rp" -type "double3" 1.2193823569033395 8.5509508996635955 0.54406493603210004 ;
 	setAttr ".rpt" -type "double3" 7.4131707776440985 -8.0068859636314613 -0.25306493603209013 ;
@@ -750,11 +833,11 @@ createNode nurbsCurve -n "Shoulder_R_CTRLShape" -p "Shoulder_R_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
 	setAttr -s 11 ".cp[0:10]" -type "double3" -0.35217993792621793 -0.47018052544076738 
-		-0.0024110084694521916 0.10932624451004913 -0.58564049412570007 -0.0066681366396927899 
-		0.61711353086668219 -0.53353207882386755 -0.010771756749361261 0.5545340071197995 
-		0.20772623619592601 -0.0096794270991821252 0.30135132562785427 0.76024513496229673 
-		-0.0052601069550423096 -0.44990861155504114 0.93811797512808415 0.0078531840264548514 
-		-0.47252843249610699 0.73149903724550303 0.00018744140283433186 -0.54306155699434377 
+		-0.0024110084694521916 0.29092392833734815 -0.50343474646994224 0.0031517263703192411 
+		0.703474681204457 -0.35358370731202626 -0.0024159788613733468 0.68732745929076244 
+		0.20613975171324483 -0.0041131694089167059 0.30135132562785427 0.76024513496229673 
+		-0.0052601069550423096 -0.31691275938859453 0.93652907257096185 0.013427925648061834 
+		-0.73632935753085538 0.86735799170863981 -0.0073975858046446685 -0.54306155699434377 
 		0 0 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Elbow_R_GRP" -p "Shoulder_R_CTRL";
 	setAttr ".s" -type "double3" 1 1 0.99999999999999989 ;
@@ -768,13 +851,13 @@ createNode transform -n "Elbow_R_CTRL" -p "Elbow_R_GRP";
 createNode nurbsCurve -n "Elbow_R_CTRLShape" -p "Elbow_R_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" -0.62112080647866463 -0.47500670714824622 
-		0.0032952650484502355 0 -0.61286502458137271 1.1102230246251565e-016 0.58382228224421873 
-		-0.50917186344702081 -0.0025907717024400423 0.61129439433402144 0.11040784786314894 
-		-2.3041532182910274e-005 0.42800239398961315 0.81004661342547735 -7.8612286272594645e-005 
-		-0.0068368610767572946 1.0934638917503809 -0.00010029843420955586 -0.43871963567750161 
-		0.81004661342547823 -7.8612286272594645e-005 -0.61443565482874973 0.11040784786314894 
-		-2.3041532182910274e-005 0 0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.62112080647866463 -0.80137154608738115 
+		0.32323963802144429 0 -1.1225650619932228 0.50996220465586328 0.58382228224421873 
+		-0.79550266950527515 0.28907152977390138 0.61129439433402144 -0.014541159376864954 
+		0.12504092652246224 0.42800239398961315 0.76908386095028014 0.041068049874453005 
+		-0.0068368610767572946 1.093667434522712 -9.7240163597134277e-005 -0.43871963567750161 
+		0.76908386095028103 0.041068049874453005 -0.61443565482874973 -0.014541159376864954 
+		0.12504092652246224 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Wrist_R_GRP" -p "Elbow_R_CTRL";
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
 	setAttr ".rp" -type "double3" 4.3949678335405578 8.7755640550264538 0.52471752405582639 ;
@@ -786,12 +869,12 @@ createNode transform -n "Wrist_R_CTRL" -p "Wrist_R_GRP";
 createNode nurbsCurve -n "Wrist_R_CTRLShape" -p "Wrist_R_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" -0.47895699210596465 -0.47895699210595666 
-		-2.2204460492503131e-016 -8.8817841970012523e-016 -0.67734747402966988 -2.2204460492503131e-016 
-		0.47895699210596154 -0.47895699210595666 -2.2204460492503131e-016 0.67734747402967743 
-		3.5527136788005009e-015 -2.2204460492503131e-016 0.47895699210596199 0.47895699210596909 
-		-2.2204460492503131e-016 -8.8817841970012523e-016 0.67734747402968676 -2.2204460492503131e-016 
-		-0.47895699210596376 0.47895699210596998 -2.2204460492503131e-016 -0.67734747402967876 
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.52498282235773264 -0.52498282235772464 
+		-2.2204460492503131e-016 -8.8817841970012523e-016 -0.74243782739120334 -2.2204460492503131e-016 
+		0.52498282235773042 -0.52498282235772464 -2.2204460492503131e-016 0.74243782739121045 
+		3.5527136788005009e-015 -2.2204460492503131e-016 0.52498282235773086 0.5249828223577353 
+		-2.2204460492503131e-016 -8.8817841970012523e-016 0.74243782739121844 -2.2204460492503131e-016 
+		-0.52498282235773175 0.52498282235773619 -2.2204460492503131e-016 -0.74243782739120956 
 		3.5527136788005009e-015 -2.2204460492503131e-016 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Neck1_GRP" -p "UpperBack_CTRL";
 	setAttr ".rp" -type "double3" 8.6372291574899211 0.65489585833648023 9.3730879392169102e-015 ;
@@ -802,6 +885,13 @@ createNode transform -n "Neck1_CTRL" -p "Neck1_GRP";
 createNode nurbsCurve -n "Neck1_CTRLShape" -p "Neck1_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.015912911722727685 -0.34983968746876748 
+		6.1062312854265193e-016 0.67237253620086612 -0.60893607229285274 6.1062312854265193e-016 
+		1.3606579841244573 -0.34983968746876792 6.1062312854265193e-016 1.4694335205827249 
+		0.27567431873537673 4.3444242765872194e-016 1.1843363532687361 0.90118832493952106 
+		4.3444242765872194e-016 0.49605090534514495 1.1602847097636069 4.3444242765872194e-016 
+		-0.19223454257844708 0.9011883249395215 4.3444242765872194e-016 -0.4773317098924359 
+		0.27567431873537762 4.3444242765872194e-016 0 0 0 0 0 0 0 0 0;
 createNode transform -n "Neck2_GRP" -p "Neck1_CTRL";
 	setAttr ".rp" -type "double3" 9.3243205744171824 0.65489585833648045 9.7163590592096475e-015 ;
 	setAttr ".sp" -type "double3" 9.3243205744171824 0.65489585833648045 9.7163590592096475e-015 ;
@@ -811,9 +901,9 @@ createNode transform -n "Neck2_CTRL" -p "Neck2_GRP";
 createNode nurbsCurve -n "Neck2_CTRLShape" -p "Neck2_CTRL";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
-	setAttr -s 11 ".cp[0:10]" -type "double3" -0.47575502677949366 -0.25359027462557471 
-		1.3423765805107892e-016 0.1889942114019707 -0.46049473699032939 1.3423765805107892e-016 
-		0.85374344958343507 -0.25359027462557515 1.3423765805107892e-016 1.1290915996153839 
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.29943339592377249 -0.25359027462557471 
+		3.1041835893500891e-016 0.36531584225769187 -0.46049473699032939 3.1041835893500891e-016 
+		1.0300650804391562 -0.25359027462557515 3.1041835893500891e-016 1.1290915996153839 
 		0.24592128453092843 1.3423765805107892e-016 0.85374344958343507 0.74543284368743312 
 		1.3423765805107892e-016 0.1889942114019707 0.95233730605218847 1.3423765805107892e-016 
 		-0.47575502677949366 0.74543284368743334 1.3423765805107892e-016 -0.75110317681144245 
@@ -831,7 +921,7 @@ createNode nurbsCurve -n "Head_CTRLShape" -p "Head_CTRL";
 	setAttr -s 11 ".cp[0:10]" -type "double3" -0.062372069871139857 -0.22705983056594259 
 		-0.048068625199157007 0 -0.77142443380868009 7.6818387269785369e-017 0.46359755053072682 
 		-0.5148149285290895 -0.059204716006881992 0.62097043600003232 0 -6.2047410809288109e-016 
-		0.76823199602549508 0.16499458147094037 -7.8404811326710307e-016 0.69771358349826684 
+		0.43593215225502924 0.16499458147094037 -4.5201386939712027e-016 0.69771358349826684 
 		0.44643844241721542 -7.416122231117804e-016 0.50978698115616616 0.4294902603668298 
 		-5.5214812764033367e-016 0.84741105322131816 0 -8.4673373634734876e-016 0 0 0 0 0 
 		0 0 0 0;
@@ -1049,10 +1139,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1.005\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n"
-		+ "                -showConnectionToSelected 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 5\n                -currentNode \"Root\" \n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n"
-		+ "                -zoom 1.005\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 5\n                -currentNode \"Root\" \n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1.005\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n"
+		+ "                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 5\n                -currentNode \"Pelvis1\" \n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1.005\n"
+		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 5\n                -currentNode \"Pelvis1\" \n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
+		+ "\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
@@ -3698,8 +3788,8 @@ createNode displayLayer -n "Joints";
 	setAttr ".dt" 1;
 	setAttr ".do" 3;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 22;
+	setAttr ".unw" 22;
 select -ne :renderPartition;
 	setAttr -s 6 ".st";
 select -ne :initialShadingGroup;
@@ -3730,8 +3820,6 @@ select -ne :hardwareRenderingGlobals;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "AlienMeshLayer.di" "AlienMesh.do";
 connectAttr "polyExtrudeFace24.out" "AlienMeshShape.i";
 connectAttr "groupId6.id" "pCubeShape7.ciog.cog[2].cgid";
@@ -3758,6 +3846,7 @@ connectAttr "Knee_R.s" "Ankle_R.is";
 connectAttr "Ankle_R_CTRL.r" "Ankle_R.r";
 connectAttr "Ankle_R.s" "Toe_R.is";
 connectAttr "Toe_R_CTRL.r" "Toe_R.r";
+connectAttr "Joints.di" "Toe_R.do";
 connectAttr "Pelvis1.s" "Hip_L.is";
 connectAttr "Hip_L_CTRL.r" "Hip_L.r";
 connectAttr "Joints.di" "Hip_L.do";
@@ -3767,6 +3856,7 @@ connectAttr "Knee_L.s" "Ankle_L.is";
 connectAttr "Ankle_L_CTRL.r" "Ankle_L.r";
 connectAttr "Ankle_L.s" "Toe_L.is";
 connectAttr "Toe_L_CTRL.r" "Toe_L.r";
+connectAttr "Joints.di" "Toe_L.do";
 connectAttr "Root.s" "LowerBack.is";
 connectAttr "LowerBack_CTRL.r" "LowerBack.r";
 connectAttr "Joints.di" "LowerBack.do";
@@ -3803,6 +3893,7 @@ connectAttr "Neck2_CTRL.r" "Neck2.r";
 connectAttr "Joints.di" "Neck2.do";
 connectAttr "Neck2.s" "Head.is";
 connectAttr "Head_CTRL.r" "Head.r";
+connectAttr "Joints.di" "Head.do";
 connectAttr "Root.jo" "Root_GRP.r";
 connectAttr "transformGeometry1.og" "Root_CTRLShape.cr";
 connectAttr "Pelvis1.jo" "Pelvis1_GRP.r";
