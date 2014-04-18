@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Alien4UV.ma
-//Last modified: Fri, Apr 18, 2014 11:21:39 AM
+//Last modified: Fri, Apr 18, 2014 11:31:08 AM
 //Codeset: UTF-8
 requires maya "2014";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeType "mentalrayRenderPass"
@@ -90,14 +90,14 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.4282376702400796 10.601106571322822 7.9231352901461829 ;
-	setAttr ".r" -type "double3" 3.2616472745549747 -334.59999999997387 2.2005635024114382e-16 ;
+	setAttr ".t" -type "double3" 8.3687533479209701 7.5818518258926568 23.689185803593087 ;
+	setAttr ".r" -type "double3" 356.66164727462927 -339.39999999998565 1.0618163695889153e-16 ;
 	setAttr ".rp" -type "double3" 3.3306690738754696e-16 -8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 7.282784438188403e-16 -2.6475029354641232e-16 2.1115163189502947e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 9.1153429520979721;
+	setAttr ".coi" 29.280417751671045;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -164,9 +164,13 @@ createNode mesh -n "AlienMeshShape" -p "AlienMesh";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 16 ".pt";
+	setAttr -s 20 ".pt";
+	setAttr ".pt[66]" -type "float3" 0 0 -0.068734862 ;
+	setAttr ".pt[71]" -type "float3" -0.00075203471 1.7763568e-15 -0.077489905 ;
+	setAttr ".pt[76]" -type "float3" 0 0 -0.066629872 ;
 	setAttr ".pt[91]" -type "float3" 0 -0.10586818 0 ;
 	setAttr ".pt[116]" -type "float3" 0 -0.10586818 0 ;
+	setAttr ".pt[117]" -type "float3" -2.7939677e-09 0 0 ;
 	setAttr ".pt[118]" -type "float3" 0 -0.10586818 0 ;
 	setAttr ".pt[168]" -type "float3" 0 -0.10586818 0 ;
 	setAttr ".pt[172]" -type "float3" 0 -0.10586818 0 ;
@@ -898,7 +902,6 @@ createNode transform -n "Hip_L_CTRL" -p "Hip_L_GRP";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 0 0 21.492013929051936 ;
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
@@ -937,7 +940,6 @@ createNode transform -n "Knee_L_CTRL" -p "Knee_L_GRP";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 0 0 -55.426043256802451 ;
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
@@ -976,7 +978,6 @@ createNode transform -n "Ankle_L_CTRL" -p "Ankle_L_GRP";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 0 0 -44.963372987268826 ;
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
@@ -1192,7 +1193,7 @@ createNode transform -n "Shoulder_L_CTRL" -p "Shoulder_L_GRP";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 0 0 -77.096875046672068 ;
+	setAttr ".r" -type "double3" 0 0 -74.808343532346271 ;
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
