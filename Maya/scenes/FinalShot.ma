@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: FinalShot.ma
-//Last modified: Sun, Apr 20, 2014 09:10:51 PM
+//Last modified: Sun, Apr 20, 2014 09:21:05 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Jeep2" -rfn "Jeep2RN" "/Users/temp/Desktop/3D-Modeling/Maya//scenes/Jeep2.ma";
 file -rdi 1 -ns "FinalShipUV" -rfn "FinalShipUVRN" "/Users/temp/Desktop/3D-Modeling/Maya//scenes/FinalShipUV.ma";
@@ -582,6 +582,8 @@ select -ne :defaultRenderingList1;
 	setAttr -s 4 ".r";
 select -ne :renderGlobalsList1;
 select -ne :initialMaterialInfo;
+select -ne :defaultRenderGlobals;
+	setAttr ".ren" -type "string" "mentalRay";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
 select -ne :hardwareRenderGlobals;
