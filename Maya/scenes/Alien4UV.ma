@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: Alien4UV.ma
-//Last modified: Mon, Apr 21, 2014 12:14:55 PM
+//Last modified: Tue, Apr 22, 2014 11:53:46 AM
 //Codeset: UTF-8
 requires maya "2014";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeType "mentalrayRenderPass"
@@ -90,14 +90,14 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 22.433690208199234 12.434410854479799 10.958483582109924 ;
-	setAttr ".r" -type "double3" 345.26164727459235 -294.19999999994411 1.9397267406908164e-15 ;
+	setAttr ".t" -type "double3" 13.856719230536612 10.338432360292666 10.971412413549549 ;
+	setAttr ".r" -type "double3" 350.66164727438434 -302.20000000003211 -2.9843275299410454e-15 ;
 	setAttr ".rp" -type "double3" 3.3306690738754696e-16 -8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 7.282784438188403e-16 -2.6475029354641232e-16 2.1115163189502949e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 29.28041775167106;
+	setAttr ".coi" 19.132472867665754;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -2727,7 +2727,6 @@ createNode mesh -n "AlienMeshShapeOrig" -p "AlienMesh";
 createNode joint -n "Root";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" yes;
-	setAttr ".t" -type "double3" 0 4.9025623709048194 -0.65489585833648023 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -2815,7 +2814,7 @@ createNode joint -n "Knee_L" -p "Hip_L";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
 	setAttr ".jo" -type "double3" 0 -3.5295172227886646 0 ;
-	setAttr ".bps" -type "matrix" -0.026703877500140867 -0.99930188997907721 0.026127296276152297 0
+	setAttr ".bps" -type "matrix" -0.026703877500140867 -0.99930188997907732 0.026127296276152297 0
 		 -0.00091356232115202829 0.026161002018241453 0.99965732497555726 0 -0.99964297043011452 0.026670857834834416 -0.0016115247473170787 0
 		 0.37064747709172557 2.3788660063828142 -0.58877026134363053 1;
 	setAttr ".radi" 0.5;
@@ -3016,12 +3015,29 @@ createNode joint -n "Head" -p "Neck2";
 	setAttr ".bps" -type "matrix" 9.9920072216264089e-16 1 0 0 9.9579925010295987e-17 1.2916495197745464e-31 1 0
 		 1 -1.0547118733938987e-15 -9.9579925010295987e-17 0 1.967887093282505e-16 10.210709701086476 -0.65489585833648067 1;
 	setAttr ".radi" 0.25;
+createNode pointConstraint -n "Root_pointConstraint1" -p "Root";
+	addAttr -ci true -k true -sn "w0" -ln "Root_CTRLW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 0 4.9025623709048194 -0.65489585833648023 ;
+	setAttr -k on ".w0";
 createNode transform -n "Root_GRP";
 	setAttr ".rp" -type "double3" 0 4.9025623709048194 -0.65489585833648023 ;
 	setAttr ".sp" -type "double3" 0 4.9025623709048194 -0.65489585833648023 ;
 createNode transform -n "Root_CTRL" -p "Root_GRP";
 	setAttr -l on ".v";
-	setAttr ".r" -type "double3" -5.2097321701733819 0 0 ;
+	setAttr ".t" -type "double3" 0 0 0.86625921462967548 ;
+	setAttr -av ".tz";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
@@ -3133,7 +3149,7 @@ createNode transform -n "Knee_R_CTRL" -p "Knee_R_GRP";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 0 0 -49.664949527191332 ;
+	setAttr ".r" -type "double3" 0 0 -49.664949527191325 ;
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
@@ -3579,7 +3595,7 @@ createNode transform -n "Elbow_L_CTRL" -p "Elbow_L_GRP";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 76.116401548011567 -66.822087383053884 -1.7093547873528259 ;
+	setAttr ".r" -type "double3" 76.116401548011567 -66.822087383053884 -1.7093547873528261 ;
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
@@ -3691,7 +3707,7 @@ createNode transform -n "Shoulder_R_CTRL" -p "Shoulder_R_GRP";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 0 -10.352737928133619 -77.440643285075865 ;
+	setAttr ".r" -type "double3" 0 -10.352737928133619 -77.440643285075879 ;
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
@@ -3730,7 +3746,7 @@ createNode transform -n "Elbow_R_CTRL" -p "Elbow_R_GRP";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 0 19.485093767771346 0 ;
+	setAttr ".r" -type "double3" 0 19.485093767771342 0 ;
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
@@ -3768,7 +3784,7 @@ createNode transform -n "Wrist_R_CTRL" -p "Wrist_R_GRP";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" -106.04907530201487 0 0 ;
+	setAttr ".r" -type "double3" -106.04907530201488 0 0 ;
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
@@ -3840,7 +3856,7 @@ createNode transform -n "Neck2_CTRL" -p "Neck2_GRP";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 47.833224251903708 -9.8062597803147007 4.6380994114861895 ;
+	setAttr ".r" -type "double3" 3.3913686764637347 -9.8062597803147629 4.6380994114862064 ;
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
@@ -4161,10 +4177,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n"
 		+ "                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n"
-		+ "                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showUnderworld 0\n                -showInvisible 0\n"
-		+ "                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n"
-		+ "\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 0.500386\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -currentNode \"Root_CTRL\" \n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
+		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 1\n                -zoom 0.500386\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showUnderworld 0\n"
+		+ "                -showInvisible 0\n                -transitionFrames 1\n                -currentNode \"Root_CTRL\" \n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"largeIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
@@ -4276,6 +4292,7 @@ createNode brush -n "art3dPaintLastSmearBrush";
 	setAttr ".env[2].envi" 1;
 	setAttr ".rro[0]"  0 1 1;
 createNode displayLayer -n "AlienMeshLayer";
+	setAttr ".dt" 2;
 	setAttr ".do" 2;
 createNode makeNurbCircle -n "makeNurbCircle1";
 createNode transformGeometry -n "transformGeometry1";
@@ -4337,7 +4354,7 @@ createNode transformGeometry -n "transformGeometry17";
 	setAttr ".txf" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 4.4989064341233114 8.7718008514618617 -0.56539001454094628 1;
 createNode makeNurbCircle -n "makeNurbCircle18";
 createNode transformGeometry -n "transformGeometry18";
-	setAttr ".txf" -type "matrix" 1 0 0 0 0 1 -1.6023737137301815e-31 0 -2.4651903288156619e-32 1.7564481092811604e-31 1 0
+	setAttr ".txf" -type "matrix" 1 0 0 0 0 1 -1.6023737137301822e-31 0 -2.4651903288156619e-32 1.7564481092811608e-31 1 0
 		 1.2193823569033395 8.5509508996635955 0.54406493603210004 1;
 createNode makeNurbCircle -n "makeNurbCircle19";
 createNode transformGeometry -n "transformGeometry19";
@@ -5516,7 +5533,7 @@ createNode skinCluster -n "skinCluster1";
 		 -4.9025623709048194 -0.65489585833648023 -4.7532277693241211e-15 1;
 	setAttr ".pm[11]" -type "matrix" 1.0547118733938987e-15 -2.2204460492503131e-16 -1 0
 		 1 2.2186712959340957e-31 9.9920072216264089e-16 0 -2.3419308123748792e-31 -1 2.2204460492503131e-16 0
-		 -5.6013441628101264 -0.65489585833648012 -4.5204866789554898e-15 1;
+		 -5.6013441628101264 -0.65489585833648012 -4.520486678955489e-15 1;
 	setAttr ".pm[12]" -type "matrix" 1.0547118733938987e-15 -2.2204460492503131e-16 -1 0
 		 1 2.2186712959340957e-31 9.9920072216264089e-16 0 -2.3419308123748792e-31 -1 2.2204460492503131e-16 0
 		 -6.4544731603714238 -0.65489585833648012 -4.2363376421351114e-15 1;
@@ -5692,6 +5709,9 @@ connectAttr "skinCluster1.og[0]" "AlienMeshShape.i";
 connectAttr "tweak1.vl[0].vt[0]" "AlienMeshShape.twl";
 connectAttr "Root_CTRL.r" "Root.r";
 connectAttr "Joints.di" "Root.do";
+connectAttr "Root_pointConstraint1.ctx" "Root.tx";
+connectAttr "Root_pointConstraint1.cty" "Root.ty";
+connectAttr "Root_pointConstraint1.ctz" "Root.tz";
 connectAttr "Root.s" "Pelvis1.is";
 connectAttr "Pelvis1_CTRL.r" "Pelvis1.r";
 connectAttr "Pelvis1.s" "Hip_R.is";
@@ -5751,10 +5771,18 @@ connectAttr "Joints.di" "Neck2.do";
 connectAttr "Neck2.s" "Head.is";
 connectAttr "Head_CTRL.r" "Head.r";
 connectAttr "Joints.di" "Head.do";
+connectAttr "Root.pim" "Root_pointConstraint1.cpim";
+connectAttr "Root.rp" "Root_pointConstraint1.crp";
+connectAttr "Root.rpt" "Root_pointConstraint1.crt";
+connectAttr "Root_CTRL.t" "Root_pointConstraint1.tg[0].tt";
+connectAttr "Root_CTRL.rp" "Root_pointConstraint1.tg[0].trp";
+connectAttr "Root_CTRL.rpt" "Root_pointConstraint1.tg[0].trt";
+connectAttr "Root_CTRL.pm" "Root_pointConstraint1.tg[0].tpm";
+connectAttr "Root_pointConstraint1.w0" "Root_pointConstraint1.tg[0].tw";
 connectAttr "Root.jo" "Root_GRP.r";
+connectAttr "Root_CTRL_pointConstraint1.ctz" "Root_CTRL.tz";
 connectAttr "Root_CTRL_pointConstraint1.ctx" "Root_CTRL.tx";
 connectAttr "Root_CTRL_pointConstraint1.cty" "Root_CTRL.ty";
-connectAttr "Root_CTRL_pointConstraint1.ctz" "Root_CTRL.tz";
 connectAttr "Controls.di" "Root_CTRL.do";
 connectAttr "transformGeometry1.og" "Root_CTRLShape.cr";
 connectAttr "Pelvis1.jo" "Pelvis1_GRP.r";
