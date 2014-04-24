@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: FinalShot2WithAnim.ma
-//Last modified: Thu, Apr 24, 2014 11:40:47 AM
+//Last modified: Thu, Apr 24, 2014 02:22:25 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Jeep2" -rfn "Jeep2RN" "/Users/temp/Desktop/3D-Modeling/Maya//scenes/Jeep2.ma";
 file -rdi 1 -ns "FinalShipUV" -rfn "FinalShipUVRN" "/Users/temp/Desktop/3D-Modeling/Maya//scenes/FinalShipUV.ma";
@@ -180,14 +180,6 @@ createNode transform -n "imagePlane4" -p "Final_CameraShape";
 createNode transform -n "imagePlane5" -p "Final_CameraShape";
 createNode transform -n "imagePlane6" -p "Final_CameraShape";
 createNode transform -n "imagePlane7" -p "Final_CameraShape";
-createNode imagePlane -n "imagePlaneShape1" -p "imagePlane7";
-	setAttr -k off ".v";
-	setAttr ".fc" 51;
-	setAttr ".imn" -type "string" "/Users/temp/Desktop/3D-Modeling/Maya//sourceimages/HomeShot1.png";
-	setAttr ".cov" -type "short2" 1200 900 ;
-	setAttr ".s" -type "double2" 1.41732 0.94488 ;
-	setAttr ".w" 12;
-	setAttr ".h" 9;
 createNode transform -n "Jeep2RNlocator";
 	setAttr ".rp" -type "double3" 0 3.4663202762603755 0.11005788419962403 ;
 	setAttr ".sp" -type "double3" 0 3.4663202762603755 0.11005788419962403 ;
@@ -496,7 +488,6 @@ createNode displayLayerManager -n "layerManager";
 	setAttr -s 7 ".dli";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
-	setAttr ".crl" 4;
 	setAttr -s 5 ".rlmi";
 	setAttr ".rlmi[4]" 1;
 	setAttr ".rlmi[6]" 2;
@@ -504,7 +495,6 @@ createNode renderLayerManager -n "renderLayerManager";
 	setAttr ".rlmi[9]" 4;
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
-	setAttr ".rndr" no;
 	setAttr -s 21 ".adjs";
 	setAttr ".adjs[0].val" -type "string" "mentalRay";
 	setAttr ".adjs[1].val" 1;
@@ -1308,6 +1298,7 @@ createNode reference -n "FinalShipUVRN";
 	setAttr -s 3 ".asn";
 lockNode -l 1 ;
 createNode displayLayer -n "UFOFinal";
+	setAttr ".v" no;
 	setAttr ".do" 4;
 createNode reference -n "Alien4UVRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -1491,7 +1482,7 @@ createNode reference -n "Alien4UVRN1";
 		"rotateZ" " -av"
 		2 "Alien4UV:AlienMeshLayer" "visibility" " 0"
 		2 "Alien4UV:Joints" "visibility" " 0"
-		2 "Alien4UV:Controls" "visibility" " 1"
+		2 "Alien4UV:Controls" "visibility" " 0"
 		3 "|Alien4UVRN1locator|Alien4UVRN1group|Alien4UV:Root_GRP|Alien4UV:Root_CTRL|Alien4UV:Root_CTRL_pointConstraint1.constraintTranslateX" 
 		"|Alien4UVRN1locator|Alien4UVRN1group|Alien4UV:Root_GRP|Alien4UV:Root_CTRL.translateX" 
 		""
@@ -1780,6 +1771,7 @@ createNode shadingEngine -n "set2";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo5";
 createNode renderLayer -n "JeepMatte";
+	setAttr ".rndr" no;
 	setAttr ".do" 1;
 createNode mib_amb_occlusion -n "mib_amb_occlusion3";
 createNode surfaceShader -n "surfaceShader3";
@@ -1800,6 +1792,7 @@ createNode shadingEngine -n "set5";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo8";
 createNode renderLayer -n "JeepOcclusion";
+	setAttr ".rndr" no;
 	setAttr -s 21 ".adjs";
 	setAttr ".adjs[0].val" -type "string" "mentalRay";
 	setAttr ".adjs[1].val" 0;
@@ -1837,6 +1830,7 @@ createNode shadingEngine -n "set7";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo10";
 createNode renderLayer -n "Passes";
+	setAttr ".rndr" no;
 	setAttr ".do" 3;
 createNode renderPass -n "reflection";
 	addAttr -ci true -sn "ut" -ln "useTransparency" -nn "Use Transparency" -dv 1 -min 
@@ -1947,6 +1941,7 @@ createNode renderPass -n "specular";
 	setAttr ".fbt" 256;
 	setAttr ".pgn" -type "string" "Illumination";
 createNode renderLayer -n "Shadow";
+	setAttr ".rndr" no;
 	setAttr ".do" 4;
 createNode lambert -n "ShadowMatte";
 	setAttr ".c" -type "float3" 1 1 1 ;
@@ -1989,7 +1984,7 @@ select -ne :defaultRenderGlobals;
 	setAttr ".ep" 3;
 	setAttr ".ofc" 1;
 	setAttr ".pff" yes;
-	setAttr ".ifp" -type "string" "JeepAnimationSeqOMFG2";
+	setAttr ".ifp" -type "string" "JeepAnimationSeq10";
 select -ne :defaultResolution;
 	setAttr ".w" 640;
 	setAttr ".h" 480;
@@ -2082,7 +2077,6 @@ connectAttr "Alien4UVRN1.phl[17]" "pairBlend1.itz2";
 connectAttr "Alien4UVRN1.phl[18]" "pairBlend1.itx2";
 connectAttr "Alien4UVRN1.phl[19]" "pairBlend1.ity2";
 connectAttr "CAmera.di" "Final_Camera.do";
-connectAttr "imagePlaneShape1.msg" "Final_CameraShape.ip" -na;
 connectAttr "JeepLighting.di" "directionalLight1.do";
 connectAttr "Passes.ri" "directionalLight1.rlio[0]";
 connectAttr "Shadow.ri" "directionalLight1.rlio[1]";
